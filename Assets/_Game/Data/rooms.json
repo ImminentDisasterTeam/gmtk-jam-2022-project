@@ -43,7 +43,6 @@
       "name": "breather_chest",
       "type": "ItemChest",
       "check": 5,
-      "content": [],
       "contentPool": [
         [
           {
@@ -52,7 +51,7 @@
         ]
       ],
       "hiddenCheck": 15,
-      "hiddenContent": []
+      "hiddenContentPool": []
     },
     {
       "name": "breather_chest_gold",
