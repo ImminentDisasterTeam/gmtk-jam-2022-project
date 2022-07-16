@@ -5,7 +5,7 @@
       "type": "Weapon",
       "image": "sdfsdf.png",
       "stats": {
-        "base": 1,
+        "initial": 1,
         "dices": 1,
         "dicesMod": 1
       },
