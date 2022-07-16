@@ -1,5 +1,5 @@
 ﻿namespace _Game.Scripts.UI {
-    public class LevelUI {
+    public class InventoryPanelUI : UIElement {
         // TODO
     }
 }

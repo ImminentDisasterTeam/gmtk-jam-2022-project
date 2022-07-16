@@ -12,7 +12,9 @@ namespace _Game.Scripts.UI {
         [SerializeField] private TextMeshProUGUI _text;
         private RoomData _data;
 
-        public bool CanContinue => _diceActionPanel.CanRoll || (!_data.mandatory && _diceActionPanel.Empty);
+        public bool CanRoll => _diceActionPanel.CanRoll;
+        public bool CanContinue => CanRoll || (!_data.mandatory && _diceActionPanel.Empty);
+
         private readonly Action<bool> _onContinueStatusChanged;
         public Event<bool> OnContinueStatusChanged { get; }
 
@@ -37,7 +39,7 @@ namespace _Game.Scripts.UI {
             _onContinueStatusChanged(CanContinue);
         }
 
-        public (int healthChange, int moneyChange) Continue(Rng rng) {
+        public (int deltaHealth, int deltaMoney) Roll(Rng rng) {
             var result = _diceActionPanel.Roll(rng);
             var items = GetItems(_data, result, rng);
             // TODO show optional selectionPanel
