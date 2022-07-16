@@ -4,9 +4,9 @@
       "name": "default",
       "health": 100,
       "attack": {
-        "initial": 3,
+        "initial": 1,
         "dices": 1,
-        "dicesMod": 1
+        "dicesMod": 0.5
       },
       "defence": {
         "initial": 1,

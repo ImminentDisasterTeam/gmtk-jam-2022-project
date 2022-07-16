@@ -3,6 +3,117 @@
     {
       "levels": [
         1
+      ],
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "one_black_spider_battle"
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "one_green_spider_battle"
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "one_red_spider_battle"
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "two_random_spider_battle",
+              "weight": 5
+            },
+            {
+              "type": "breather_chest_gold",
+              "weight": 1
+            },
+            {
+              "type": "risky_health",
+              "weight": 1
+            },
+            {
+              "type": "simpleTrap",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "two_random_spider_battle",
+              "weight": 5
+            },
+            {
+              "type": "breather_chest_gold",
+              "weight": 1
+            },
+            {
+              "type": "breather_chest",
+              "weight": 1
+            },
+            {
+              "type": "simpleTrap",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "two_random_spider_battle",
+              "weight": 5
+            },
+            {
+              "type": "breather_chest_gold",
+              "weight": 1
+            },
+            {
+              "type": "risky_health",
+              "weight": 1
+            },
+            {
+              "type": "simpleTrap",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "two_random_spider_battle",
+              "weight": 4
+            },
+            {
+              "type": "breather_chest",
+              "weight": 1
+            },
+            {
+              "type": "risky_health",
+              "weight": 1
+            },
+            {
+              "type": "heal_health",
+              "weight": 2
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "spider_queen_battle",
+              "weight": 1
+            }
+          ]
+        }
       ]
     },
     {
@@ -15,11 +126,31 @@
         {
           "subPool": [
             {
-              "type": "spider_battle",
+              "type": "spider_queen_battle",
               "weight": 4
-            },
+            }
+          ]
+        },
+        {
+          "subPool": [
             {
-              "type": "more_random_battle",
+              "type": "spider_queen_battle",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "spider_queen_battle",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "spider_queen_battle",
               "weight": 1
             }
           ]

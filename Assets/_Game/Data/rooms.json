@@ -1,31 +1,74 @@
 {
   "rooms": [
     {
-      "name": "spider_battle",
+      "name": "one_black_spider_battle",
       "type": "Battle",
       "contentPool": [
         {
           "subPool": [
             {
-              "type": "spider"
+              "type": "blackSpider"
             }
           ]
         }
       ]
     },
     {
-      "name": "more_random_battle",
+      "name": "one_green_spider_battle",
       "type": "Battle",
-      "text": "SUCK ASS",
       "contentPool": [
         {
           "subPool": [
             {
-              "type": "spider",
-              "weight": 4
+              "type": "greenSpider"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "one_red_spider_battle",
+      "type": "Battle",
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "redSpiderSpider"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "spider_queen_battle",
+      "type": "Battle",
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "queenSpider"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "two_random_spider_battle",
+      "type": "Battle",
+      "text": "",
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "greenSpider",
+              "weight": 1
             },
             {
-              "type": "goblin",
+              "type": "blackSpider",
+              "weight": 1
+            },
+            {
+              "type": "redSpider",
               "weight": 1
             }
           ]
@@ -33,11 +76,15 @@
         {
           "subPool": [
             {
-              "type": "rat",
+              "type": "greenSpider",
               "weight": 1
             },
             {
-              "type": "slime",
+              "type": "blackSpider",
+              "weight": 1
+            },
+            {
+              "type": "redSpider",
               "weight": 1
             }
           ]
@@ -45,8 +92,8 @@
       ]
     },
     {
-      "image": "gold_chest.png",
       "name": "breather_chest",
+      "image": "gold_chest.png",
       "type": "ItemChest",
       "check": 5,
       "contentPool": [
@@ -59,10 +106,19 @@
         }
       ],
       "hiddenCheck": 15,
-      "hiddenContentPool": []
+      "hiddenContentPool": [
+        {
+          "subPool": [
+            {
+              "type": "amulet1"
+            }
+          ]
+        }
+      ]
     },
     {
       "name": "breather_chest_gold",
+      "image": "gold_chest.png",
       "type": "GoldChest",
       "check": 5,
       "gold": 120,
@@ -70,27 +126,42 @@
       "hiddenGold": 120
     },
     {
-      "name": "RISKY",
+      "name": "risky_health",
+      "image": "simpleTrapInFontain.png",
       "type": "Health",
       "check": [
         6,
         10
       ],
       "healthChange": [
-        -5,
+        -10,
         0,
-        3
+        10
       ],
       "mandatory": false
     },
     {
-      "name": "simpleTrap",
+      "name": "heal_health",
+      "image": "simpleTrapInFontain.png",
       "type": "Health",
       "check": [
         8
       ],
       "healthChange": [
-        -3,
+        0,
+        7
+      ],
+      "mandatory": false
+    },
+    {
+      "name": "simpleTrap",
+      "image": "simpleTrap.png",
+      "type": "Health",
+      "check": [
+        8
+      ],
+      "healthChange": [
+        -5,
         0
       ],
       "mandatory": true
