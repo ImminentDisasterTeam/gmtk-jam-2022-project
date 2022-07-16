@@ -7,19 +7,23 @@
     },
     {
       "levels": [
-        2, 3, 4
+        2,
+        3,
+        4
       ],
       "contentPool": [
-        [
-          {
-            "type": "spider_battle",
-            "weight": 4
-          },
-          {
-            "type": "more_random_battle",
-            "weight": 1
-          }
-        ]
+        {
+          "subPool": [
+            {
+              "type": "spider_battle",
+              "weight": 4
+            },
+            {
+              "type": "more_random_battle",
+              "weight": 1
+            }
+          ]
+        }
       ]
     }
   ]
