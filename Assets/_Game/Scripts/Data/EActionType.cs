@@ -4,6 +4,8 @@
         Defend,
         Charge,
         Heal,
-        Wait
+        UseItem,  // HEAL, BUT FOR PLAYER -> no serialization
+        Wait,
+        Interact   // FOR INTERACTING WITH ENVIRONMENT -> no serialization
     }
 }

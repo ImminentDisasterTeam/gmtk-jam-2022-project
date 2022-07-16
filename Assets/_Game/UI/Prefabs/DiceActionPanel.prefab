@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 4617357504131748549}
   - component: {fileID: 4617357504131748548}
   - component: {fileID: 4617357504131748544}
+  - component: {fileID: 7188953809189878365}
   m_Layer: 5
-  m_Name: ActionDicePanel
+  m_Name: DiceActionPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,6 +134,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 2
   m_VerticalFit: 0
+--- !u!114 &7188953809189878365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4617357504131748550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ae23f3b26e44b9e82665e911039f58d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _actionIcon: {fileID: 4617357504569713182}
+  _statsText: {fileID: 1506195102820247902}
+  _diceSlotsParent: {fileID: 4617357504777583291}
+  _diceSlotPrefab: {fileID: 6476225802043756711, guid: 9e984fb10342ca747b6ba9ab768b7ab5, type: 3}
 --- !u!1 &4617357504569713171
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,7 +322,7 @@ GameObject:
   - component: {fileID: 1506195102820247902}
   - component: {fileID: 6530969283221302238}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: StatsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

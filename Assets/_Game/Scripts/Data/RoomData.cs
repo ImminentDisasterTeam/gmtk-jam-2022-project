@@ -12,6 +12,7 @@ namespace _Game.Scripts.Data {
         // optional for different types
         public PoolItemData[] contentPool;
         public int[] check;
+        public int ChestCheck => check[0];
         public int[] healthChange;
         public bool mandatory;
         public int gold;

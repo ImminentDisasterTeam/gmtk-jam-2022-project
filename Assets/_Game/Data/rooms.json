@@ -95,7 +95,9 @@
       "name": "breather_chest",
       "image": "gold_chest.png",
       "type": "ItemChest",
-      "check": 5,
+      "check": [
+        5
+      ],
       "contentPool": [
         {
           "subPool": [
@@ -120,7 +122,9 @@
       "name": "breather_chest_gold",
       "image": "gold_chest.png",
       "type": "GoldChest",
-      "check": 5,
+      "check": [
+        5
+      ],
       "gold": 120,
       "hiddenCheck": 15,
       "hiddenGold": 120

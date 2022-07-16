@@ -163,6 +163,7 @@ GameObject:
   - component: {fileID: 5431291318986912759}
   - component: {fileID: 5431291318986912758}
   - component: {fileID: 5840178310065539413}
+  - component: {fileID: 6476225802043756711}
   m_Layer: 5
   m_Name: DiceSlot
   m_TagString: Untagged
@@ -244,6 +245,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _img: {fileID: 5431291318432450635}
   _text: {fileID: 0}
+--- !u!114 &6476225802043756711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5431291318986912754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db95a4091312424ebb603aa6278d5e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _diceImage: {fileID: 5431291318432450635}
+  _diceRoll: {fileID: 2223964397303457979}
+  _diceRollText: {fileID: 329221630204580078}
 --- !u!1 &8277393776375224169
 GameObject:
   m_ObjectHideFlags: 0
