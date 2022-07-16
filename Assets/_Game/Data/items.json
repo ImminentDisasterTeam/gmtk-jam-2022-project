@@ -3,9 +3,9 @@
     {
       "name": "sword1",
       "type": "Weapon",
-      "image": "sdfsdf.png",
+      "image": "sword1.png",
       "stats": {
-        "base": 1,
+        "initial": 1,
         "dices": 1,
         "dicesMod": 1
       },

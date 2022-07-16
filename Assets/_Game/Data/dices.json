@@ -1,20 +1,167 @@
 {
   "dices": [
+    
     {
       "name": "d4",
+      "displayName": "Base d4 Dice",
+      "desc": "",
       "image": "d4.png",
       "faces": [
         1, 2, 3, 4
       ]
     },
     {
+      "name": "d6",
+      "displayName": "Base d6 Dice",
+      "desc": "",
+      "image": "d6.png",
+      "faces": [
+        1, 2, 3, 4, 5, 6
+      ]
+    },
+    {
+      "name": "d20",
+      "displayName": "Base d20 Dice",
+      "desc": "",
+      "image": "d20.png",
+      "faces": [
+        1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
+      ]
+    },
+
+
+    
+    {
       "name": "d4_risky",
+      "displayName": "Gambler's Dice",
+      "desc": "",
       "image": "d4_risky.png",
       "faces": [
-        1, 1, 1, 8
+        1, 1, 1, 10
       ],
       "minLevel": 2,
       "maxLevel": 4
+    },
+    {
+      "name": "d4_curse",
+      "displayName": "Cursed Dice",
+      "desc": "",
+      "image": "d4_curse.png",
+      "faces": [
+        -4, -3, -2, -1
+      ],
+      "minLevel": 2,
+      "maxLevel": 4
+    },
+    {
+      "name": "d4_sadness",
+      "displayName": "Sadness",
+      "desc": "",
+      "image": "d4_curse.png",
+      "faces": [
+        0, 0, 0, 0
+      ],
+      "minLevel": 2,
+      "maxLevel": 4
+    },
+
+
+    {
+      "name": "d6_risky",
+      "displayName": "Gambler's True Dice",
+      "desc": "",
+      "image": "d6_risky.png",
+      "faces": [
+        1, 1, 1, 1, 1, 15
+      ],
+      "minLevel": 2,
+      "maxLevel": 4
+    },
+    {
+      "name": "d6_simple_numbers",
+      "displayName": "SIMPLE Dice",
+      "desc": "",
+      "image": "d6_simple_numbers.png",
+      "faces": [
+        2, 3, 5, 7, 11, 13
+      ],
+      "minLevel": 5,
+      "maxLevel": 7
+    },
+    {
+      "name": "d6_odd",
+      "displayName": "Odd Dice",
+      "desc": "It is very, very odd dice.",
+      "image": "d6_odd.png",
+      "faces": [
+        1, 3, 5, 7, 9, 11
+      ],
+      "minLevel": 3,
+      "maxLevel": 5
+    },
+    {
+      "name": "d6_pulse",
+      "displayName": "Pulse",
+      "desc": "Stable.",
+      "image": "d6_pulse.png",
+      "faces": [
+        6, 6, 6, 6, 6, 6
+      ],
+      "minLevel": 4,
+      "maxLevel": 6
+    },
+    {
+      "name": "d6_even",
+      "displayName": "E(l)ven Dice",
+      "desc": "Why do not elves like odd numbers?",
+      "image": "d6_even.png",
+      "faces": [
+        2, 4, 6, 8, 10, 12
+      ],
+      "minLevel": 5,
+      "maxLevel": 7
+    },
+    {
+      "name": "d4_lucky",
+      "displayName": "Lucky? Dice",
+      "desc": "Previous owner was lucky to die quickly.",
+      "image": "d4_lucky.png",
+      "faces": [
+        10, 10, 10, -10
+      ],
+      "minLevel": 5,
+      "maxLevel": 7
+    },
+
+
+
+
+    
+    {
+      "name": "d20_risky",
+      "displayName": "True Gambler's True Dice",
+      "desc": "",
+      "image": "d20_risky.png",
+      "faces": [
+        1, 1, 1, 1, 25, 1, 1, 1, 1, 25, 1, 1, 1, 1, 25, 1, 1, 1, 1, 25
+      ],
+      "minLevel": 5,
+      "maxLevel": 7
+    },
+
+
+
+    {
+      "name": "d2_all_or_nothing",
+      "displayName": "Devil's Coin",
+      "desc": "",
+      "image": "d2_all_or_nothing.png",
+      "faces": [
+        -20, 20
+      ],
+      "minLevel": 8,
+      "maxLevel": 10
     }
+
   ]
 }

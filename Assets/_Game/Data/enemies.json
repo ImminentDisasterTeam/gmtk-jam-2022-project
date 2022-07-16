@@ -1,13 +1,32 @@
 {
   "enemies": [
     {
-      "name": "spider",
-      "health": 5,
+      "name": "blackSpider",
+      "health": 20,
       "actionLoop": [
-        "spiderAttack",
-        "spiderDefend",
-        "wait"
+        "blackSpiderAttack",
+        "blackSpiderDef"
+      ]
+    },
+
+    {
+      "name": "greenSpider",
+      "health": 20,
+      "actionLoop": [
+        "greenSpiderAttack",
+        "greenSpiderHeal"
+      ]
+    },
+
+    {
+      "name": "redSpider",
+      "health": 20,
+      "actionLoop": [
+        "redSpiderAttack",
+        "redSpiderCharge"
       ]
     }
+
+
   ]
 }

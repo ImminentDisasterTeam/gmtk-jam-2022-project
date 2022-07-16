@@ -4,11 +4,13 @@
       "name": "spider_battle",
       "type": "Battle",
       "contentPool": [
-        [
-          {
-            "type" :"spider"
-          }
-        ]
+        {
+          "subPool": [
+            {
+              "type": "spider"
+            }
+          ]
+        }
       ]
     },
     {
@@ -16,26 +18,30 @@
       "type": "Battle",
       "text": "SUCK ASS",
       "contentPool": [
-        [
-          {
-            "type": "spider",
-            "weight": 4
-          },
-          {
-            "type": "goblin",
-            "weight": 1
-          }
-        ],
-        [
-          {
-            "type": "rat",
-            "weight": 1
-          },
-          {
-            "type": "slime",
-            "weight": 1
-          }
-        ]
+        {
+          "subPool": [
+            {
+              "type": "spider",
+              "weight": 4
+            },
+            {
+              "type": "goblin",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "rat",
+              "weight": 1
+            },
+            {
+              "type": "slime",
+              "weight": 1
+            }
+          ]
+        }
       ]
     },
     {
@@ -43,16 +49,17 @@
       "name": "breather_chest",
       "type": "ItemChest",
       "check": 5,
-      "content": [],
       "contentPool": [
-        [
-          {
-            "type": "sword1"
-          }
-        ]
+        {
+          "subPool": [
+            {
+              "type": "sword1"
+            }
+          ]
+        }
       ],
       "hiddenCheck": 15,
-      "hiddenContent": []
+      "hiddenContentPool": []
     },
     {
       "name": "breather_chest_gold",
