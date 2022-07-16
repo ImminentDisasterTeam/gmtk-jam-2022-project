@@ -5,6 +5,8 @@ using UnityEngine;
 namespace _Game.Scripts.UI {
     public class SlotManager : MonoBehaviour {
         public static SlotManager Instance { get; private set; }
+
+        [Header("DEBUG")]
         [SerializeField] private SlotUI _selectedSlot;  // serialized for debug purposes
 
         private SlotUI _currentFrameSlot;
