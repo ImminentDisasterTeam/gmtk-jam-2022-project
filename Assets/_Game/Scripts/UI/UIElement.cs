@@ -3,6 +3,10 @@ using UnityEngine;
 
 namespace _Game.Scripts.UI {
     public abstract class UIElement : MonoBehaviour {
+        private void Awake() {
+            gameObject.SetActive(false);
+        }
+
         public virtual void Show(Action onDone = null) {
             gameObject.SetActive(true);
             onDone?.Invoke();
