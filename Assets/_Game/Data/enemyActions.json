@@ -143,7 +143,7 @@
       "name": "redSpiderCharge",
       "subActions": [
         {
-          "type": "Heal",
+          "type": "Charge",
           "stats": {
             "initial": 1,
             "dices": 1,
@@ -178,6 +178,49 @@
         "healthLower": 0,
         "elseAction": "redSpiderAttack"
       }
+    },
+
+
+    {
+      "name": "queenSpiderChargedAttack",
+      "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 25,
+            "dices": 0,
+            "dicesMod": 0
+          }
+        }
+      ],
+      "condition": {
+        "chargeHigher": 25,
+        "chargeLower": 0,
+        "healthHigher": 0,
+        "healthLower": 0,
+        "elseAction": "queenSpiderCharge"
+      }
+    },
+    {
+      "name": "queenSpiderCharge",
+      "subActions": [
+        {
+          "type": "Charge",
+          "stats": {
+            "initial": 0,
+            "dices": 1,
+            "dicesMod": 1
+          }
+        }
+      ],
+      "condition": {
+        "chargeHigher": 0,
+        "chargeLower": 25,
+        "healthHigher": 0,
+        "healthLower": 0,
+        "elseAction": "queenSpiderChargedAttack"
+      }
     }
+
   ]
 }

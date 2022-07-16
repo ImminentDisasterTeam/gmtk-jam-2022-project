@@ -2,6 +2,8 @@
   "items": [
     {
       "name": "sword1",
+      "displayName": "Rusty Sword",
+      "desc": "9 out of 10 orcs recommend.",
       "type": "Weapon",
       "image": "sword1.png",
       "stats": {
@@ -10,6 +12,113 @@
         "dicesMod": 1
       },
       "cost": 100
+    },
+    {
+      "name": "sword2",
+      "displayName": "Shiny Sword",
+      "desc": "Blind yourself with sun reflection.",
+      "type": "Weapon",
+      "image": "sword2.png",
+      "stats": {
+        "initial": 5,
+        "dices": 1,
+        "dicesMod": 0.75
+      },
+      "cost": 1000
+    },
+    {
+      "name": "club1",
+      "displayName": "BFC",
+      "desc": "Reeeeeeeeeeally big club.",
+      "type": "Weapon",
+      "image": "club1.png",
+      "stats": {
+        "initial": 10,
+        "dices": 2,
+        "dicesMod": 0.75
+      },
+      "cost": 1000
+    },
+
+    {
+      "name": "shield1",
+      "displayName": "Broken Door",
+      "desc": "Can't be closed.",
+      "type": "Armor",
+      "image": "shield1.png",
+      "stats": {
+        "initial": 1,
+        "dices": 1,
+        "dicesMod": 0.25
+      },
+      "cost": 100
+    },
+    {
+      "name": "shield3",
+      "displayName": "Wooden Shield",
+      "desc": "Effective against fire (according to the manufacturer).",
+      "type": "Armor",
+      "image": "shield3.png",
+      "stats": {
+        "initial": 3,
+        "dices": 1,
+        "dicesMod": 0.5
+      },
+      "cost": 100
+    },
+    {
+      "name": "shield2",
+      "displayName": "Aegis",
+      "desc": "If only hiding behind a shield would be enough...",
+      "type": "Armor",
+      "image": "shield2.png",
+      "stats": {
+        "initial": 10,
+        "dices": 2,
+        "dicesMod": 1.25
+      },
+      "cost": 10000
+    },
+
+    
+    {
+      "name": "amulet1",
+      "displayName": "Nice Stone",
+      "desc": "Found on the beach.",
+      "type": "Amulet",
+      "image": "amulet1.png",
+      "stats": {
+        "initial": 3,
+        "dices": 1,
+        "dicesMod": 1
+      },
+      "cost": 100
+    },
+    {
+      "name": "amulet2",
+      "displayName": "Amulet of Forgottten God",
+      "desc": "Show your loyalty.",
+      "type": "Amulet",
+      "image": "amulet2.png",
+      "stats": {
+        "initial": 6,
+        "dices": 1,
+        "dicesMod": 1.25
+      },
+      "cost": 1000
+    },
+    {
+      "name": "amulet3",
+      "displayName": "Blessed Necklace",
+      "desc": "Seems to.",
+      "type": "It looks extremely uncomfortable.",
+      "image": "amulet3.png",
+      "stats": {
+        "initial": 0,
+        "dices": 2,
+        "dicesMod": 1
+      },
+      "cost": 10000
     }
   ]
 }
