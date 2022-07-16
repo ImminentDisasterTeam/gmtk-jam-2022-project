@@ -2,6 +2,48 @@
   "dungeons": [
     {
       "levels": [
+        -1000
+      ],
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "breather_chest"
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "breather_chest_gold"
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "risky_heath"
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "heal_health"
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "simpleTrap"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "levels": [
         1
       ],
       "contentPool": [

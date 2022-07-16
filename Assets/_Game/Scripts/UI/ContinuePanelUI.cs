@@ -1,11 +1,10 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.UI;
 using Event = GeneralUtils.Event;
 
 namespace _Game.Scripts.UI {
     public class ContinuePanelUI : UIElement {
-        [SerializeField] private Button _continueButton;
+        [SerializeField] private GameButton _continueButton;
 
         private readonly Action _onContinue;
         public Event OnContinue { get; }
@@ -15,7 +14,7 @@ namespace _Game.Scripts.UI {
         }
 
         private void Awake() {
-            _continueButton.onClick.AddListener(() => _onContinue());
+            _continueButton.OnClick.Subscribe(() => _onContinue());
         }
 
         public void SetEnabled(bool enabled) {

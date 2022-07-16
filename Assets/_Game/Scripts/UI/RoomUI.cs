@@ -18,21 +18,23 @@ namespace _Game.Scripts.UI {
             _rng = rng;
             _onRoomFinished = onRoomFinished;
 
-            switch (data.Type) {
-                case ERoomType.Battle:
-                    StartBattleRoom();
-                    break;
-                case ERoomType.ItemChest:
-                case ERoomType.GoldChest:
-                case ERoomType.Health:
-                    StartEnvironmentRoom();
-                    break;
-                case ERoomType.Empty:
-                    StartEmptyRoom();
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
-            }
+            Show(() => {
+                switch (data.Type) {
+                    case ERoomType.Battle:
+                        StartBattleRoom();
+                        break;
+                    case ERoomType.ItemChest:
+                    case ERoomType.GoldChest:
+                    case ERoomType.Health:
+                        StartEnvironmentRoom();
+                        break;
+                    case ERoomType.Empty:
+                        StartEmptyRoom();
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+            });
         }
 
         private void StartBattleRoom() {
@@ -74,7 +76,9 @@ namespace _Game.Scripts.UI {
             _environmentInteractionPanel.OnContinueStatusChanged.ClearSubscribers();
             _continuePanel.OnContinue.ClearSubscribers();
 
-            _onRoomFinished(finishByDeath);
+            Hide(() => {
+                _onRoomFinished(finishByDeath);
+            });
         }
     }
 }
