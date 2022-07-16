@@ -2,6 +2,8 @@
   "enemies": [
     {
       "name": "blackSpider",
+      "displayName": "Black Spider",
+      "image": "blackSpider.png",
       "health": 20,
       "actionLoop": [
         "blackSpiderAttack",
@@ -11,6 +13,8 @@
 
     {
       "name": "greenSpider",
+      "displayName": "Green Spider",
+      "image": "greenSpider.png",
       "health": 20,
       "actionLoop": [
         "greenSpiderAttack",
@@ -20,12 +24,26 @@
 
     {
       "name": "redSpider",
+      "displayName": "Red Spider",
+      "image": "redSpider.png",
       "health": 20,
       "actionLoop": [
         "redSpiderAttack",
         "redSpiderCharge"
       ]
+    },
+
+    {
+      "name": "queenSpider",
+      "displayName": "Spider Queen",
+      "image": "queenSpider.png",
+      "health": 100,
+      "actionLoop": [
+        "queenSpiderCharge"
+      ]
     }
+
+    
 
 
   ]
