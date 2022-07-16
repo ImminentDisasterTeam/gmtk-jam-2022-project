@@ -6,16 +6,14 @@ using JetBrains.Annotations;
 namespace _Game.Scripts.GamePlay {
     public class Dungeon {
         private readonly DungeonData _data;
-        private readonly Rng _rng;
         private int _currentRoom = -1;
 
-        public Dungeon(DungeonData data, Rng rng) {
+        public Dungeon(DungeonData data) {
             _data = data;
-            _rng = rng;
         }
 
         [CanBeNull]
-        public Room StartNextRoom() {
+        public Room StartNextRoom(Rng rng) {
             if (_currentRoom + 1 >= _data.contentPool.Length) {
                 return null;
             }
@@ -23,7 +21,7 @@ namespace _Game.Scripts.GamePlay {
             _currentRoom++;
 
             var possibleRooms = _data.contentPool[_currentRoom].subPool;
-            var room = _rng.NextWeightedChoice(possibleRooms
+            var room = rng.NextWeightedChoice(possibleRooms
                 .Select(r => (r.type, (float) r.Weight))
                 .ToList());
 
