@@ -78,10 +78,10 @@
       "maxLevel": 4
     },
     {
-      "name": "d6_simple_numbers",
-      "displayName": "SIMPLE Dice",
-      "desc": "",
-      "image": "d6_simple_numbers.png",
+      "name": "d6_prime_numbers",
+      "displayName": "Prime Dice",
+      "desc": "He is the the leader of the dices.",
+      "image": "d6_prime_numbers.png",
       "faces": [
         2, 3, 5, 7, 11, 13
       ],

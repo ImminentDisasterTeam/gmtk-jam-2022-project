@@ -83,7 +83,7 @@
         "chargeHigher": 0,
         "chargeLower": 0,
         "healthHigher": 0,
-        "healthLower": 10,
+        "healthLower": 4,
         "elseAction": "blackSpiderAttack"
       }
     },
@@ -119,7 +119,7 @@
         "chargeHigher": 0,
         "chargeLower": 0,
         "healthHigher": 0,
-        "healthLower": 10,
+        "healthLower": 4,
         "elseAction": "greenSpiderAttack"
       }
     },
@@ -215,7 +215,7 @@
       ],
       "condition": {
         "chargeHigher": 0,
-        "chargeLower": 25,
+        "chargeLower": 20,
         "healthHigher": 0,
         "healthLower": 0,
         "elseAction": "queenSpiderChargedAttack"
