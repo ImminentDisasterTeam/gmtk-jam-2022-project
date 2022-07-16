@@ -1,0 +1,54 @@
+{
+  "actions": [
+    {
+      "name": "spiderAttack",
+      "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "base": 2,
+            "dices": 0,
+            "dicesMod": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "spiderAttackCHARGED",
+      "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "base": 2,
+            "dices": 0,
+            "dicesMod": 0
+          }
+        }
+      ],
+      "condition": {
+        "chargeHigher": 10,
+        "chargeLower": 0,
+        "healthHigher": 0,
+        "healthLower": 0,
+        "else": "spiderCharge"
+      }
+    },
+    {
+      "name": "wait",
+      "subActions": [
+        {
+          "type": "Wait"
+        }
+      ]
+    },
+    {
+      "type": "Defend"
+    },
+    {
+      "type": "Heal"
+    },
+    {
+      "type": "Charge"
+    }
+  ]
+}

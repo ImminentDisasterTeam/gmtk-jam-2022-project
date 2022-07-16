@@ -1,0 +1,92 @@
+{
+  "rooms": [
+    {
+      "name": "spider_battle",
+      "type": "Battle",
+      "contentPool": [
+        [
+          {
+            "type" :"spider"
+          }
+        ]
+      ]
+    },
+    {
+      "name": "more_random_battle",
+      "type": "Battle",
+      "text": "SUCK ASS",
+      "contentPool": [
+        [
+          {
+            "type": "spider",
+            "weight": 4
+          },
+          {
+            "type": "goblin",
+            "weight": 1
+          }
+        ],
+        [
+          {
+            "type": "rat",
+            "weight": 1
+          },
+          {
+            "type": "slime",
+            "weight": 1
+          }
+        ]
+      ]
+    },
+    {
+      "image": "gold_chest.png",
+      "name": "breather_chest",
+      "type": "ItemChest",
+      "check": 5,
+      "content": [],
+      "contentPool": [
+        [
+          {
+            "type": "sword1"
+          }
+        ]
+      ],
+      "hiddenCheck": 15,
+      "hiddenContent": []
+    },
+    {
+      "name": "breather_chest_gold",
+      "type": "GoldChest",
+      "check": 5,
+      "gold": 120,
+      "hiddenCheck": 15,
+      "hiddenGold": 120
+    },
+    {
+      "name": "RISKY",
+      "type": "Health",
+      "check": [
+        6,
+        10
+      ],
+      "healthChange": [
+        -5,
+        0,
+        3
+      ],
+      "mandatory": false
+    },
+    {
+      "name": "simpleTrap",
+      "type": "Health",
+      "check": [
+        8
+      ],
+      "healthChange": [
+        -3,
+        0
+      ],
+      "mandatory": true
+    }
+  ]
+}

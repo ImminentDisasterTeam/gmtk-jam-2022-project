@@ -1,0 +1,15 @@
+{
+  "items": [
+    {
+      "name": "sword1",
+      "type": "Weapon",
+      "image": "sdfsdf.png",
+      "stats": {
+        "base": 1,
+        "dices": 1,
+        "dicesMod": 1
+      },
+      "cost": 100
+    }
+  ]
+}

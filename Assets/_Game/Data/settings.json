@@ -1,0 +1,11 @@
+{
+  "handSize": 3,
+  "deckSize": 8,
+  "inventorySize": 8,
+  "shopInventory": [
+    "sword1"
+  ],
+  "sellMultiplier": 0.3,
+  "goldRetainMultiplier": 0.5,
+  "maxLevel": 10
+}

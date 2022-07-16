@@ -1,0 +1,13 @@
+{
+  "enemies": [
+    {
+      "name": "spider",
+      "health": 5,
+      "actionLoop": [
+        "spiderAttack",
+        "spiderDefend",
+        "wait"
+      ]
+    }
+  ]
+}
