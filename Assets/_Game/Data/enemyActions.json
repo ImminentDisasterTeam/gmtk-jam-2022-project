@@ -30,7 +30,7 @@
         "chargeLower": 0,
         "healthHigher": 0,
         "healthLower": 0,
-        "else": "spiderCharge"
+        "elseAction": "spiderCharge"
       }
     },
     {
