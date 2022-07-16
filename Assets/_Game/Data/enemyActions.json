@@ -6,7 +6,7 @@
         {
           "type": "Attack",
           "stats": {
-            "base": 2,
+            "initial": 2,
             "dices": 0,
             "dicesMod": 0
           }
@@ -19,7 +19,7 @@
         {
           "type": "Attack",
           "stats": {
-            "base": 2,
+            "initial": 2,
             "dices": 0,
             "dicesMod": 0
           }

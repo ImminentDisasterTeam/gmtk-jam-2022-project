@@ -4,17 +4,17 @@
       "name": "default",
       "health": 20,
       "attack": {
-        "base": 3,
+        "initial": 3,
         "dices": 1,
         "dicesMod": 1
       },
       "defence": {
-        "base": 1,
+        "initial": 1,
         "dices": 0,
         "dicesMod": 0
       },
       "interaction": {
-        "base": 2,
+        "initial": 2,
         "dices": 1,
         "dicesMod": 0.75
       }
