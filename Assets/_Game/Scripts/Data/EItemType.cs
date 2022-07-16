@@ -2,7 +2,7 @@
     public enum EItemType {
         Weapon,
         Defence,
-        Interaction,
+        Interaction, //Amulet/ring etc
         HealthPotion
     }
 }
