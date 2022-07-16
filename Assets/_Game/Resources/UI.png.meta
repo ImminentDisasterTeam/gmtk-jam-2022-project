@@ -13,7 +13,7 @@ TextureImporter:
     second: UI_2
   - first:
       213: -9136572144232859775
-    second: item_icon
+    second: UI_3
   - first:
       213: 8586885197115800619
     second: UI_4
@@ -25,7 +25,7 @@ TextureImporter:
     second: UI_6
   - first:
       213: 7843416716369364892
-    second: UI_7
+    second: coin
   - first:
       213: -6595680761151332689
     second: UI_8
@@ -64,37 +64,37 @@ TextureImporter:
     second: UI_19
   - first:
       213: 6620621745411573659
-    second: potion
+    second: UI_20
   - first:
       213: -256003546741158619
-    second: wait
+    second: UI_21
   - first:
       213: 238177201661318622
-    second: UI_22
+    second: wait
   - first:
       213: 9084407170249120912
-    second: UI_23
+    second: d2_all_or_nothing
   - first:
       213: -4464969597253999955
     second: UI_24
   - first:
       213: -7543061489181569089
-    second: UI_25
+    second: d4
   - first:
       213: -3947773304791079134
-    second: UI_26
+    second: d20
   - first:
       213: -7867266084347359734
-    second: UI_27
+    second: d6
   - first:
       213: 3787343402263556702
     second: UI_28
   - first:
       213: 1360550569445208017
-    second: UI_29
+    second: d6_risky
   - first:
       213: 5732017358795156118
-    second: UI_30
+    second: d6_pulse
   - first:
       213: 1925608543531601625
     second: UI_31
@@ -103,31 +103,61 @@ TextureImporter:
     second: UI_32
   - first:
       213: 2950200755348404279
-    second: UI_33
+    second: d4_risky
   - first:
       213: -4657114132291979715
-    second: UI_34
+    second: d4_curse
   - first:
       213: -5079178053783169288
-    second: UI_35
+    second: d4_sadness
   - first:
       213: 6546827368892410583
-    second: UI_36
+    second: d4_lucky
   - first:
       213: -5527499082827161287
-    second: UI_37
+    second: d6_odd
   - first:
       213: 1001184207971911622
-    second: UI_38
+    second: d6_prime_numbers
   - first:
       213: 568254257420953003
-    second: UI_39
+    second: d6_even
   - first:
       213: 7823209138725740554
-    second: UI_40
+    second: amulet1
   - first:
       213: 6499865249175746193
-    second: UI_41
+    second: amulet2
+  - first:
+      213: 4347788266467267333
+    second: amulet3
+  - first:
+      213: 7359777851653371123
+    second: UI_43
+  - first:
+      213: 4155290992980403602
+    second: UI_44
+  - first:
+      213: 8248441185375187369
+    second: sword1
+  - first:
+      213: -3772187427372803828
+    second: sword2
+  - first:
+      213: -1285249541232034538
+    second: club1
+  - first:
+      213: -8081169631480828808
+    second: shield3
+  - first:
+      213: -5435382621212259808
+    second: shield2
+  - first:
+      213: -3160185590587579153
+    second: UI_50
+  - first:
+      213: 5473873561477175044
+    second: shield1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -247,7 +277,7 @@ TextureImporter:
         height: 12
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 1, y: 4, z: 7, w: 4}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -264,11 +294,11 @@ TextureImporter:
         serializedVersion: 2
         x: 32
         y: 240
-        width: 16
+        width: 14
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 2, y: 2, z: 2, w: 2}
+      border: {x: 2, y: 2, z: 0, w: 2}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -280,16 +310,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: item_icon
+      name: UI_3
       rect:
         serializedVersion: 2
         x: 48
         y: 240
-        width: 15
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 1, y: 1, z: 0, w: 1}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -364,13 +394,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_7
+      name: coin
       rect:
         serializedVersion: 2
         x: 0
         y: 224
         width: 16
-        height: 15
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,10 +421,10 @@ TextureImporter:
         x: 16
         y: 224
         width: 16
-        height: 15
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 1, y: 1, z: 1, w: 0}
+      border: {x: 1, y: 1, z: 1, w: 1}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -637,7 +667,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: potion
+      name: UI_20
       rect:
         serializedVersion: 2
         x: 64
@@ -658,10 +688,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wait
+      name: UI_21
       rect:
         serializedVersion: 2
-        x: 96
+        x: 80
         y: 208
         width: 16
         height: 16
@@ -679,11 +709,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_22
+      name: wait
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
+        x: 96
+        y: 208
         width: 16
         height: 16
       alignment: 0
@@ -700,10 +730,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_23
+      name: d2_all_or_nothing
       rect:
         serializedVersion: 2
-        x: 16
+        x: 0
         y: 192
         width: 16
         height: 16
@@ -724,7 +754,7 @@ TextureImporter:
       name: UI_24
       rect:
         serializedVersion: 2
-        x: 32
+        x: 16
         y: 192
         width: 16
         height: 16
@@ -742,10 +772,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_25
+      name: d4
       rect:
         serializedVersion: 2
-        x: 48
+        x: 32
         y: 192
         width: 16
         height: 16
@@ -763,10 +793,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_26
+      name: d20
       rect:
         serializedVersion: 2
-        x: 64
+        x: 48
         y: 192
         width: 16
         height: 16
@@ -784,10 +814,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_27
+      name: d6
       rect:
         serializedVersion: 2
-        x: 96
+        x: 64
         y: 192
         width: 16
         height: 16
@@ -808,8 +838,8 @@ TextureImporter:
       name: UI_28
       rect:
         serializedVersion: 2
-        x: 0
-        y: 176
+        x: 80
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -826,11 +856,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_29
+      name: d6_risky
       rect:
         serializedVersion: 2
-        x: 16
-        y: 176
+        x: 96
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -847,11 +877,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_30
+      name: d6_pulse
       rect:
         serializedVersion: 2
-        x: 0
-        y: 160
+        x: 112
+        y: 192
         width: 16
         height: 16
       alignment: 0
@@ -871,8 +901,8 @@ TextureImporter:
       name: UI_31
       rect:
         serializedVersion: 2
-        x: 16
-        y: 160
+        x: 0
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -892,8 +922,8 @@ TextureImporter:
       name: UI_32
       rect:
         serializedVersion: 2
-        x: 32
-        y: 160
+        x: 16
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -910,11 +940,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_33
+      name: d4_risky
       rect:
         serializedVersion: 2
-        x: 48
-        y: 160
+        x: 32
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -931,11 +961,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_34
+      name: d4_curse
       rect:
         serializedVersion: 2
-        x: 64
-        y: 160
+        x: 48
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -952,11 +982,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_35
+      name: d4_sadness
       rect:
         serializedVersion: 2
-        x: 0
-        y: 144
+        x: 64
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -973,11 +1003,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_36
+      name: d4_lucky
       rect:
         serializedVersion: 2
-        x: 16
-        y: 144
+        x: 80
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -994,11 +1024,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_37
+      name: d6_odd
       rect:
         serializedVersion: 2
-        x: 32
-        y: 144
+        x: 96
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -1015,11 +1045,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_38
+      name: d6_prime_numbers
       rect:
         serializedVersion: 2
-        x: 0
-        y: 128
+        x: 112
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -1036,11 +1066,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_39
+      name: d6_even
       rect:
         serializedVersion: 2
-        x: 16
-        y: 128
+        x: 128
+        y: 176
         width: 16
         height: 16
       alignment: 0
@@ -1057,11 +1087,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_40
+      name: amulet1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 128
+        x: 0
+        y: 160
         width: 16
         height: 16
       alignment: 0
@@ -1078,7 +1108,217 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: UI_41
+      name: amulet2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196b601a109243a50800000000000000
+      internalID: 6499865249175746193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: amulet3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 503946d8462765c30800000000000000
+      internalID: 4347788266467267333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_43
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f4369956fe232660800000000000000
+      internalID: 7359777851653371123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_44
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2952af6742f8aa930800000000000000
+      internalID: 4155290992980403602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a17df45e89587270800000000000000
+      internalID: 8248441185375187369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sword2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c09df3d458f76abc0800000000000000
+      internalID: -3772187427372803828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: club1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 144
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61d712f0a50e92ee0800000000000000
+      internalID: -1285249541232034538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shield3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c29e9390be9df80800000000000000
+      internalID: -8081169631480828808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shield2
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02acf4ccd44a194b0800000000000000
+      internalID: -5435382621212259808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_50
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe428b0e2f3c424d0800000000000000
+      internalID: -3160185590587579153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shield1
       rect:
         serializedVersion: 2
         x: 48
@@ -1092,8 +1332,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 196b601a109243a50800000000000000
-      internalID: 6499865249175746193
+      spriteID: 407df39900b17fb40800000000000000
+      internalID: 5473873561477175044
       vertices: []
       indices: 
       edges: []
