@@ -3,7 +3,7 @@
     {
       "name": "sword1",
       "type": "Weapon",
-      "image": "sdfsdf.png",
+      "image": "sword1.png",
       "stats": {
         "initial": 1,
         "dices": 1,

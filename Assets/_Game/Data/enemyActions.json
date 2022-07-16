@@ -1,7 +1,7 @@
 {
   "actions": [
     {
-      "name": "spiderAttack",
+      "name": "spiderAttack_EXAMPLE",
       "subActions": [
         {
           "type": "Attack",
@@ -14,7 +14,7 @@
       ]
     },
     {
-      "name": "spiderAttackCHARGED",
+      "name": "spiderAttackCHARGED_EXAMPLE",
       "subActions": [
         {
           "type": "Attack",
@@ -49,6 +49,135 @@
     },
     {
       "type": "Charge"
+    },
+
+
+
+
+    {
+      "name": "blackSpiderAttack",
+      "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 2,
+            "dices": 0,
+            "dicesMod": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "blackSpiderDef",
+      "subActions": [
+        {
+          "type": "Defend",
+          "stats": {
+            "initial": 1,
+            "dices": 1,
+            "dicesMod": 0.75
+          }
+        }
+      ],
+      "condition": {
+        "chargeHigher": 0,
+        "chargeLower": 0,
+        "healthHigher": 0,
+        "healthLower": 10,
+        "elseAction": "blackSpiderAttack"
+      }
+    },
+
+
+
+    {
+      "name": "greenSpiderAttack",
+      "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 1,
+            "dices": 1,
+            "dicesMod": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "name": "greenSpiderHeal",
+      "subActions": [
+        {
+          "type": "Heal",
+          "stats": {
+            "initial": 1,
+            "dices": 1,
+            "dicesMod": 0.5
+          }
+        }
+      ],
+      "condition": {
+        "chargeHigher": 0,
+        "chargeLower": 0,
+        "healthHigher": 0,
+        "healthLower": 10,
+        "elseAction": "greenSpiderAttack"
+      }
+    },
+
+
+
+    {
+      "name": "redSpiderAttack",
+      "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 1,
+            "dices": 0,
+            "dicesMod": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "redSpiderCharge",
+      "subActions": [
+        {
+          "type": "Heal",
+          "stats": {
+            "initial": 1,
+            "dices": 1,
+            "dicesMod": 1
+          }
+        }
+      ],
+      "condition": {
+        "chargeHigher": 0,
+        "chargeLower": 15,
+        "healthHigher": 0,
+        "healthLower": 0,
+        "elseAction": "redSpiderChargeAttack"
+      }
+    },
+    {
+      "name": "redSpiderChargeAttack",
+      "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 10,
+            "dices": 1,
+            "dicesMod": 1
+          }
+        }
+      ],
+      "condition": {
+        "chargeHigher": 15,
+        "chargeLower": 0,
+        "healthHigher": 0,
+        "healthLower": 0,
+        "elseAction": "redSpiderAttack"
+      }
     }
   ]
 }
