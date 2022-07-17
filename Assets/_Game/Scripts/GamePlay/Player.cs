@@ -160,7 +160,7 @@ namespace _Game.Scripts.GamePlay {
         }
 
         public void ChangeInteractionSlot([CanBeNull] string itemName) {
-            _data.defenceSlot = itemName;
+            _data.interactSlot = itemName;
             WriteToSave();
         }
 
