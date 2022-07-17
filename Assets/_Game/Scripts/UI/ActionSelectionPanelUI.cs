@@ -26,6 +26,10 @@ namespace _Game.Scripts.UI {
             _defendButton.OnClick.Subscribe(OnDefend);
             _useItemButton.OnClick.Subscribe(OnUseItem);
             _runAwayButton.OnClick.Subscribe(OnRunAway);
+        }
+
+        public void Load() {
+            _playerActionPanel.OnContentsChanged.Unsubscribe(OnActionPanelChanged);
             _playerActionPanel.OnContentsChanged.Subscribe(OnActionPanelChanged);
         }
 

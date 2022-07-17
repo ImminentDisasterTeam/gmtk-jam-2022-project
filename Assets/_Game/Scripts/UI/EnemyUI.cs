@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using _Game.Scripts.Data;
+using DG.Tweening;
 using GeneralUtils;
 using TMPro;
 using UnityEngine;
@@ -31,14 +32,16 @@ namespace _Game.Scripts.UI {
             _allPanelsReadyWaiter.WaitFor(0, onReady);
 
             foreach (var action in actions) {
-                var actionPanel = Instantiate(_actionPanelPrefab, _actionPanelsParent);
+                var actionPanel = Instantiate(_actionPanelPrefab, _actionPanelsParent.transform);
                 actionPanel.Load(action.Type, action.stats);
                 actionPanel.OnContentsChanged.Subscribe(OnPanelChanged);
                 OnPanelChanged(actionPanel);
             }
 
-            LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform) _actionPanelsParent);
-            LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform) transform);
+            LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform) _actionPanelsParent.transform);
+            DOVirtual.DelayedCall(0.05f, () => {
+                LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform) _actionPanelsParent.transform);
+            });
         }
 
         public int[] Roll(Rng rng) {
@@ -75,8 +78,8 @@ namespace _Game.Scripts.UI {
 
         protected DiceActionPanelUI[] GetActionPanels() {
             return Enumerable
-                .Range(0, _actionPanelsParent.childCount)
-                .Select(_actionPanelsParent.GetChild)
+                .Range(0, _actionPanelsParent.transform.childCount)
+                .Select(_actionPanelsParent.transform.GetChild)
                 .Select(t => t.GetComponent<DiceActionPanelUI>())
                 .Where(c => c != null)
                 .ToArray();
