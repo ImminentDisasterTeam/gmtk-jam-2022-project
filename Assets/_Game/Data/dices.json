@@ -96,7 +96,7 @@
     {
       "name": "d6_prime_numbers",
       "displayName": "Prime Dice",
-      "desc": "He is the the leader of the dices.",
+      "desc": "He is the the leader of the dice.",
       "image": "d6_prime_numbers",
       "faces": [
         2, 3, 5, 7, 11, 13
