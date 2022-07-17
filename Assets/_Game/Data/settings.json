@@ -14,8 +14,8 @@
     "amulet2",
     "amulet3"
   ],
-  "sellMultiplier": 0.3,
-  "goldRetainMultiplier": 0.5,
+  "sellMultiplier": 0.4,
+  "goldRetainMultiplier": 0.6,
   "maxLevel": 7,
   "initialDices": [
     "d4",
