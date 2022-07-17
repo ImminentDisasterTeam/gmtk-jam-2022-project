@@ -117,8 +117,12 @@ namespace _Game.Scripts.GamePlay {
         }
 
         public void Reset(Rng rng, bool byDeath = false) {
-            // TODO HANDLE DEATH
+            var oldData = _data;
             _data = CreateNewData(rng);
+            if (byDeath) {
+                _data.dices = oldData.dices;
+                _data.money = (int) (oldData.money * DataHolder.Instance.GetSettings().goldRetainMultiplier);
+            }
             PostLoad();
         }
 
