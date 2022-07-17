@@ -489,7 +489,7 @@
         {
           "type": "Defend",
           "stats": {
-            "initial": 10,
+            "initial": 5,
             "dices": 1,
             "dicesMod": 1
           }
