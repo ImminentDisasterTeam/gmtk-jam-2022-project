@@ -7,11 +7,11 @@
   ],
   "sellMultiplier": 0.3,
   "goldRetainMultiplier": 0.5,
-  "maxLevel": 10,
+  "maxLevel": 7,
   "initialDices": [
     "d4",
     "d4",
     "d6",
-    "d6"
+    "d6_fib"
   ]
 }
