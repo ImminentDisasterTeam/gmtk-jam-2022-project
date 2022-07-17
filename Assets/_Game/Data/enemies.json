@@ -142,7 +142,7 @@
       "name": "Golem",
       "displayName": "Golem",
       "image": "Golem",
-      "health": 250,
+      "health": 500,
       "actionLoop": [
         "GolemAttack1",
         "GolemDef1",

@@ -100,10 +100,6 @@
         {
           "subPool": [
             {
-              "type": "two_random_spider_battle",
-              "weight": 5
-            },
-            {
               "type": "breather_chest_gold",
               "weight": 1
             },
@@ -114,6 +110,10 @@
             {
               "type": "simpleTrap",
               "weight": 1
+            },
+            {
+              "type": "easy_money",
+              "weight": 2
             }
           ]
         },
@@ -137,7 +137,7 @@
             },
             {
               "type": "easy_money",
-              "weight": 1
+              "weight": 3
             }
           ]
         },

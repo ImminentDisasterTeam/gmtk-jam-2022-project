@@ -130,6 +130,7 @@
     {
       "name": "one_black_spider_battle",
       "type": "Battle",
+      "text": "hello",
       "contentPool": [
         {
           "subPool": [
