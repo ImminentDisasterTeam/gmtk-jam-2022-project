@@ -142,17 +142,14 @@
       "name": "Golem",
       "displayName": "Golem",
       "image": "Golem",
-      "health": 50,
+      "health": 500,
       "actionLoop": [
-        "",
+        "wait",
         "wait",
         "wait",
         "wait"
       ]
     }
-
-    
-
 
   ]
 }

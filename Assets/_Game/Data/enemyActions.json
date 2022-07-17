@@ -509,6 +509,20 @@
           }
         }
       ]
+    },
+
+    {
+      "name": "GolemAttack",
+      "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 100,
+            "dices": 1,
+            "dicesMod": 1
+          }
+        }
+      ]
     }
 
     

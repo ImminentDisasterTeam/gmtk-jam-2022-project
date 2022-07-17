@@ -9,7 +9,7 @@
         {
           "subPool": [
             {
-              "type": "sword1_amulet1_chest"
+              "type": "random2_chest"
             }
           ]
         },
@@ -489,7 +489,7 @@
         {
           "subPool": [
             {
-              "type": "random2_chest",
+              "type": "random3_chest",
               "weight": 18
             },
             {

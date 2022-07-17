@@ -318,7 +318,7 @@
               "type": "sword2"
             },
             {
-              "type": "amulet2"
+              "type": "UI_32"
             }
           ]
         }
@@ -331,7 +331,7 @@
               "type": "shield2"
             },
             {
-              "type": "sword2"
+              "type": "sword3"
             },
             {
               "type": "amulet2"
@@ -355,7 +355,7 @@
               "type": "shield3"
             },
             {
-              "type": "sword3"
+              "type": "club1"
             },
             {
               "type": "amulet3"

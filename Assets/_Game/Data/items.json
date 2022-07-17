@@ -27,6 +27,19 @@
       "cost": 1000
     },
     {
+      "name": "sword3",
+      "displayName": "Toxic Sword",
+      "desc": "Do not touch the blade.",
+      "type": "Weapon",
+      "image": "sword3",
+      "stats": {
+        "initial": 25,
+        "dices": 1,
+        "dicesMod": 0.25
+      },
+      "cost": 1000
+    },
+    {
       "name": "club1",
       "displayName": "BFC",
       "desc": "Reeeeeeeeeeally big club.",
@@ -103,7 +116,20 @@
       "stats": {
         "initial": 6,
         "dices": 1,
-        "dicesMod": 1.25
+        "dicesMod": 1
+      },
+      "cost": 1000
+    },
+    {
+      "name": "UI_32",
+      "displayName": "Emerald Ring",
+      "desc": "The inscription on the ring: 'replica'.",
+      "type": "Interaction",
+      "image": "UI_32",
+      "stats": {
+        "initial": 15,
+        "dices": 2,
+        "dicesMod": 0.1
       },
       "cost": 1000
     },
@@ -116,7 +142,7 @@
       "stats": {
         "initial": 0,
         "dices": 2,
-        "dicesMod": 1
+        "dicesMod": 1.5
       },
       "cost": 10000
     }
