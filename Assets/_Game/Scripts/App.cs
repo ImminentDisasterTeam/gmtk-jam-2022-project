@@ -1,18 +1,22 @@
-﻿using _Game.Scripts.Data;
+﻿using System;
+using _Game.Scripts.GamePlay;
+using _Game.Scripts.UI;
+using GeneralUtils;
 using UnityEngine;
 
 namespace _Game.Scripts {
     public class App : MonoBehaviour {
+        [SerializeField] private MainGameMenuUI _mainGameMenu;
+
         private void Start() {
-            var dices = DataHolder.Instance.GetDices();
-            var dungeons = DataHolder.Instance.GetDungeons();
-            var enemies = DataHolder.Instance.GetEnemies();
-            var enemyActions = DataHolder.Instance.GetEnemyActions();
-            var items = DataHolder.Instance.GetItems();
-            var players = DataHolder.Instance.GetPlayers();
-            var rooms = DataHolder.Instance.GetRooms();
-            var settings = DataHolder.Instance.GetSettings();
             Debug.Log("Start");
+
+            var stamp = (int) new DateTimeOffset(DateTime.UtcNow).ToUnixTimeSeconds();
+            var rng = new Rng(stamp);
+            Player.LoadPlayer(rng);
+
+            _mainGameMenu.Load(rng);
+            _mainGameMenu.Show();
         }
     }
 }

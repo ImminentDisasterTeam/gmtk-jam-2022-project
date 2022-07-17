@@ -1,4 +1,5 @@
-﻿using _Game.Scripts.Data;
+﻿using System;
+using _Game.Scripts.Data;
 using _Game.Scripts.GamePlay;
 using GeneralUtils;
 using TMPro;
@@ -20,7 +21,7 @@ namespace _Game.Scripts.UI {
         [SerializeField] private RoomUI _roomUI;
         [SerializeField] private DungeonDiceUI _dungeonDiceUI;
 
-        private void Start() {
+        private void OnEnable() {
             _startButton.onClick.AddListener(OnButtonClick);
             ToggleUI(true);
             Player.LoadPlayer(new Rng(42));
@@ -29,36 +30,41 @@ namespace _Game.Scripts.UI {
         private void OnButtonClick() {
             var dungeonNumber = int.Parse(_dungeonNumberInput.text);
             var randomSeed = int.Parse(_randomSeedInput.text);
+            var rng = new Rng(randomSeed);
 
             var dungeons = DataHolder.Instance.GetDungeons();
             if (dungeons.Length <= dungeonNumber) {
                 Debug.LogError($"Index {dungeonNumber} is out of range: only got {dungeons.Length} dungeons!");
                 return;
             }
+            
+            StartDungeon(dungeons[dungeonNumber], rng, null, false);
+        }
 
+        public void StartDungeon(DungeonData dungeonData, Rng rng, Action<bool> onDone, bool disableThisUI = true) {
             Player.Instance.InDungeon = true;
 
-            var rng = new Rng(randomSeed);
-            var dungeon = new Dungeon(dungeons[dungeonNumber]);
+            var dungeon = new Dungeon(dungeonData);
             new DungeonRunner(dungeon, rng, _roomUI.StartRoom, finishedByDeath => {
                 Debug.LogWarning("FINISHED DUNGEON." + (finishedByDeath ? " DIED." : ""));
 
                 Player.Instance.InDungeon = false;
                 if (finishedByDeath) {
-                    Player.Instance.Reset(rng);
+                    Player.Instance.Reset(rng, true);
                 }
 
                 _dungeonDiceUI.Hide();
-                ToggleUI(true);
+                ToggleUI(true, disableThisUI);
+                onDone?.Invoke(finishedByDeath);
             });
 
-            ToggleUI(false);
+            ToggleUI(false, disableThisUI);
             _dungeonDiceUI.Load(Player.Instance.Dices, DataHolder.Instance.GetSettings().handSize, rng);
             _dungeonDiceUI.Show();
         }
 
-        private void ToggleUI(bool isStartingUI) {
-            _startGroup.SetActive(isStartingUI);
+        private void ToggleUI(bool isStartingUI, bool forceDisable = true) {
+            _startGroup.SetActive(isStartingUI && !forceDisable);
             _gameUI.SetActive(!isStartingUI);
         }
     }

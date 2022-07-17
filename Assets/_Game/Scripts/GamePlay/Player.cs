@@ -34,6 +34,21 @@ namespace _Game.Scripts.GamePlay {
                 WriteToSave();
             }
         }
+        public int Level {
+            get => _data. level;
+            private set {
+                _data.level = value;
+                WriteToSave();
+            }
+        }
+
+        public bool HasDicesChoice {
+            get => _data.hasDicesChoice;
+            set {
+                _data.hasDicesChoice = value;
+                WriteToSave();
+            }
+        }
 
         public void RaiseEscapeThreshold() {
             EscapeThreshold += DataHolder.Instance.GetSettings().escapeThresholdStep;
@@ -61,6 +76,8 @@ namespace _Game.Scripts.GamePlay {
                     StatsPanelUI.Instance.SetEnabled(false);
                 } else if (wasInDungeon && !value) {
                     StatsPanelUI.Instance.SetEnabled(true);
+                    HasDicesChoice = true;
+                    Level++;
                     ResetHealthToMax();
                     WriteToSave();
                 }
@@ -77,7 +94,8 @@ namespace _Game.Scripts.GamePlay {
             PostLoad();
         }
 
-        public void Reset(Rng rng) {
+        public void Reset(Rng rng, bool byDeath = false) {
+            // TODO HANDLE DEATH
             _data = CreateNewData(rng);
             PostLoad();
         }
@@ -134,6 +152,7 @@ namespace _Game.Scripts.GamePlay {
                 maxHealth = playerData.maxHealth,
                 image = playerData.image,
                 escapeThreshold = settings.initialEscapeThreshold,
+                level = 1,
                 attackSlot = "",
                 defenceSlot = "",
                 interactSlot = "",
@@ -141,7 +160,8 @@ namespace _Game.Scripts.GamePlay {
                 defaultDefence = playerData.defence,
                 defaultInteraction = playerData.interaction,
                 dices = settings.initialDices,
-                inventory = Array.Empty<string>()
+                inventory = Array.Empty<string>(),
+                hasDicesChoice = false
             };
 
             Array.Resize(ref data.dices, settings.deckSize);
