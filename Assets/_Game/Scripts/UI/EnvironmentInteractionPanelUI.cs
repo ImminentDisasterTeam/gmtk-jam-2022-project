@@ -137,11 +137,11 @@ namespace _Game.Scripts.UI {
                     return result < check[0];
                 }
 
-                if (index == check.Length - 1) {
-                    return result >= check[index];
+                if (index == check.Length) {
+                    return result >= check[index - 1];
                 }
 
-                return result < check[index + 1] && result >= check[index];
+                return result < check[index] && result >= check[index - 1];
             }
 
             static string Health(int healthChange) {
