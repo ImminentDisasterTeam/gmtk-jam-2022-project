@@ -1,6 +1,55 @@
 {
   "rooms": [
     {
+      "name": "juniorLavamental_battle",
+      "type": "Battle",
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "juniorLavamental"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "one_random_skeleton_battle",
+      "type": "Battle",
+      "text": "",
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "greenSpider",
+              "weight": 1
+            },
+            {
+              "type": "blackSpider",
+              "weight": 1
+            },
+            {
+              "type": "redSpider",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "royal_skeleton_battle",
+      "type": "Battle",
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "royalSkeleton"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "one_white_skeleton_battle",
       "type": "Battle",
       "contentPool": [
@@ -78,6 +127,20 @@
         }
       ]
     },
+    
+    {
+      "name": "one_red_evil_spider_battle",
+      "type": "Battle",
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "redEvilSpider"
+            }
+          ]
+        }
+      ]
+    },
     {
       "name": "spider_queen_battle",
       "type": "Battle",
@@ -132,7 +195,8 @@
     },
     {
       "name": "sword1_amulet1_chest",
-      "image": "gold_chest",
+      "image": "Chest",
+      "image2": "ChestOpened",
       "type": "ItemChest",
       "check": [
         5
@@ -159,7 +223,8 @@
     },
     {
       "name": "random1_chest",
-      "image": "gold_chest",
+      "image": "Chest",
+      "image2": "ChestOpened",
       "type": "ItemChest",
       "check": [
         5
@@ -196,10 +261,90 @@
         }
       ]
     },
+    {
+      "name": "random2_chest",
+      "image": "Chest",
+      "image2": "ChestOpened",
+      "type": "ItemChest",
+      "check": [
+        15
+      ],
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "shield2"
+            },
+            {
+              "type": "sword2"
+            },
+            {
+              "type": "amulet2"
+            }
+          ]
+        }
+      ],
+      "hiddenCheck": 30,
+      "hiddenContentPool": [
+        {
+          "subPool": [
+            {
+              "type": "shield2"
+            },
+            {
+              "type": "sword2"
+            },
+            {
+              "type": "amulet2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "random3_chest",
+      "image": "Chest",
+      "image2": "ChestOpened",
+      "type": "ItemChest",
+      "check": [
+        25
+      ],
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "shield3"
+            },
+            {
+              "type": "sword3"
+            },
+            {
+              "type": "amulet3"
+            }
+          ]
+        }
+      ],
+      "hiddenCheck": 40,
+      "hiddenContentPool": [
+        {
+          "subPool": [
+            {
+              "type": "shield3"
+            },
+            {
+              "type": "sword3"
+            },
+            {
+              "type": "amulet3"
+            }
+          ]
+        }
+      ]
+    },
     
     {
       "name": "risky_health",
-      "image": "simpleTrapInFontain",
+      "image": "FontainTrap",
       "type": "Health",
       "check": [
         6,
@@ -209,6 +354,21 @@
         -15,
         0,
         30
+      ],
+      "mandatory": false
+    },
+    {
+      "name": "risky_health2",
+      "image": "FontainTrap",
+      "type": "Health",
+      "check": [
+        6,
+        10
+      ],
+      "healthChange": [
+        -30,
+        0,
+        60
       ],
       "mandatory": false
     },
@@ -240,7 +400,7 @@
     },
     {
       "name": "simpleTrap2",
-      "image": "simpleTrap",
+      "image": "simpleTrap2",
       "type": "Health",
       "check": [
         10
@@ -253,12 +413,12 @@
     },
     {
       "name": "empty",
-      "image": "empty",
       "type": "Empty"
     },
     {
       "name": "breather_chest_gold",
-      "image": "gold_chest",
+      "image": "BigChest",
+      "image2": "BigChestOpened",
       "type": "GoldChest",
       "check": [
         5
@@ -269,7 +429,8 @@
     },
     {
       "name": "easy_money",
-      "image": "gold_chest",
+      "image": "BigChest",
+      "image2": "BigChestOpened",
       "type": "GoldChest",
       "check": [
         1
@@ -280,7 +441,8 @@
     },
     {
       "name": "jackpot",
-      "image": "gold_chest",
+      "image": "BigChest",
+      "image2": "BigChestOpened",
       "type": "GoldChest",
       "check": [
         5
@@ -291,7 +453,8 @@
     },
     {
       "name": "minijackpot",
-      "image": "gold_chest",
+      "image": "BigChest",
+      "image2": "BigChestOpened",
       "type": "GoldChest",
       "check": [
         5

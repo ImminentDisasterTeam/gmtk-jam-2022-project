@@ -11,6 +11,8 @@
   "initialDices": [
     "d4",
     "d4",
+    "d4_sadness",
+    "d6",
     "d6",
     "d6_fib"
   ],

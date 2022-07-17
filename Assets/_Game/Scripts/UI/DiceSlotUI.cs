@@ -12,14 +12,20 @@ namespace _Game.Scripts.UI {
         [SerializeField] private Image _diceImage;
         [SerializeField] private GameObject _diceRoll;
         [SerializeField] private TextMeshProUGUI _diceRollText;
-        // TODO tooltip
 
         public override EType Type => EType.Dice;
 
-        public override void SwapWith(SlotUI other) {
+        protected override void PerformSwapWith(SlotUI other) {
             var otherSlot = (DiceSlotUI) other;
             (otherSlot.Dice, Dice) = (Dice, otherSlot.Dice);
         }
+
+        protected override void LoadTooltip(Tooltip tooltip) {
+            var diceTooltip = (DiceTooltip) tooltip;
+            diceTooltip.Load(Dice);
+        }
+
+        protected override bool IsEmpty() => Dice == null;
 
         private readonly Action<DiceSlotUI, Dice, Dice> _onContentsChanged;
         public Event<DiceSlotUI, Dice, Dice> OnContentsChanged { get; }

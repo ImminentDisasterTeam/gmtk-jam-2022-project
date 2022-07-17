@@ -78,16 +78,64 @@
       "image": "blackSkeleton",
       "health": 13,
       "actionLoop": [
-        "blackSkeletonAttack"
+        "blackSkeletonAttack",
+        "wait",
+        "wait"
       ]
     },
     {
-      "name": "blackSkeleton",
-      "displayName": "Skeleton",
-      "image": "blackSkeleton",
-      "health": 13,
+      "name": "royalSkeleton",
+      "displayName": "Royal Skeleton",
+      "image": "royalSkeleton",
+      "health": 40,
       "actionLoop": [
-        "blackSkeletonAttack"
+        "royalSkeletonAttack",
+        "wait",
+        "wait",
+        "wait"
+      ]
+    },
+
+    {
+      "name": "juniorLavamental",
+      "displayName": "Junior Lavamental",
+      "image": "juniorLavamental",
+      "health": 5,
+      "actionLoop": [
+        "juniorLavamentalCharge"
+      ]
+    },
+    {
+      "name": "middleLavamental",
+      "displayName": "Middle Lavamental",
+      "image": "middleLavamental",
+      "health": 10,
+      "actionLoop": [
+        "",
+        ""
+      ]
+    },
+    {
+      "name": "seniorLavamental",
+      "displayName": "Senior Lavamental",
+      "image": "seniorLavamental",
+      "health": 25,
+      "actionLoop": [
+        "",
+        "wait",
+        "wait"
+      ]
+    },
+    {
+      "name": "Golem",
+      "displayName": "Golem",
+      "image": "Golem",
+      "health": 50,
+      "actionLoop": [
+        "",
+        "wait",
+        "wait",
+        "wait"
       ]
     }
 

@@ -343,7 +343,90 @@
           }
         }
       ]
+    }, 
+
+    {
+      "name": "royalSkeletonAttack",
+      "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 8,
+            "dices": 1,
+            "dicesMod": 0.75
+          }
+        },
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 8,
+            "dices": 1,
+            "dicesMod": 0.75
+          }
+        }
+      ]
+    },
+
+
+
+    {
+      "name": "juniorLavamentalChargedAttack",
+      "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 40,
+            "dices": 0,
+            "dicesMod": 0
+          }
+        },
+        {
+          "type": "Heal",
+          "stats": {
+            "initial": -100,
+            "dices": 0,
+            "dicesMod": 0
+          }
+        }
+      ],
+      "condition": {
+        "chargeHigher": 1,
+        "chargeLower": 0,
+        "healthHigher": 0,
+        "healthLower": 0,
+        "elseAction": "juniorLavamentalCharge"
+      }
+    },
+    {
+      "name": "juniorLavamentalCharge",
+      "subActions": [
+        {
+          "type": "Charge",
+          "stats": {
+            "initial": 0,
+            "dices": 1,
+            "dicesMod": 1
+          }       
+        },
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 1,
+            "dices": 0,
+            "dicesMod": 0
+          }
+        }
+      ],
+      "condition": {
+        "chargeHigher": 0,
+        "chargeLower": 1,
+        "healthHigher": 0,
+        "healthLower": 0,
+        "elseAction": "juniorLavamentalChargedAttack"
+      }
     }
+
+    
 
   ]
 }

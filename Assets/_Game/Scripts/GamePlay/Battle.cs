@@ -46,6 +46,7 @@ namespace _Game.Scripts.GamePlay {
 
             onPlayerReady = ready => _syncWaiter.Value += ready ? 1 : -1;
 
+            _allowContinue(false);
             StartTurn();
         }
 
@@ -82,6 +83,7 @@ namespace _Game.Scripts.GamePlay {
         }
 
         private void OnContinue() {
+            _allowContinue(false);
             _onContinue.Unsubscribe(OnContinue);
 
             var enemyAttack = 0;

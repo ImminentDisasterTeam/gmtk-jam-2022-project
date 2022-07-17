@@ -14,10 +14,17 @@ namespace _Game.Scripts.UI {
 
         public override EType Type { get; }
 
-        public override void SwapWith(SlotUI other) {
+        protected override void PerformSwapWith(SlotUI other) {
             var otherSlot = (ItemSlotUI) other;
             (otherSlot.Item, Item) = (Item, otherSlot.Item);
         }
+
+        protected override void LoadTooltip(Tooltip tooltip) {
+            var itemTooltip = (ItemTooltip) tooltip;
+            itemTooltip.Load(Item);
+        }
+
+        protected override bool IsEmpty() => Item == null;
 
         public override bool CanTakeFrom(SlotUI other) {
             var otherSlot = (ItemSlotUI) other;

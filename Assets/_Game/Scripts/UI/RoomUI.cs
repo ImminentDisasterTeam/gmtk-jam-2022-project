@@ -4,6 +4,7 @@ using _Game.Scripts.GamePlay;
 using GeneralUtils;
 using GeneralUtils.Processes;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace _Game.Scripts.UI {
     public class RoomUI : UIElement {
@@ -13,15 +14,25 @@ namespace _Game.Scripts.UI {
         [SerializeField] private DiceActionPanelUI _playerActionPanel;
         [SerializeField] private EnemyUI _enemyUI;
         [SerializeField] private GameObject _battleUI;
+        [SerializeField] private Image _background;
+        [SerializeField] private Image _object;
 
         // private RoomData _data;
         private Rng _rng;
         private Action<bool> _onRoomFinished;
 
-        public void StartRoom(RoomData data, Rng rng, Action<bool> onRoomFinished) {
+        public void StartRoom(RoomData data, Rng rng, Sprite background, Action<bool> onRoomFinished) {
             // _data = data;
             _rng = rng;
             _onRoomFinished = onRoomFinished;
+            _background.sprite = background;
+
+            var hasObject = !string.IsNullOrEmpty(data.image);
+            _object.gameObject.SetActive(hasObject);
+            if (hasObject) {
+                _object.sprite = SpriteHolder.Instance.GetSprite(data.image);
+                _object.SetNativeSize();
+            }
 
             Show(() => {
                 switch (data.Type) {
@@ -42,7 +53,7 @@ namespace _Game.Scripts.UI {
 
         private void StartBattleRoom(RoomData data, Rng rng) {
             _battleUI.SetActive(true);
-            EnableContinue(false);
+            // EnableContinue(false);
 
             _actionSelectionPanel.Load();
             _actionSelectionPanel.Show();
