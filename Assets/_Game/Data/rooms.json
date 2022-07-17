@@ -387,7 +387,7 @@
     },
     {
       "name": "simpleTrap2",
-      "image": "simpleTrap",
+      "image": "simpleTrap2",
       "type": "Health",
       "check": [
         10
