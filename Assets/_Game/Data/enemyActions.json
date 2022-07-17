@@ -512,19 +512,139 @@
     },
 
     {
-      "name": "GolemAttack",
+      "name": "GolemAttack5",
       "subActions": [
         {
           "type": "Attack",
           "stats": {
-            "initial": 100,
+            "initial": 15,
+            "dices": 2,
+            "dicesMod": 5
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "GolemAttack1",
+      "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 5,
             "dices": 1,
             "dicesMod": 1
           }
         }
       ]
-    }
+    },
 
+    {
+      "name": "GolemAttack2",
+      "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 10,
+            "dices": 1,
+            "dicesMod": 2
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "GolemAttack3",
+      "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 10,
+            "dices": 1,
+            "dicesMod": 3
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "GolemAttack4",
+      "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 10,
+            "dices": 1,
+            "dicesMod": 4
+          }
+        }
+      ]
+    },
+    {
+      "name": "GolemDef1",
+      "subActions": [
+        {
+          "type": "Defend",
+          "stats": {
+            "initial": 10,
+            "dices": 1,
+            "dicesMod": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "GolemDef2",
+      "subActions": [
+        {
+          "type": "Defend",
+          "stats": {
+            "initial": 10,
+            "dices": 1,
+            "dicesMod": 2
+          }
+        }
+      ]
+    },
+    {
+      "name": "GolemDef3",
+      "subActions": [
+        {
+          "type": "Defend",
+          "stats": {
+            "initial": 10,
+            "dices": 1,
+            "dicesMod": 3
+          }
+        }
+      ]
+    },
+    {
+      "name": "GolemDef4",
+      "subActions": [
+        {
+          "type": "Defend",
+          "stats": {
+            "initial": 10,
+            "dices": 1,
+            "dicesMod": 4
+          }
+        }
+      ]
+    },
+    {
+      "name": "GolemDef5",
+      "subActions": [
+        {
+          "type": "Defend",
+          "stats": {
+            "initial": 10,
+            "dices": 2,
+            "dicesMod": 5
+          }
+        }
+      ]
+    }
     
 
 

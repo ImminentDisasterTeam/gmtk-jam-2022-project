@@ -142,10 +142,18 @@
       "name": "Golem",
       "displayName": "Golem",
       "image": "Golem",
-      "health": 500,
+      "health": 250,
       "actionLoop": [
-        "wait",
-        "wait",
+        "GolemAttack1",
+        "GolemDef1",
+        "GolemAttack2",
+        "GolemDef2",        
+        "GolemAttack3",
+        "GolemDef3",
+        "GolemAttack4",
+        "GolemDef4",
+        "GolemAttack5",
+        "GolemDef5",
         "wait",
         "wait"
       ]
