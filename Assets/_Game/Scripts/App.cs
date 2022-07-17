@@ -6,8 +6,8 @@ using UnityEngine;
 
 namespace _Game.Scripts {
     public class App : MonoBehaviour {
-        [SerializeField] private MainGameMenuUI _mainGameMenu;
-
+        [SerializeField] private MainMenuUI _mainMenu;
+        
         private void Start() {
             Debug.Log("Start");
 
@@ -15,8 +15,8 @@ namespace _Game.Scripts {
             var rng = new Rng(stamp);
             Player.LoadPlayer(rng);
 
-            _mainGameMenu.Load(rng);
-            _mainGameMenu.Show();
+            _mainMenu.Load(rng);
+            _mainMenu.Show();
             SoundHolder.Instance.PlayMusic("main");
         }
     }

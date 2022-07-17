@@ -16,6 +16,7 @@ namespace _Game.Scripts.Data {
         public StatsData defaultDefence;
         public StatsData defaultInteraction;
         public string[] dices;
+        public string[] thisLevelDices;
         public string[] inventory;
         public bool hasDicesChoice;
     }
