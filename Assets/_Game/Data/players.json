@@ -2,11 +2,11 @@
   "players": [
     {
       "name": "default",
-      "maxHealth": 60,
+      "maxHealth": 120,
       "attack": {
         "initial": 1,
         "dices": 1,
-        "dicesMod": 0.5
+        "dicesMod": 1
       },
       "defence": {
         "initial": 1,

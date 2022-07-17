@@ -7,9 +7,9 @@
       "type": "Weapon",
       "image": "sword1",
       "stats": {
-        "initial": 2,
+        "initial": 4,
         "dices": 1,
-        "dicesMod": 1
+        "dicesMod": 0.75
       },
       "cost": 100
     },

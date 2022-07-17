@@ -36,7 +36,7 @@
       "name": "redEvilSpider",
       "displayName": "Red Spider",
       "image": "redSpider",
-      "health": 8,
+      "health": 12,
       "actionLoop": [
         "redEvilSpiderChargeAttack",
         "redEvilSpiderCharge"
@@ -47,7 +47,7 @@
       "name": "queenSpider",
       "displayName": "Spider Queen",
       "image": "queenSpider",
-      "health": 20,
+      "health": 30,
       "actionLoop": [
         "queenSpiderCharge"
       ]
