@@ -207,7 +207,7 @@
       "faces": [
         20
       ],
-      "minLevel": 7,
+      "minLevel": 6,
       "maxLevel": 7
     },
 
@@ -242,7 +242,7 @@
       "faces": [
         10, 20, 30, 40, 50, 60
       ],
-      "minLevel": 7,
+      "minLevel": 6,
       "maxLevel": 7
     },
 
@@ -265,7 +265,7 @@
       "faces": [
         8, 13, 21, 34, 55, 89
       ],
-      "minLevel": 7,
+      "minLevel": 6,
       "maxLevel": 7
     }
 

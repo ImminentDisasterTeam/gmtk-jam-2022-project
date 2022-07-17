@@ -9,7 +9,7 @@
         {
           "subPool": [
             {
-              "type": "sword1_amulet1_chest"
+              "type": "random2_chest"
             }
           ]
         },
@@ -80,10 +80,6 @@
         {
           "subPool": [
             {
-              "type": "two_random_spider_battle",
-              "weight": 5
-            },
-            {
               "type": "breather_chest_gold",
               "weight": 1
             },
@@ -94,15 +90,15 @@
             {
               "type": "simpleTrap",
               "weight": 1
+            },
+            {
+              "type": "easy_money",
+              "weight": 1
             }
           ]
         },
         {
           "subPool": [
-            {
-              "type": "two_random_spider_battle",
-              "weight": 5
-            },
             {
               "type": "breather_chest_gold",
               "weight": 1
@@ -114,6 +110,10 @@
             {
               "type": "simpleTrap",
               "weight": 1
+            },
+            {
+              "type": "easy_money",
+              "weight": 2
             }
           ]
         },
@@ -134,6 +134,10 @@
             {
               "type": "simpleTrap",
               "weight": 1
+            },
+            {
+              "type": "easy_money",
+              "weight": 3
             }
           ]
         },
@@ -141,7 +145,7 @@
           "subPool": [
             {
               "type": "two_random_spider_battle",
-              "weight": 4
+              "weight": 7
             },
             {
               "type": "sword1_amulet1_chest",
@@ -154,6 +158,10 @@
             {
               "type": "heal_health",
               "weight": 2
+            },
+            {
+              "type": "easy_money",
+              "weight": 1
             }
           ]
         },
@@ -194,6 +202,10 @@
             {
               "type": "random1_chest",
               "weight": 1
+            },
+            {
+              "type": "easy_money",
+              "weight": 1
             }
           ]
         },
@@ -233,6 +245,10 @@
             },
             {
               "type": "risky_health",
+              "weight": 1
+            },
+            {
+              "type": "easy_money",
               "weight": 1
             }
           ]
@@ -274,6 +290,10 @@
             {
               "type": "simpleTrap2",
               "weight": 1
+            },
+            {
+              "type": "easy_money",
+              "weight": 1
             }
           ]
         },
@@ -298,6 +318,10 @@
             {
               "type": "empty",
               "weight": 1
+            },
+            {
+              "type": "easy_money",
+              "weight": 1
             }
           ]
         },
@@ -313,6 +337,10 @@
             },
             {
               "type": "risky_health",
+              "weight": 1
+            },
+            {
+              "type": "easy_money",
               "weight": 1
             }
           ]
@@ -366,14 +394,6 @@
             {
               "type": "risky_health2",
               "weight": 1
-            }
-          ]
-        },
-        {
-          "subPool": [
-            {
-              "type": "one_grey_skeleton_battle",
-              "weight": 9
             }
           ]
         },
@@ -449,10 +469,6 @@
         {
           "subPool": [
             {
-              "type": "middleLavamental_battle",
-              "weight": 1
-            },
-            {
               "type": "simpleTrap2",
               "weight": 1
             },
@@ -489,7 +505,7 @@
         {
           "subPool": [
             {
-              "type": "random2_chest",
+              "type": "random3_chest",
               "weight": 18
             },
             {
@@ -526,7 +542,44 @@
       "levels": [
         6
       ],
-      "contentPool": []
+      "contentPool": [
+
+
+
+        
+        {
+          "subPool": [
+            {
+              "type": "simpleTrap2",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "jackpot",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "heal_health",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "golem_battle",
+              "weight": 1
+            }
+          ]
+        }
+      ]
     }
   ]
 }

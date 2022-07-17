@@ -4,7 +4,15 @@
   "inventorySize": 8,
   "dicesPerLevel": 3,
   "shopInventory": [
-    "sword1"
+    "sword1",
+    "sword2",
+    "club1",
+    "shield1",
+    "shield2",
+    "shield3",
+    "amulet1",
+    "amulet2",
+    "amulet3"
   ],
   "sellMultiplier": 0.3,
   "goldRetainMultiplier": 0.5,
