@@ -93,7 +93,7 @@
     },
     {
       "name": "breather_chest",
-      "image": "gold_chest.png",
+      "image": "gold_chest",
       "type": "ItemChest",
       "check": [
         5
@@ -120,7 +120,7 @@
     },
     {
       "name": "breather_chest_gold",
-      "image": "gold_chest.png",
+      "image": "gold_chest",
       "type": "GoldChest",
       "check": [
         5
@@ -131,7 +131,7 @@
     },
     {
       "name": "risky_health",
-      "image": "simpleTrapInFontain.png",
+      "image": "simpleTrapInFontain",
       "type": "Health",
       "check": [
         6,
@@ -146,7 +146,7 @@
     },
     {
       "name": "heal_health",
-      "image": "simpleTrapInFontain.png",
+      "image": "simpleTrapInFontain",
       "type": "Health",
       "check": [
         8
@@ -159,7 +159,7 @@
     },
     {
       "name": "simpleTrap",
-      "image": "simpleTrap.png",
+      "image": "simpleTrap",
       "type": "Health",
       "check": [
         8
@@ -169,6 +169,11 @@
         0
       ],
       "mandatory": true
+    },
+    {
+      "name": "empty",
+      "image": "empty",
+      "type": "Empty"
     }
   ]
 }

@@ -5,7 +5,7 @@
       "name": "d4",
       "displayName": "Base d4 Dice",
       "desc": "",
-      "image": "d4.png",
+      "image": "d4",
       "faces": [
         1, 2, 3, 4
       ]
@@ -14,7 +14,7 @@
       "name": "d6",
       "displayName": "Base d6 Dice",
       "desc": "",
-      "image": "d6.png",
+      "image": "d6",
       "faces": [
         1, 2, 3, 4, 5, 6
       ]
@@ -23,7 +23,7 @@
       "name": "d20",
       "displayName": "Base d20 Dice",
       "desc": "",
-      "image": "d20.png",
+      "image": "d20",
       "faces": [
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
       ]
@@ -35,7 +35,7 @@
       "name": "d4_risky",
       "displayName": "Gambler's Dice",
       "desc": "",
-      "image": "d4_risky.png",
+      "image": "d4_risky",
       "faces": [
         1, 1, 1, 10
       ],
@@ -46,7 +46,7 @@
       "name": "d4_curse",
       "displayName": "Cursed Dice",
       "desc": "",
-      "image": "d4_curse.png",
+      "image": "d4_curse",
       "faces": [
         -4, -3, -2, -1
       ],
@@ -57,7 +57,7 @@
       "name": "d4_sadness",
       "displayName": "Sadness",
       "desc": "",
-      "image": "d4_curse.png",
+      "image": "d4_curse",
       "faces": [
         0, 0, 0, 0
       ],
@@ -70,7 +70,7 @@
       "name": "d6_risky",
       "displayName": "Gambler's True Dice",
       "desc": "",
-      "image": "d6_risky.png",
+      "image": "d6_risky",
       "faces": [
         1, 1, 1, 1, 1, 15
       ],
@@ -81,7 +81,7 @@
       "name": "d6_prime_numbers",
       "displayName": "Prime Dice",
       "desc": "He is the the leader of the dices.",
-      "image": "d6_prime_numbers.png",
+      "image": "d6_prime_numbers",
       "faces": [
         2, 3, 5, 7, 11, 13
       ],
@@ -92,7 +92,7 @@
       "name": "d6_odd",
       "displayName": "Odd Dice",
       "desc": "It is very, very odd dice.",
-      "image": "d6_odd.png",
+      "image": "d6_odd",
       "faces": [
         1, 3, 5, 7, 9, 11
       ],
@@ -103,7 +103,7 @@
       "name": "d6_pulse",
       "displayName": "Pulse",
       "desc": "Stable.",
-      "image": "d6_pulse.png",
+      "image": "d6_pulse",
       "faces": [
         6, 6, 6, 6, 6, 6
       ],
@@ -114,7 +114,7 @@
       "name": "d6_even",
       "displayName": "E(l)ven Dice",
       "desc": "Why do not elves like odd numbers?",
-      "image": "d6_even.png",
+      "image": "d6_even",
       "faces": [
         2, 4, 6, 8, 10, 12
       ],
@@ -125,7 +125,7 @@
       "name": "d4_lucky",
       "displayName": "Lucky? Dice",
       "desc": "Previous owner was lucky to die quickly.",
-      "image": "d4_lucky.png",
+      "image": "d4_lucky",
       "faces": [
         10, 10, 10, -10
       ],
@@ -141,7 +141,7 @@
       "name": "d20_risky",
       "displayName": "True Gambler's True Dice",
       "desc": "",
-      "image": "d20_risky.png",
+      "image": "d20_risky",
       "faces": [
         1, 1, 1, 1, 25, 1, 1, 1, 1, 25, 1, 1, 1, 1, 25, 1, 1, 1, 1, 25
       ],
@@ -155,7 +155,7 @@
       "name": "d2_all_or_nothing",
       "displayName": "Devil's Coin",
       "desc": "",
-      "image": "d2_all_or_nothing.png",
+      "image": "d2_all_or_nothing",
       "faces": [
         -20, 20
       ],

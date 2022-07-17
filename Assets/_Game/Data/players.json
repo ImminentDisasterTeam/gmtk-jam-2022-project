@@ -2,7 +2,7 @@
   "players": [
     {
       "name": "default",
-      "health": 100,
+      "maxHealth": 100,
       "attack": {
         "initial": 1,
         "dices": 1,

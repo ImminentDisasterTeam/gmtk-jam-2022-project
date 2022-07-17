@@ -3,7 +3,7 @@
     {
       "name": "blackSpider",
       "displayName": "Black Spider",
-      "image": "blackSpider.png",
+      "image": "blackSpider",
       "health": 6,
       "actionLoop": [
         "blackSpiderAttack",
@@ -14,7 +14,7 @@
     {
       "name": "greenSpider",
       "displayName": "Green Spider",
-      "image": "greenSpider.png",
+      "image": "greenSpider",
       "health": 6,
       "actionLoop": [
         "greenSpiderAttack",
@@ -25,7 +25,7 @@
     {
       "name": "redSpider",
       "displayName": "Red Spider",
-      "image": "redSpider.png",
+      "image": "redSpider",
       "health": 8,
       "actionLoop": [
         "redSpiderAttack",
@@ -36,7 +36,7 @@
     {
       "name": "queenSpider",
       "displayName": "Spider Queen",
-      "image": "queenSpider.png",
+      "image": "queenSpider",
       "health": 15,
       "actionLoop": [
         "queenSpiderCharge"

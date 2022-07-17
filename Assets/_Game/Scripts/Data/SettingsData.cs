@@ -10,5 +10,6 @@ namespace _Game.Scripts.Data {
         public float sellMultiplier;
         public float goldRetainMultiplier;
         public int maxLevel;
+        public string[] initialDices;
     }
 }

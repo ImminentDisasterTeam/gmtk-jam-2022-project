@@ -18,7 +18,7 @@ namespace _Game.Scripts.UI {
         }
 
         public void SetEnabled(bool enabled) {
-            _continueButton.enabled = enabled;
+            _continueButton.SetEnabled(enabled);
         }
     }
 }

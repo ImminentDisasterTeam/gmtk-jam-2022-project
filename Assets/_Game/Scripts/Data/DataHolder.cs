@@ -19,6 +19,10 @@ namespace _Game.Scripts.Data {
             Instance = this;
         }
 
+        public DataHolder() {
+            Instance = this;
+        }
+
         public DiceData[] GetDices() {
             return JsonUtility.FromJson<Dices>(_dices.text).dices;
         }

@@ -22,7 +22,14 @@
         {
           "subPool": [
             {
-              "type": "risky_heath"
+              "type": "empty"
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "risky_health"
             }
           ]
         },

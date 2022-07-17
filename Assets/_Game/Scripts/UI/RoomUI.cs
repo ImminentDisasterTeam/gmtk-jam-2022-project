@@ -2,6 +2,7 @@
 using _Game.Scripts.Data;
 using _Game.Scripts.GamePlay;
 using GeneralUtils;
+using GeneralUtils.Processes;
 using UnityEngine;
 
 namespace _Game.Scripts.UI {
@@ -26,10 +27,8 @@ namespace _Game.Scripts.UI {
                     case ERoomType.ItemChest:
                     case ERoomType.GoldChest:
                     case ERoomType.Health:
-                        StartEnvironmentRoom();
-                        break;
                     case ERoomType.Empty:
-                        StartEmptyRoom();
+                        StartEnvironmentRoom();
                         break;
                     default:
                         throw new ArgumentOutOfRangeException();
@@ -48,6 +47,9 @@ namespace _Game.Scripts.UI {
 
             _continuePanel.SetEnabled(_environmentInteractionPanel.CanContinue);
             _continuePanel.OnContinue.Subscribe(OnEnvironmentContinue);
+
+            _environmentInteractionPanel.Show();
+            _continuePanel.Show();
         }
 
         private void OnEnvironmentContinueStatusChanged(bool canContinue) {
@@ -61,22 +63,24 @@ namespace _Game.Scripts.UI {
             }
 
             var (deltaHealth, deltaMoney) = _environmentInteractionPanel.Roll(_rng);
-            Player.Instance.ChangeMoney(deltaMoney);
+            Player.Instance.Money += deltaMoney;
             var dead = Player.Instance.ChangeHealth(deltaHealth);
             if (dead) {
                 FinishRoom(true);
             }
         }
 
-        private void StartEmptyRoom() {
-            // TODO
-        }
-
         private void FinishRoom(bool finishByDeath = false) {
             _environmentInteractionPanel.OnContinueStatusChanged.ClearSubscribers();
             _continuePanel.OnContinue.ClearSubscribers();
 
-            Hide(() => {
+            var hideProcess = new ParallelProcess();
+            hideProcess.Add(new AsyncProcess(_continuePanel.Hide));
+            if (_environmentInteractionPanel.gameObject.activeSelf) {
+                hideProcess.Add(new AsyncProcess(_environmentInteractionPanel.Hide));
+            }
+            hideProcess.Add(new AsyncProcess(Hide));
+            hideProcess.Run(() => {
                 _onRoomFinished(finishByDeath);
             });
         }

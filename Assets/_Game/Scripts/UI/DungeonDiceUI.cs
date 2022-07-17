@@ -21,7 +21,7 @@ namespace _Game.Scripts.UI {
             _rng = rng;
 
             _deckList.Clear();
-            _deckList.AddRange(dices);
+            _deckList.AddRange(dices.Where(dice => dice != null));
             _discardList.Clear();
             UpdateLabels();
 

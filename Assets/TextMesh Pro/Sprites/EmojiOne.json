@@ -1,7 +1,7 @@
 {"frames": [
 
 {
-	"filename": "1f60a.png",
+	"filename": "1f60a",
 	"frame": {"x":0,"y":0,"w":128,"h":128},
 	"rotated": false,
 	"trimmed": false,
@@ -10,7 +10,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "1f60b.png",
+	"filename": "1f60b",
 	"frame": {"x":128,"y":0,"w":128,"h":128},
 	"rotated": false,
 	"trimmed": false,
@@ -19,7 +19,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "1f60d.png",
+	"filename": "1f60d",
 	"frame": {"x":256,"y":0,"w":128,"h":128},
 	"rotated": false,
 	"trimmed": false,
@@ -28,7 +28,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "1f60e.png",
+	"filename": "1f60e",
 	"frame": {"x":384,"y":0,"w":128,"h":128},
 	"rotated": false,
 	"trimmed": false,
@@ -37,7 +37,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "1f600.png",
+	"filename": "1f600",
 	"frame": {"x":0,"y":128,"w":128,"h":128},
 	"rotated": false,
 	"trimmed": false,
@@ -46,7 +46,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "1f601.png",
+	"filename": "1f601",
 	"frame": {"x":128,"y":128,"w":128,"h":128},
 	"rotated": false,
 	"trimmed": false,
@@ -55,7 +55,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "1f602.png",
+	"filename": "1f602",
 	"frame": {"x":256,"y":128,"w":128,"h":128},
 	"rotated": false,
 	"trimmed": false,
@@ -64,7 +64,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "1f603.png",
+	"filename": "1f603",
 	"frame": {"x":384,"y":128,"w":128,"h":128},
 	"rotated": false,
 	"trimmed": false,
@@ -73,7 +73,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "1f604.png",
+	"filename": "1f604",
 	"frame": {"x":0,"y":256,"w":128,"h":128},
 	"rotated": false,
 	"trimmed": false,
@@ -82,7 +82,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "1f605.png",
+	"filename": "1f605",
 	"frame": {"x":128,"y":256,"w":128,"h":128},
 	"rotated": false,
 	"trimmed": false,
@@ -91,7 +91,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "1f606.png",
+	"filename": "1f606",
 	"frame": {"x":256,"y":256,"w":128,"h":128},
 	"rotated": false,
 	"trimmed": false,
@@ -100,7 +100,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "1f609.png",
+	"filename": "1f609",
 	"frame": {"x":384,"y":256,"w":128,"h":128},
 	"rotated": false,
 	"trimmed": false,
@@ -109,7 +109,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "1f618.png",
+	"filename": "1f618",
 	"frame": {"x":0,"y":384,"w":128,"h":128},
 	"rotated": false,
 	"trimmed": false,
@@ -118,7 +118,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "1f923.png",
+	"filename": "1f923",
 	"frame": {"x":128,"y":384,"w":128,"h":128},
 	"rotated": false,
 	"trimmed": false,
@@ -127,7 +127,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "263a.png",
+	"filename": "263a",
 	"frame": {"x":256,"y":384,"w":128,"h":128},
 	"rotated": false,
 	"trimmed": false,
@@ -136,7 +136,7 @@
 	"pivot": {"x":0.5,"y":0.5}
 },
 {
-	"filename": "2639.png",
+	"filename": "2639",
 	"frame": {"x":384,"y":384,"w":128,"h":128},
 	"rotated": false,
 	"trimmed": false,
@@ -147,7 +147,7 @@
 "meta": {
 	"app": "http://www.codeandweb.com/texturepacker",
 	"version": "1.0",
-	"image": "EmojiOne.png",
+	"image": "EmojiOne",
 	"format": "RGBA8888",
 	"size": {"w":512,"h":512},
 	"scale": "1",

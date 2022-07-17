@@ -14,6 +14,10 @@ namespace _Game.Scripts.UI {
             OnClick = new Event(out _onClick);
         }
 
+        public void SetEnabled(bool enabled) {
+            _button.interactable = enabled;
+        }
+
         private void Awake() {
             _button.onClick.AddListener(OnButtonClick);
         }

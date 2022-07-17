@@ -12,8 +12,8 @@ namespace _Game.Scripts.UI {
         [SerializeField] private TextMeshProUGUI _text;
         private RoomData _data;
 
-        public bool CanRoll => _diceActionPanel.CanRoll;
-        public bool CanContinue => CanRoll || (!_data.mandatory && _diceActionPanel.Empty);
+        public bool CanRoll => _data.Type != ERoomType.Empty && _diceActionPanel.CanRoll;
+        public bool CanContinue => _data.Type == ERoomType.Empty || CanRoll || (!_data.mandatory && _diceActionPanel.Empty);
 
         private readonly Action<bool> _onContinueStatusChanged;
         public Event<bool> OnContinueStatusChanged { get; }
@@ -27,12 +27,17 @@ namespace _Game.Scripts.UI {
                 ERoomType.ItemChest => GetChestDescription(data),
                 ERoomType.GoldChest => GetChestDescription(data),
                 ERoomType.Health => GetHealthDescription(data),
+                ERoomType.Empty => "Just peace and quiet.",
                 _ => throw new ArgumentOutOfRangeException()
             };
+            
+            _data = data;
+            if (data.Type == ERoomType.Empty) {
+                return;
+            }
 
             _diceActionPanel.Load(EActionType.Interact, interactionStats);
             _diceActionPanel.OnContentsChanged.Subscribe(OnPanelChanged);
-            _data = data;
         }
 
         private void OnPanelChanged(DiceActionPanelUI _) {
@@ -41,6 +46,14 @@ namespace _Game.Scripts.UI {
 
         public (int deltaHealth, int deltaMoney) Roll(Rng rng) {
             var result = _diceActionPanel.Roll(rng);
+            
+            _text.text = _data.Type switch {
+                ERoomType.ItemChest => GetChestRollDescription(_data, result),
+                ERoomType.GoldChest => GetChestRollDescription(_data, result),
+                ERoomType.Health => GetHealthRollDescription(_data, result),
+                _ => throw new ArgumentOutOfRangeException()
+            };
+
             var items = GetItems(_data, result, rng);
             // TODO show optional selectionPanel
             return (GetHealthChange(_data, result), GetGold(_data, result));
@@ -79,6 +92,54 @@ namespace _Game.Scripts.UI {
             }
         }
 
+        private static string GetChestRollDescription(RoomData data, int result) {
+            if (result < data.ChestCheck) {
+                return "You got nothing.";
+            }
+
+            if (result < data.hiddenCheck) {
+                return $"You got {LootType()}!";
+            }
+
+            return $"You got more {LootType()} than you expected!";
+
+            string LootType() => data.Type == ERoomType.GoldChest ? "gold" : "items";
+        }
+
+        private static string GetHealthRollDescription(RoomData data, int result) {
+            for (var i = 0; i < data.healthChange.Length; i++) {
+                if (Check(result, i, data.check)) {
+                    return $"Received {Health(data.healthChange[i])}!";
+                }
+            }
+
+            throw new ArgumentOutOfRangeException();
+
+            static bool Check(int result, int index, int[] check) {
+                if (index == 0) {
+                    return result < check[0];
+                }
+
+                if (index == check.Length - 1) {
+                    return result >= check[index];
+                }
+
+                return result < check[index + 1] && result >= check[index];
+            }
+
+            static string Health(int healthChange) {
+                if (healthChange == 0) {
+                    return "nothing";
+                }
+
+                if (healthChange > 0) {
+                    return $"{healthChange} health";
+                }
+
+                return $"{-healthChange} damage";
+            }
+        }
+
         private static int GetHealthChange(RoomData data, int result) {
             // var healthChange = _data.Type != ERoomType.Health
             //     ? 0
@@ -97,14 +158,18 @@ namespace _Game.Scripts.UI {
         public override void Show(Action onDone = null) {
             var showProcess = new ParallelProcess();
             showProcess.Add(new AsyncProcess(base.Show));
-            showProcess.Add(new AsyncProcess(_diceActionPanel.Show));
+            if (_data.Type != ERoomType.Empty) {
+                showProcess.Add(new AsyncProcess(_diceActionPanel.Show));
+            }
             showProcess.Run(onDone);
         }
 
         public override void Hide(Action onDone = null) {
             _diceActionPanel.OnContentsChanged.Unsubscribe(OnPanelChanged);
             var hideProcess = new ParallelProcess();
-            hideProcess.Add(new AsyncProcess(_diceActionPanel.Hide));
+            if (_data.Type != ERoomType.Empty) {
+                hideProcess.Add(new AsyncProcess(_diceActionPanel.Hide));
+            }
             hideProcess.Add(new AsyncProcess(base.Hide));
             hideProcess.Run(onDone);
         }
