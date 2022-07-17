@@ -424,9 +424,96 @@
         "healthLower": 0,
         "elseAction": "juniorLavamentalChargedAttack"
       }
+    },
+
+    {
+      "name": "middleLavamentalAttack",
+      "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 5,
+            "dices": 1,
+            "dicesMod": 1
+          }
+        }
+      ]
+    },
+    {
+      "name": "middleLavamentalAttack2",
+      "subActions": [
+        {
+          "type": "Defend",
+          "stats": {
+            "initial": 5,
+            "dices": 1,
+            "dicesMod": 1
+          }       
+        },
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 1,
+            "dices": 1,
+            "dicesMod": 0.5
+          }
+        }
+      ]
+    },
+    {
+      "name": "middleLavamentalAttack3",
+      "subActions": [
+        {
+          "type": "Heal",
+          "stats": {
+            "initial": 100,
+            "dices": 0,
+            "dicesMod": 0
+          }
+        },
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 1,
+            "dices": 1,
+            "dicesMod": 5
+          }
+        }
+      ]
+    },
+
+
+    {
+      "name": "seniorLavamentalDef",
+      "subActions": [
+        {
+          "type": "Defend",
+          "stats": {
+            "initial": 10,
+            "dices": 1,
+            "dicesMod": 1
+          }
+        }
+      ]
+    },
+
+    {
+      "name": "seniorLavamentalAttack",
+      "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 100,
+            "dices": 1,
+            "dicesMod": 1
+          }
+        }
+      ]
     }
 
     
+
+
 
   ]
 }

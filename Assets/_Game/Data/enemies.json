@@ -109,21 +109,33 @@
       "name": "middleLavamental",
       "displayName": "Middle Lavamental",
       "image": "middleLavamental",
-      "health": 10,
+      "health": 20,
       "actionLoop": [
-        "",
-        ""
+        "middleLavamentalAttack",
+        "middleLavamentalAttack2",
+        "middleLavamentalAttack",
+        "middleLavamentalAttack2",
+        "middleLavamentalAttack",
+        "middleLavamentalAttack2",
+        "middleLavamentalAttack3"
       ]
     },
     {
       "name": "seniorLavamental",
       "displayName": "Senior Lavamental",
       "image": "seniorLavamental",
-      "health": 25,
+      "health": 100,
       "actionLoop": [
-        "",
+        "seniorLavamentalDef",
+        "seniorLavamentalDef",
+        "seniorLavamentalDef",
+        "seniorLavamentalDef",
+        "seniorLavamentalDef",
+        "seniorLavamentalDef",
         "wait",
-        "wait"
+        "wait",
+        "wait",
+        "seniorLavamentalAttack"
       ]
     },
     {
