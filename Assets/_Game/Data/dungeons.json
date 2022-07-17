@@ -113,7 +113,7 @@
             },
             {
               "type": "easy_money",
-              "weight": 2
+              "weight": 3
             }
           ]
         },
@@ -161,7 +161,7 @@
             },
             {
               "type": "easy_money",
-              "weight": 1
+              "weight": 2
             }
           ]
         },
