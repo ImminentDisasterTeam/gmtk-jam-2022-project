@@ -10,12 +10,14 @@ namespace _Game.Scripts.UI {
 
         public static SpriteHolder Instance { get; private set; }
         private readonly Dictionary<string, Sprite> _cache = new Dictionary<string, Sprite>();
+        private readonly Dictionary<string, Sprite[]> _spritesBySheet = new Dictionary<string, Sprite[]>();
 
         private void Awake() {
             Instance = this;
 
             foreach (var spriteSheet in _spriteSheets) {
                 var sprites = Resources.LoadAll<Sprite>(spriteSheet.name);
+                _spritesBySheet.Add(spriteSheet.name, sprites);
                 foreach (var sprite in sprites) {
                     _cache.Add(sprite.name, sprite);
                 }
@@ -24,6 +26,10 @@ namespace _Game.Scripts.UI {
 
         public Sprite GetSprite(string spriteName) {
             return _cache.GetValue(spriteName, () => Resources.Load<Sprite>(spriteName));
+        }
+
+        public Sprite[] GetSheet(string spriteSheetName) {
+            return _spritesBySheet[spriteSheetName];
         }
 
         public Sprite GetSprite(EActionType actionType) {

@@ -4,6 +4,7 @@ using _Game.Scripts.GamePlay;
 using GeneralUtils;
 using GeneralUtils.Processes;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace _Game.Scripts.UI {
     public class RoomUI : UIElement {
@@ -13,15 +14,17 @@ namespace _Game.Scripts.UI {
         [SerializeField] private DiceActionPanelUI _playerActionPanel;
         [SerializeField] private EnemyUI _enemyUI;
         [SerializeField] private GameObject _battleUI;
+        [SerializeField] private Image _background;
 
         // private RoomData _data;
         private Rng _rng;
         private Action<bool> _onRoomFinished;
 
-        public void StartRoom(RoomData data, Rng rng, Action<bool> onRoomFinished) {
+        public void StartRoom(RoomData data, Rng rng, Sprite background, Action<bool> onRoomFinished) {
             // _data = data;
             _rng = rng;
             _onRoomFinished = onRoomFinished;
+            _background.sprite = background;
 
             Show(() => {
                 switch (data.Type) {
