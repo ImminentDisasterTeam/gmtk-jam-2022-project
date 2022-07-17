@@ -30,6 +30,7 @@ namespace _Game.Scripts.UI {
         }
 
         public void Reload() {
+            InfoPanelUI.Instance.Hide();
             CurrentType = null;
             SetEnabled(true);
             if (_playerActionPanel.gameObject.activeSelf) {
@@ -38,6 +39,7 @@ namespace _Game.Scripts.UI {
         }
 
         private void OnAttack() {
+            InfoPanelUI.Instance.Hide();
             CurrentType = EActionType.Attack;
             _playerActionPanel.Load(EActionType.Attack, Player.Instance.AttackStats);
             if (!_playerActionPanel.gameObject.activeSelf) {
@@ -48,6 +50,7 @@ namespace _Game.Scripts.UI {
         }
 
         private void OnDefend() {
+            InfoPanelUI.Instance.Hide();
             CurrentType = EActionType.Defend;
             _playerActionPanel.Load(EActionType.Defend, Player.Instance.DefenceStats);
             if (!_playerActionPanel.gameObject.activeSelf) {
@@ -62,7 +65,16 @@ namespace _Game.Scripts.UI {
         }
 
         private void OnRunAway() {
-            // TODO RunAway
+            CurrentType = EActionType.ChickenOut;
+            _playerActionPanel.Load(EActionType.ChickenOut, Player.Instance.InteractionStats);
+            if (!_playerActionPanel.gameObject.activeSelf) {
+                _playerActionPanel.Show();
+            }
+
+            _onSelected();
+
+            InfoPanelUI.Instance.LoadEscape(Player.Instance.EscapeThreshold);
+            InfoPanelUI.Instance.Show();
         }
 
         private void OnActionPanelChanged(DiceActionPanelUI actionPanel) {
@@ -71,7 +83,7 @@ namespace _Game.Scripts.UI {
             }
         }
 
-        private void SetEnabled(bool enabled) {
+        public void SetEnabled(bool enabled) {
             _attackButton.SetEnabled(enabled);
             _defendButton.SetEnabled(enabled);
             _useItemButton.SetEnabled(enabled);

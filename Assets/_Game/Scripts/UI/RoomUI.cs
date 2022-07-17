@@ -48,13 +48,17 @@ namespace _Game.Scripts.UI {
             _continuePanel.Show();
 
             var lastStatus = false;
-            
-            new Battle(data, rng, Reload, _enemyUI, out var onPlayerReady,
-                EnableContinue, _continuePanel.OnContinue, GetPlayerRoll, FinishRoom);  // TODO do not finish room this way. Do it manually
+
+            new Battle(data, rng, Reload, _enemyUI, out var onPlayerReady, EnableContinue,
+                _continuePanel.OnContinue, GetPlayerRoll, DisableInput, FinishRoom);  // TODO do not finish room this way. Do it manually
 
             void Reload() {
                 lastStatus = false;
                 _actionSelectionPanel.Reload();
+            }
+
+            void DisableInput() {
+                _actionSelectionPanel.SetEnabled(false);
             }
             
             void CheckReady() {
