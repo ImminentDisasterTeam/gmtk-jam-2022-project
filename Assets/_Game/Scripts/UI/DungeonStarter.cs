@@ -25,6 +25,7 @@ namespace _Game.Scripts.UI {
             _startButton.onClick.AddListener(OnButtonClick);
             ToggleUI(true);
             Player.LoadPlayer(new Rng(42));
+            SoundHolder.Instance.PlayMusic("dungeon");
         }
 
         private void OnButtonClick() {
