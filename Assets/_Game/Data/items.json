@@ -20,7 +20,7 @@
       "type": "Weapon",
       "image": "sword2",
       "stats": {
-        "initial": 5,
+        "initial": 6,
         "dices": 1,
         "dicesMod": 1.25
       },
