@@ -244,6 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _selection: {fileID: 7635813081115367116}
+  _tooltip: {fileID: 2869303037045153836}
   State: 0
   _diceImage: {fileID: 5431291318432450635}
   _diceRoll: {fileID: 2223964397303457979}
@@ -470,7 +471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3232660265973576998, guid: e173225bda700f1479985dc7d77370f6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3720580390561004025, guid: e173225bda700f1479985dc7d77370f6, type: 3}
       propertyPath: m_Pivot.x
@@ -556,6 +557,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4096052925518645898, guid: e173225bda700f1479985dc7d77370f6, type: 3}
+      propertyPath: m_text
+      value: Previous owner was lucky to die quickly. Previous owner was lucky to
+        die quickly.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096052925518645898, guid: e173225bda700f1479985dc7d77370f6, type: 3}
+      propertyPath: m_fontSize
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096052925518645898, guid: e173225bda700f1479985dc7d77370f6, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096052925518645898, guid: e173225bda700f1479985dc7d77370f6, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 4096052925518645898, guid: e173225bda700f1479985dc7d77370f6, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409632607878929458, guid: e173225bda700f1479985dc7d77370f6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e173225bda700f1479985dc7d77370f6, type: 3}
 --- !u!224 &2330116929419372811 stripped
@@ -563,3 +589,14 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3720580390561004025, guid: e173225bda700f1479985dc7d77370f6, type: 3}
   m_PrefabInstance: {fileID: 1437797440140234994}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2869303037045153836 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3757650049295773918, guid: e173225bda700f1479985dc7d77370f6, type: 3}
+  m_PrefabInstance: {fileID: 1437797440140234994}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b4c1f048574dffa7b16e8ffe2e4201, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
