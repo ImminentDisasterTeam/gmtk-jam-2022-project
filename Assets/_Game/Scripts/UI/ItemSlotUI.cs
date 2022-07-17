@@ -10,25 +10,40 @@ namespace _Game.Scripts.UI {
     public class ItemSlotUI : SlotUI {
         [SerializeField] private Image _itemImage;
         [SerializeField] private EItemType _itemType = EItemType.Any;
-        // TODO tooltip
 
-        public override EType Type { get; }
+        public bool merchant;
+
+        public override EType Type => EType.Item;
 
         protected override void PerformSwapWith(SlotUI other) {
             var otherSlot = (ItemSlotUI) other;
+
+            if ((merchant && !otherSlot.merchant) || (!merchant && otherSlot.merchant)) {
+                var merchantPrice = (merchant ? Item : otherSlot.Item)?.Data.GetPrice(true) ?? 0;
+                var playerPrice = (merchant ? otherSlot.Item : Item)?.Data.GetPrice(false) ?? 0;
+                Player.Instance.Money += playerPrice - merchantPrice;
+            }
+
             (otherSlot.Item, Item) = (Item, otherSlot.Item);
         }
 
         protected override void LoadTooltip(Tooltip tooltip) {
             var itemTooltip = (ItemTooltip) tooltip;
-            itemTooltip.Load(Item);
+            itemTooltip.Load(Item, merchant);
         }
 
         protected override bool IsEmpty() => Item == null;
 
         public override bool CanTakeFrom(SlotUI other) {
             var otherSlot = (ItemSlotUI) other;
-            return otherSlot.Item == null || _itemType.Accepts(otherSlot.Item.Data.Type);
+            var can = otherSlot.Item == null || _itemType.Accepts(otherSlot.Item.Data.Type);
+            if (!can || !(merchant && !otherSlot.merchant)) {
+                return can;
+            }
+
+            var thisPrice = Item?.Data.GetPrice(true) ?? 0;
+            var otherPrice = otherSlot.Item?.Data.GetPrice(false) ?? 0;
+            return Player.Instance.Money + otherPrice - thisPrice >= 0;
         }
 
         private readonly Action<ItemSlotUI, Item, Item> _onContentsChanged;

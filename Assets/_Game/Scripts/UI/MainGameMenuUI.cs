@@ -17,7 +17,7 @@ namespace _Game.Scripts.UI {
 
         private void Awake() {
             _inn.OnClick.Subscribe(OpenInn);
-            // _shop.OnClick.Subscribe(OpenShop);
+            _shop.OnClick.Subscribe(OpenShop);
             _dungeon.OnClick.Subscribe(StartDungeon);
         }
 
@@ -33,6 +33,17 @@ namespace _Game.Scripts.UI {
                     });
                 });
                 _innUI.Show();
+            });
+        }
+
+        private void OpenShop() {
+            Hide(() => {
+                _shopUI.Load(() => {
+                    _shopUI.Hide(() => {
+                        Show();
+                    });
+                });
+                _shopUI.Show();
             });
         }
 

@@ -1,7 +1,5 @@
-﻿using System;
-using _Game.Scripts.GamePlay;
+﻿using _Game.Scripts.GamePlay;
 using GeneralUtils;
-using PlasticGui;
 using UnityEngine;
 
 namespace _Game.Scripts.UI {

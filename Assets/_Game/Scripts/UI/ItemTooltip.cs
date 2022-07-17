@@ -1,4 +1,5 @@
-﻿using _Game.Scripts.GamePlay;
+﻿using _Game.Scripts.Data;
+using _Game.Scripts.GamePlay;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,10 +12,10 @@ namespace _Game.Scripts.UI {
         [SerializeField] private TextMeshProUGUI _money;
         [SerializeField] private Image _dices;
 
-        public void Load(Item data) {
+        public void Load(Item data, bool merchant) {
             _name.text = data.Data.displayName;
             _description.text = data.Data.desc;
-            _money.text = data.Data.cost.ToString();
+            _money.text = data.Data.GetPrice(merchant).ToString();
 
             var diceCount = data.Data.stats.DiceCount;
             _stats.text = data.Data.stats + (diceCount == 0 ? "" : $" <color=orange>{diceCount}");

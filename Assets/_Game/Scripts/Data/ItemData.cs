@@ -12,5 +12,7 @@ namespace _Game.Scripts.Data {
         public string image;
         public StatsData stats;
         public int cost;
+
+        public int GetPrice(bool isMerchant) => (int) (cost * (isMerchant ? 1 : DataHolder.Instance.GetSettings().sellMultiplier));
     }
 }

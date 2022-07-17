@@ -60,7 +60,7 @@
       "type": "Defence",
       "image": "shield1",
       "stats": {
-        "initial": 1,
+        "initial": 2,
         "dices": 1,
         "dicesMod": 0.25
       },
