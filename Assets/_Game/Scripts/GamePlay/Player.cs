@@ -78,11 +78,33 @@ namespace _Game.Scripts.GamePlay {
                     StatsPanelUI.Instance.SetEnabled(true);
                     HasDicesChoice = true;
                     Level++;
+                    GenerateDicesForLevel();
                     ResetHealthToMax();
                     WriteToSave();
                 }
             }
         }
+
+        private void GenerateDicesForLevel() {
+            // god forgive me
+            var stamp = (int) new DateTimeOffset(DateTime.UtcNow).ToUnixTimeSeconds();
+            var rng = new Rng(stamp);
+            //
+
+            var dices = new List<string>();
+            var suitableDices = DataHolder.Instance.GetDices()
+                .Where(d => d.minLevel <= Level && Level <= d.maxLevel).Select(d => new Dice(d)).ToList();
+            for (var i = 0; i < DataHolder.Instance.GetSettings().dicesPerLevel; i++) {
+                var dice = rng.NextChoice(suitableDices);
+                suitableDices.Remove(dice);
+                dices.Add(dice.Data.name);
+            }
+
+            _data.thisLevelDices = dices.ToArray();
+            WriteToSave();
+        }
+
+        public string[] ThisLevelDices => _data.thisLevelDices;
 
         public static void LoadPlayer(Rng rng) {
             Instance = new Player();

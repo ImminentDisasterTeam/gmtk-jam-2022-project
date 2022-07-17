@@ -31,12 +31,11 @@ namespace _Game.Scripts.UI {
                 return;
             }
 
-            var level = Player.Instance.Level;
-            var suitableDices = DataHolder.Instance.GetDices()
-                .Where(d => d.minLevel <= level && level <= d.maxLevel).ToArray();
-            for (var i = 0; i < DataHolder.Instance.GetSettings().dicesPerLevel; i++) {
+            foreach (var diceName in Player.Instance.ThisLevelDices) {
+                var dice = new Dice(DataHolder.Instance.GetDices().First(d => d.name == diceName));
+
                 var choiceSlot = Instantiate(_diceSlotPrefab, _choiceParent);
-                choiceSlot.Dice = new Dice(rng.NextChoice(suitableDices));
+                choiceSlot.Dice = dice;
                 choiceSlot.State = SlotUI.EState.CanTake;
             }
 
