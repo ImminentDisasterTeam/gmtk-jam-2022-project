@@ -93,7 +93,7 @@
             },
             {
               "type": "easy_money",
-              "weight": 1
+              "weight": 2
             }
           ]
         },
@@ -297,7 +297,7 @@
             },
             {
               "type": "easy_money",
-              "weight": 1
+              "weight": 3
             },
             {
               "type": "minijackpot",
@@ -329,7 +329,7 @@
             },
             {
               "type": "easy_money",
-              "weight": 1
+              "weight": 2
             }
           ]
         },
@@ -349,7 +349,7 @@
             },
             {
               "type": "easy_money",
-              "weight": 1
+              "weight": 3
             },
             {
               "type": "minijackpot",
