@@ -121,7 +121,7 @@
       "cost": 1000
     },
     {
-      "name": "UI_32",
+      "name": "ring",
       "displayName": "Emerald Ring",
       "desc": "The inscription on the ring: 'replica'.",
       "type": "Interaction",

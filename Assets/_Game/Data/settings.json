@@ -25,6 +25,6 @@
     "d6",
     "d6_fib"
   ],
-  "initialEscapeThreshold": 8,
+  "initialEscapeThreshold": 12,
   "escapeThresholdStep": 2
 }
