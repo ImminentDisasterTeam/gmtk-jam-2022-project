@@ -27,6 +27,18 @@ namespace _Game.Scripts.GamePlay {
             ? null
             : new Item(DataHolder.Instance.GetItems().First(item => item.name == itemName)));
 
+        public int EscapeThreshold {
+            get => _data. escapeThreshold;
+            private set {
+                _data.escapeThreshold = value;
+                WriteToSave();
+            }
+        }
+
+        public void RaiseEscapeThreshold() {
+            EscapeThreshold += DataHolder.Instance.GetSettings().escapeThresholdStep;
+        }
+
         public int Health { get; private set; }
         public int MaxHealth => _data.maxHealth;
         public int Money {
@@ -121,6 +133,7 @@ namespace _Game.Scripts.GamePlay {
             var data = new PlayerSaveData {
                 maxHealth = playerData.maxHealth,
                 image = playerData.image,
+                escapeThreshold = settings.initialEscapeThreshold,
                 attackSlot = "",
                 defenceSlot = "",
                 interactSlot = "",

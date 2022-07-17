@@ -6,6 +6,7 @@ namespace _Game.Scripts.Data {
     public struct PlayerSaveData {
         public int maxHealth;
         public int money;
+        public int escapeThreshold;
         public string image;
         public string attackSlot;
         public string defenceSlot;

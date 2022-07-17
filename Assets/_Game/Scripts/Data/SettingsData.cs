@@ -11,5 +11,7 @@ namespace _Game.Scripts.Data {
         public float goldRetainMultiplier;
         public int maxLevel;
         public string[] initialDices;
+        public int initialEscapeThreshold;
+        public int escapeThresholdStep;
     }
 }

@@ -2,6 +2,7 @@
 using System.Linq;
 using _Game.Scripts.Data;
 using _Game.Scripts.UI;
+using DG.Tweening;
 using GeneralUtils;
 
 namespace _Game.Scripts.GamePlay {
@@ -13,11 +14,13 @@ namespace _Game.Scripts.GamePlay {
         private readonly Action<bool> _allowContinue;
         private readonly Event _onContinue;
         private readonly Func<(EActionType type, int result)> _getPlayerRoll;
+        private readonly Action _disableInput;
         private readonly Action<bool> _finishBattle;
 
         private int _enemyHealth;
         private int _enemyCharge;
         private int _enemyActionPointer = -1;
+        private int _chargeToRemove;
         private EnemyActionData CurrentAction => Action(_enemy.actionLoop[_enemyActionPointer]);
 
         private EnemyActionData _performedAction;
@@ -25,7 +28,7 @@ namespace _Game.Scripts.GamePlay {
 
         // I HAVENT SLEPT FOR SO LONG
         public Battle(RoomData data, Rng rng, Action reload, EnemyUI enemyUI, out Action<bool> onPlayerReady, Action<bool> allowContinue,
-            Event onContinue, Func<(EActionType type, int result)> getPlayerRoll, Action<bool> finishBattle) {
+            Event onContinue, Func<(EActionType type, int result)> getPlayerRoll, Action disableInput, Action<bool> finishBattle) {
             var enemyName = rng.NextWeightedChoice(data.contentPool[0].WeightedItems);
             _enemy = DataHolder.Instance.GetEnemies().First(e => e.name == enemyName);
             _enemyHealth = _enemy.health;
@@ -36,6 +39,7 @@ namespace _Game.Scripts.GamePlay {
             _allowContinue = allowContinue;
             _onContinue = onContinue;
             _getPlayerRoll = getPlayerRoll;
+            _disableInput = disableInput;
             _finishBattle = finishBattle;
 
             _enemyUI.Load(_enemy.health, SpriteHolder.Instance.GetSprite(_enemy.image));
@@ -51,6 +55,7 @@ namespace _Game.Scripts.GamePlay {
 
             IncrementPointer();
 
+            _chargeToRemove = 0;
             _performedAction = CurrentAction;
             while (_performedAction.HasCondition) {
                 var condition = _performedAction.condition;
@@ -59,6 +64,7 @@ namespace _Game.Scripts.GamePlay {
                 var healthHigherOK = condition.healthHigher == 0 || _enemyHealth >= condition.healthHigher;
                 var healthLowerOK = condition.healthLower == 0 || _enemyHealth < condition.healthLower;
                 if (chargeHigherOK && chargeLowerOK && healthHigherOK && healthLowerOK) {
+                    _chargeToRemove = condition.chargeHigher;
                     break;
                 }
 
@@ -80,6 +86,9 @@ namespace _Game.Scripts.GamePlay {
 
             var enemyAttack = 0;
             var enemyDefence = 0;
+
+            _enemyCharge += -_chargeToRemove;
+            _enemyUI.SetCharge(_enemyCharge);
 
             var rolls = _enemyUI.Roll(_rng);
             for (var i = 0; i < _performedAction.subActions.Length; i++) {
@@ -121,13 +130,22 @@ namespace _Game.Scripts.GamePlay {
                 case EActionType.UseItem:
                     Player.Instance.ChangeHealth(playerResult);
                     break;
+                case EActionType.ChickenOut:
+                    var escaped = playerResult >= Player.Instance.EscapeThreshold;
+                    Player.Instance.RaiseEscapeThreshold();
+                    InfoPanelUI.Instance.LoadEscapeResult(escaped);
+                    if (escaped) {
+                        FinishTurn(true, false);
+                        return;
+                    }
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
 
             var playerDeltaHealth = Math.Min(0, playerDefense - enemyAttack);
             if (Player.Instance.ChangeHealth(playerDeltaHealth)) {
-                _finishBattle(true);
+                FinishTurn(true, true);
                 return;
             }
 
@@ -135,12 +153,23 @@ namespace _Game.Scripts.GamePlay {
             _enemyHealth = Math.Max(0, _enemyHealth + enemyDeltaHealth);
             _enemyUI.SetHealth(_enemyHealth);
             if (_enemyHealth == 0) {
-                _finishBattle(false);
+                FinishTurn(true, false);
                 return;
             }
 
-            // TODO: pause before the next turn
-            StartTurn();
+            FinishTurn(false);
+
+            void FinishTurn(bool finishBattle, bool finishByDeath = false) {
+                _disableInput();
+                DOVirtual.DelayedCall(0.8f, () => {
+                    if (!finishBattle) {
+                        StartTurn();
+                        return;
+                    }
+
+                    _finishBattle(finishByDeath);
+                });
+            }
         }
 
         private void IncrementPointer() {
