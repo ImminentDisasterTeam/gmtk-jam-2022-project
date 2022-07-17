@@ -60,7 +60,7 @@
       "type": "Defence",
       "image": "shield1",
       "stats": {
-        "initial": 1,
+        "initial": 2,
         "dices": 1,
         "dicesMod": 0.25
       },
@@ -121,7 +121,7 @@
       "cost": 1000
     },
     {
-      "name": "UI_32",
+      "name": "ring",
       "displayName": "Emerald Ring",
       "desc": "The inscription on the ring: 'replica'.",
       "type": "Interaction",
