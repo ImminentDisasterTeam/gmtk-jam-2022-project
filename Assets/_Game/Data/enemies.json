@@ -32,6 +32,16 @@
         "redSpiderCharge"
       ]
     },
+    {
+      "name": "redEvilSpider",
+      "displayName": "Red Spider",
+      "image": "redSpider",
+      "health": 8,
+      "actionLoop": [
+        "redEvilSpiderChargeAttack",
+        "redEvilSpiderCharge"
+      ]
+    },
 
     {
       "name": "queenSpider",

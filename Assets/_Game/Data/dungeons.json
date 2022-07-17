@@ -8,7 +8,7 @@
         {
           "subPool": [
             {
-              "type": "breather_chest"
+              "type": "sword1_amulet1_chest"
             }
           ]
         },
@@ -106,7 +106,7 @@
               "weight": 1
             },
             {
-              "type": "breather_chest",
+              "type": "sword1_amulet1_chest",
               "weight": 1
             },
             {
@@ -142,11 +142,11 @@
               "weight": 4
             },
             {
-              "type": "breather_chest",
+              "type": "sword1_amulet1_chest",
               "weight": 1
             },
             {
-              "type": "risky_health",
+              "type": "shield1_amulet1_chest",
               "weight": 1
             },
             {
@@ -158,7 +158,7 @@
         {
           "subPool": [
             {
-              "type": "spider_queen_battle",
+              "type": "redEvilSpider",
               "weight": 1
             }
           ]
@@ -167,15 +167,13 @@
     },
     {
       "levels": [
-        2,
-        3,
-        4
+        2
       ],
       "contentPool": [
         {
           "subPool": [
             {
-              "type": "spider_queen_battle",
+              "type": "two_random_spider_battle",
               "weight": 4
             }
           ]
@@ -183,7 +181,15 @@
         {
           "subPool": [
             {
-              "type": "spider_queen_battle",
+              "type": "two_random_spider_battle",
+              "weight": 9
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "sword1_amulet1_chest",
               "weight": 1
             }
           ]
@@ -191,7 +197,39 @@
         {
           "subPool": [
             {
-              "type": "spider_queen_battle",
+              "type": "two_random_spider_battle",
+              "weight": 9
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "two_random_spider_battle",
+              "weight": 18
+            },
+            {
+              "type": "heal_health",
+              "weight": 1
+            },
+            {
+              "type": "empty",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "random1_chest",
+              "weight": 18
+            },
+            {
+              "type": "simpleTrap",
+              "weight": 1
+            },
+            {
+              "type": "risky_health",
               "weight": 1
             }
           ]

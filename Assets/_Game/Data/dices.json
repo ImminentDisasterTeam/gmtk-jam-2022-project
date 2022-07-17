@@ -1,32 +1,48 @@
 {
   "dices": [
-    
+    {
+      "name": "d6_fib",
+      "displayName": "Fibonacci's Dice",
+      "desc": "The worst.",
+      "image": "d6_fib.png",
+      "faces": [
+        0, 1, 1, 2, 3, 5
+      ],
+      "minLevel": 1,
+      "maxLevel": 1
+    },
     {
       "name": "d4",
       "displayName": "Base d4 Dice",
-      "desc": "",
-      "image": "d4",
+      "desc": "Be careful, you can prick yourself.",
+      "image": "d4.png",
       "faces": [
         1, 2, 3, 4
-      ]
+      ],
+      "minLevel": 2,
+      "maxLevel": 2
     },
     {
       "name": "d6",
       "displayName": "Base d6 Dice",
-      "desc": "",
-      "image": "d6",
+      "desc": "The most popular dice in the world.",
+      "image": "d6.png",
       "faces": [
         1, 2, 3, 4, 5, 6
-      ]
+      ],
+      "minLevel": 2,
+      "maxLevel": 2
     },
     {
       "name": "d20",
       "displayName": "Base d20 Dice",
-      "desc": "",
-      "image": "d20",
+      "desc": "Classics for D&D players.",
+      "image": "d20.png",
       "faces": [
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
-      ]
+      ],
+      "minLevel": 4,
+      "maxLevel": 5
     },
 
 
@@ -34,19 +50,19 @@
     {
       "name": "d4_risky",
       "displayName": "Gambler's Dice",
-      "desc": "",
-      "image": "d4_risky",
+      "desc": "All we need is faith.",
+      "image": "d4_risky.png",
       "faces": [
-        1, 1, 1, 10
+        1, 1, 1, 15
       ],
       "minLevel": 2,
-      "maxLevel": 4
+      "maxLevel": 2
     },
     {
       "name": "d4_curse",
       "displayName": "Cursed Dice",
-      "desc": "",
-      "image": "d4_curse",
+      "desc": "Just to keep the balance in the world.",
+      "image": "d4_curse.png",
       "faces": [
         -4, -3, -2, -1
       ],
@@ -56,81 +72,103 @@
     {
       "name": "d4_sadness",
       "displayName": "Sadness",
-      "desc": "",
-      "image": "d4_curse",
+      "desc": "Sadness everywhere.",
+      "image": "d4_curse.png",
       "faces": [
         0, 0, 0, 0
       ],
       "minLevel": 2,
-      "maxLevel": 4
+      "maxLevel": 7
     },
 
 
     {
       "name": "d6_risky",
       "displayName": "Gambler's True Dice",
-      "desc": "",
-      "image": "d6_risky",
+      "desc": "Check your luck.",
+      "image": "d6_risky.png",
       "faces": [
-        1, 1, 1, 1, 1, 15
+        1, 1, 1, 1, 1, 40
       ],
       "minLevel": 2,
-      "maxLevel": 4
+      "maxLevel": 2
     },
     {
       "name": "d6_prime_numbers",
       "displayName": "Prime Dice",
       "desc": "He is the the leader of the dices.",
-      "image": "d6_prime_numbers",
+      "image": "d6_prime_numbers.png",
       "faces": [
         2, 3, 5, 7, 11, 13
       ],
-      "minLevel": 5,
-      "maxLevel": 7
+      "minLevel": 3,
+      "maxLevel": 3
     },
     {
       "name": "d6_odd",
       "displayName": "Odd Dice",
       "desc": "It is very, very odd dice.",
-      "image": "d6_odd",
+      "image": "d6_odd.png",
       "faces": [
         1, 3, 5, 7, 9, 11
       ],
-      "minLevel": 3,
-      "maxLevel": 5
+      "minLevel": 2,
+      "maxLevel": 2
     },
     {
       "name": "d6_pulse",
       "displayName": "Pulse",
       "desc": "Stable.",
-      "image": "d6_pulse",
+      "image": "d6_pulse.png",
       "faces": [
         6, 6, 6, 6, 6, 6
       ],
-      "minLevel": 4,
-      "maxLevel": 6
+      "minLevel": 2,
+      "maxLevel": 3
     },
     {
       "name": "d6_even",
       "displayName": "E(l)ven Dice",
       "desc": "Why do not elves like odd numbers?",
-      "image": "d6_even",
+      "image": "d6_even.png",
       "faces": [
         2, 4, 6, 8, 10, 12
       ],
-      "minLevel": 5,
-      "maxLevel": 7
+      "minLevel": 3,
+      "maxLevel": 3
     },
     {
       "name": "d4_lucky",
       "displayName": "Lucky? Dice",
       "desc": "Previous owner was lucky to die quickly.",
-      "image": "d4_lucky",
+      "image": "d4_lucky.png",
       "faces": [
         10, 10, 10, -10
       ],
-      "minLevel": 5,
-      "maxLevel": 7
+      "minLevel": 3,
+      "maxLevel": 5
+    },
+    {
+      "name": "d3_unversal",
+      "displayName": "Dice for All Needs",
+      "desc": "Can be used in any situation. With 33% for success.",
+      "image": "d3_unversal.png",
+      "faces": [
+        12, 0, -12
+      ],
+      "minLevel": 3,
+      "maxLevel": 5
+    },
+    {
+      "name": "d6_curse",
+      "displayName": "Cursed Cube",
+      "desc": "Just to keep the even more balance in the world.",
+      "image": "d6_curse.png",
+      "faces": [
+        -6, -5, -4, -3, -2, -1
+      ],
+      "minLevel": 3,
+      "maxLevel": 4
     },
 
 
@@ -140,27 +178,95 @@
     {
       "name": "d20_risky",
       "displayName": "True Gambler's True Dice",
-      "desc": "",
-      "image": "d20_risky",
+      "desc": "100% 250 on enemy attack (just kidding).",
+      "image": "d20_risky.png",
       "faces": [
-        1, 1, 1, 1, 25, 1, 1, 1, 1, 25, 1, 1, 1, 1, 25, 1, 1, 1, 1, 25
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 250
       ],
       "minLevel": 5,
       "maxLevel": 7
     },
 
+    {
+      "name": "d6_pirate_luck",
+      "displayName": "Pirate's Dice",
+      "desc": "Was used to play on blind pirates' ship.",
+      "image": "d6_pirate_luck.png",
+      "faces": [
+        9, 12, 15, 15, 18, 21
+      ],
+      "minLevel": 6,
+      "maxLevel": 7
+    },
+
+    {
+      "name": "d1",
+      "displayName": "Truth",
+      "desc": "It won't change, no matter what you believe.",
+      "image": "d1.png",
+      "faces": [
+        20
+      ],
+      "minLevel": 7,
+      "maxLevel": 7
+    },
 
 
     {
       "name": "d2_all_or_nothing",
       "displayName": "Devil's Coin",
-      "desc": "",
-      "image": "d2_all_or_nothing",
+      "desc": "A deal with the devil is sometimes so attractive.",
+      "image": "d2_all_or_nothing.png",
       "faces": [
-        -20, 20
+        -20, 50
       ],
-      "minLevel": 8,
-      "maxLevel": 10
+      "minLevel": 5,
+      "maxLevel": 7
+    },
+    {
+      "name": "d4true",
+      "displayName": "True d4 Dice",
+      "desc": "Do not bonk yourself.",
+      "image": "d4true.png",
+      "faces": [
+        15, 25, 35, 45
+      ],
+      "minLevel": 6,
+      "maxLevel": 7
+    },
+    {
+      "name": "d6true",
+      "displayName": "True d6 Dice",
+      "desc": "Someone likes round numbers.",
+      "image": "d6true.png",
+      "faces": [
+        10, 20, 30, 40, 50, 60
+      ],
+      "minLevel": 7,
+      "maxLevel": 7
+    },
+
+    {
+      "name": "d5_spirit",
+      "displayName": "Spirit's Pyramid",
+      "desc": "Is this even a dice?",
+      "image": "d5_spirit.png",
+      "faces": [
+        0, 13, 13, 13, 13
+      ],
+      "minLevel": 5,
+      "maxLevel": 7
+    },
+    {
+      "name": "d6_fib2",
+      "displayName": "Second Fibonacci's Dice",
+      "desc": "Better than the first one.",
+      "image": "d6_fib2.png",
+      "faces": [
+        8, 13, 21, 34, 55, 89
+      ],
+      "minLevel": 7,
+      "maxLevel": 7
     }
 
   ]

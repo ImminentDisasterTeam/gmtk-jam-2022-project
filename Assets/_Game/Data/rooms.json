@@ -92,7 +92,7 @@
       ]
     },
     {
-      "name": "breather_chest",
+      "name": "sword1_amulet1_chest",
       "image": "gold_chest",
       "type": "ItemChest",
       "check": [
@@ -119,16 +119,45 @@
       ]
     },
     {
-      "name": "breather_chest_gold",
+      "name": "random1_chest",
       "image": "gold_chest",
-      "type": "GoldChest",
+      "type": "ItemChest",
       "check": [
         5
       ],
-      "gold": 120,
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "shield1"
+            },
+            {
+              "type": "sword1"
+            },
+            {
+              "type": "amulet1"
+            }
+          ]
+        }
+      ],
       "hiddenCheck": 15,
-      "hiddenGold": 120
+      "hiddenContentPool": [
+        {
+          "subPool": [
+            {
+              "type": "shield1"
+            },
+            {
+              "type": "sword1"
+            },
+            {
+              "type": "amulet1"
+            }
+          ]
+        }
+      ]
     },
+    
     {
       "name": "risky_health",
       "image": "simpleTrapInFontain",
@@ -138,22 +167,22 @@
         10
       ],
       "healthChange": [
-        -10,
+        -15,
         0,
-        10
+        30
       ],
       "mandatory": false
     },
     {
       "name": "heal_health",
-      "image": "simpleTrapInFontain",
+      "image": "Fontain",
       "type": "Health",
       "check": [
         8
       ],
       "healthChange": [
         0,
-        7
+        20
       ],
       "mandatory": false
     },
@@ -165,7 +194,7 @@
         8
       ],
       "healthChange": [
-        -5,
+        -15,
         0
       ],
       "mandatory": true
@@ -174,6 +203,17 @@
       "name": "empty",
       "image": "empty",
       "type": "Empty"
+    },
+    {
+      "name": "breather_chest_gold",
+      "image": "gold_chest",
+      "type": "GoldChest",
+      "check": [
+        5
+      ],
+      "gold": 120,
+      "hiddenCheck": 15,
+      "hiddenGold": 120
     },
     {
       "name": "easy_money",
@@ -185,6 +225,28 @@
       "gold": 120,
       "hiddenCheck": 3,
       "hiddenGold": 120
+    },
+    {
+      "name": "jackpot",
+      "image": "gold_chest",
+      "type": "GoldChest",
+      "check": [
+        5
+      ],
+      "gold": 80,
+      "hiddenCheck": 15,
+      "hiddenGold": 10000
+    },
+    {
+      "name": "minijackpot",
+      "image": "gold_chest",
+      "type": "GoldChest",
+      "check": [
+        5
+      ],
+      "gold": 50,
+      "hiddenCheck": 15,
+      "hiddenGold": 1000
     }
   ]
 }
