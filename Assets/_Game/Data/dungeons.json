@@ -158,7 +158,7 @@
         {
           "subPool": [
             {
-              "type": "redEvilSpider",
+              "type": "one_red_evil_spider_battle",
               "weight": 1
             }
           ]
