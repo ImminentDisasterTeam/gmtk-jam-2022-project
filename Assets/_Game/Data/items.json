@@ -22,7 +22,7 @@
       "stats": {
         "initial": 5,
         "dices": 1,
-        "dicesMod": 0.75
+        "dicesMod": 1.25
       },
       "cost": 1000
     },
@@ -33,7 +33,7 @@
       "type": "Weapon",
       "image": "sword3",
       "stats": {
-        "initial": 25,
+        "initial": 30,
         "dices": 1,
         "dicesMod": 0.25
       },
