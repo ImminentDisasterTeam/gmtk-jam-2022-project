@@ -380,11 +380,11 @@
           "subPool": [
             {
               "type": "random1_chest",
-              "weight": 18
+              "weight": 1
             },
             {
               "type": "simpleTrap2",
-              "weight": 1
+              "weight": 18
             },
             {
               "type": "risky_health",
@@ -395,7 +395,7 @@
         {
           "subPool": [
             {
-              "type": "one_black_skeleton_battle",
+              "type": "royal_skeleton_battle",
               "weight": 1
             }
           ]

@@ -1,6 +1,42 @@
 {
   "rooms": [
     {
+      "name": "one_random_skeleton_battle",
+      "type": "Battle",
+      "text": "",
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "greenSpider",
+              "weight": 1
+            },
+            {
+              "type": "blackSpider",
+              "weight": 1
+            },
+            {
+              "type": "redSpider",
+              "weight": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "royal_skeleton_battle",
+      "type": "Battle",
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "royalSkeleton"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "one_white_skeleton_battle",
       "type": "Battle",
       "contentPool": [

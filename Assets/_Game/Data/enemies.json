@@ -78,16 +78,20 @@
       "image": "blackSkeleton",
       "health": 13,
       "actionLoop": [
-        "blackSkeletonAttack"
+        "blackSkeletonAttack",
+        "wait"
       ]
     },
     {
-      "name": "blackSkeleton",
-      "displayName": "Skeleton",
-      "image": "blackSkeleton",
-      "health": 13,
+      "name": "royalSkeleton",
+      "displayName": "Royal Skeleton",
+      "image": "royalSkeleton",
+      "health": 40,
       "actionLoop": [
-        "blackSkeletonAttack"
+        "royalSkeletonAttack",
+        "wait",
+        "wait",
+        "wait"
       ]
     }
 
