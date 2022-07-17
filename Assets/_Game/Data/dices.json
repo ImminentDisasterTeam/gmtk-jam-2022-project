@@ -4,7 +4,7 @@
       "name": "d6_fib",
       "displayName": "Fibonacci's Dice",
       "desc": "The worst.",
-      "image": "d6_fib.png",
+      "image": "d6_fib",
       "faces": [
         0, 1, 1, 2, 3, 5
       ],
@@ -15,7 +15,7 @@
       "name": "d4",
       "displayName": "Base d4 Dice",
       "desc": "Be careful, you can prick yourself.",
-      "image": "d4.png",
+      "image": "d4",
       "faces": [
         1, 2, 3, 4
       ],
@@ -26,7 +26,7 @@
       "name": "d6",
       "displayName": "Base d6 Dice",
       "desc": "The most popular dice in the world.",
-      "image": "d6.png",
+      "image": "d6",
       "faces": [
         1, 2, 3, 4, 5, 6
       ],
@@ -37,7 +37,7 @@
       "name": "d20",
       "displayName": "Base d20 Dice",
       "desc": "Classics for D&D players.",
-      "image": "d20.png",
+      "image": "d20",
       "faces": [
         1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20
       ],
@@ -51,7 +51,7 @@
       "name": "d4_risky",
       "displayName": "Gambler's Dice",
       "desc": "All we need is faith.",
-      "image": "d4_risky.png",
+      "image": "d4_risky",
       "faces": [
         1, 1, 1, 15
       ],
@@ -62,7 +62,7 @@
       "name": "d4_curse",
       "displayName": "Cursed Dice",
       "desc": "Just to keep the balance in the world.",
-      "image": "d4_curse.png",
+      "image": "d4_curse",
       "faces": [
         -4, -3, -2, -1
       ],
@@ -73,7 +73,7 @@
       "name": "d4_sadness",
       "displayName": "Sadness",
       "desc": "Sadness everywhere.",
-      "image": "d4_curse.png",
+      "image": "d4_curse",
       "faces": [
         0, 0, 0, 0
       ],
@@ -86,7 +86,7 @@
       "name": "d6_risky",
       "displayName": "Gambler's True Dice",
       "desc": "Check your luck.",
-      "image": "d6_risky.png",
+      "image": "d6_risky",
       "faces": [
         1, 1, 1, 1, 1, 40
       ],
@@ -97,7 +97,7 @@
       "name": "d6_prime_numbers",
       "displayName": "Prime Dice",
       "desc": "He is the the leader of the dices.",
-      "image": "d6_prime_numbers.png",
+      "image": "d6_prime_numbers",
       "faces": [
         2, 3, 5, 7, 11, 13
       ],
@@ -108,7 +108,7 @@
       "name": "d6_odd",
       "displayName": "Odd Dice",
       "desc": "It is very, very odd dice.",
-      "image": "d6_odd.png",
+      "image": "d6_odd",
       "faces": [
         1, 3, 5, 7, 9, 11
       ],
@@ -119,7 +119,7 @@
       "name": "d6_pulse",
       "displayName": "Pulse",
       "desc": "Stable.",
-      "image": "d6_pulse.png",
+      "image": "d6_pulse",
       "faces": [
         6, 6, 6, 6, 6, 6
       ],
@@ -130,7 +130,7 @@
       "name": "d6_even",
       "displayName": "E(l)ven Dice",
       "desc": "Why do not elves like odd numbers?",
-      "image": "d6_even.png",
+      "image": "d6_even",
       "faces": [
         2, 4, 6, 8, 10, 12
       ],
@@ -141,7 +141,7 @@
       "name": "d4_lucky",
       "displayName": "Lucky? Dice",
       "desc": "Previous owner was lucky to die quickly.",
-      "image": "d4_lucky.png",
+      "image": "d4_lucky",
       "faces": [
         10, 10, 10, -10
       ],
@@ -152,7 +152,7 @@
       "name": "d3_unversal",
       "displayName": "Dice for All Needs",
       "desc": "Can be used in any situation. With 33% for success.",
-      "image": "d3_unversal.png",
+      "image": "d3_unversal",
       "faces": [
         12, 0, -12
       ],
@@ -163,7 +163,7 @@
       "name": "d6_curse",
       "displayName": "Cursed Cube",
       "desc": "Just to keep the even more balance in the world.",
-      "image": "d6_curse.png",
+      "image": "d6_curse",
       "faces": [
         -6, -5, -4, -3, -2, -1
       ],
@@ -179,7 +179,7 @@
       "name": "d20_risky",
       "displayName": "True Gambler's True Dice",
       "desc": "100% 250 on enemy attack (just kidding).",
-      "image": "d20_risky.png",
+      "image": "d20_risky",
       "faces": [
         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 250
       ],
@@ -191,7 +191,7 @@
       "name": "d6_pirate_luck",
       "displayName": "Pirate's Dice",
       "desc": "Was used to play on blind pirates' ship.",
-      "image": "d6_pirate_luck.png",
+      "image": "d6_pirate_luck",
       "faces": [
         9, 12, 15, 15, 18, 21
       ],
@@ -203,7 +203,7 @@
       "name": "d1",
       "displayName": "Truth",
       "desc": "It won't change, no matter what you believe.",
-      "image": "d1.png",
+      "image": "d1",
       "faces": [
         20
       ],
@@ -216,7 +216,7 @@
       "name": "d2_all_or_nothing",
       "displayName": "Devil's Coin",
       "desc": "A deal with the devil is sometimes so attractive.",
-      "image": "d2_all_or_nothing.png",
+      "image": "d2_all_or_nothing",
       "faces": [
         -20, 50
       ],
@@ -227,7 +227,7 @@
       "name": "d4true",
       "displayName": "True d4 Dice",
       "desc": "Do not bonk yourself.",
-      "image": "d4true.png",
+      "image": "d4true",
       "faces": [
         15, 25, 35, 45
       ],
@@ -238,7 +238,7 @@
       "name": "d6true",
       "displayName": "True d6 Dice",
       "desc": "Someone likes round numbers.",
-      "image": "d6true.png",
+      "image": "d6true",
       "faces": [
         10, 20, 30, 40, 50, 60
       ],
@@ -250,7 +250,7 @@
       "name": "d5_spirit",
       "displayName": "Spirit's Pyramid",
       "desc": "Is this even a dice?",
-      "image": "d5_spirit.png",
+      "image": "d5_spirit",
       "faces": [
         0, 13, 13, 13, 13
       ],
@@ -261,7 +261,7 @@
       "name": "d6_fib2",
       "displayName": "Second Fibonacci's Dice",
       "desc": "Better than the first one.",
-      "image": "d6_fib2.png",
+      "image": "d6_fib2",
       "faces": [
         8, 13, 21, 34, 55, 89
       ],

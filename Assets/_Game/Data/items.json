@@ -7,7 +7,7 @@
       "type": "Weapon",
       "image": "sword1",
       "stats": {
-        "initial": 1,
+        "initial": 2,
         "dices": 1,
         "dicesMod": 1
       },

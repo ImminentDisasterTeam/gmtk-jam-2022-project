@@ -33,7 +33,7 @@
         {
           "subPool": [
             {
-              "type": "redSpiderSpider"
+              "type": "redSpider"
             }
           ]
         }

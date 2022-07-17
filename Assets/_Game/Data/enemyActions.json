@@ -207,7 +207,7 @@
       ],
       "condition": {
         "chargeHigher": 0,
-        "chargeLower": 15,
+        "chargeLower": 7,
         "healthHigher": 0,
         "healthLower": 0,
         "elseAction": "redEvilSpiderChargeAttack"
@@ -226,7 +226,7 @@
         }
       ],
       "condition": {
-        "chargeHigher": 15,
+        "chargeHigher": 7,
         "chargeLower": 0,
         "healthHigher": 0,
         "healthLower": 0,
@@ -248,7 +248,7 @@
         }
       ],
       "condition": {
-        "chargeHigher": 25,
+        "chargeHigher": 10,
         "chargeLower": 0,
         "healthHigher": 0,
         "healthLower": 0,
@@ -269,11 +269,59 @@
       ],
       "condition": {
         "chargeHigher": 0,
-        "chargeLower": 20,
+        "chargeLower": 10,
         "healthHigher": 0,
         "healthLower": 0,
         "elseAction": "queenSpiderChargedAttack"
       }
+    },
+
+
+
+    {
+      "name": "whiteSkeletonAttack",
+      "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 4,
+            "dices": 1,
+            "dicesMod": 0.5
+          }
+        }
+      ]
+    },
+
+
+
+    {
+      "name": "greySkeleton",
+      "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 4,
+            "dices": 1,
+            "dicesMod": 0.5
+          }
+        }
+      ]
+    },
+
+
+
+    {
+      "name": "blackSkeletonAttack",
+      "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 4,
+            "dices": 1,
+            "dicesMod": 0.5
+          }
+        }
+      ]
     }
 
   ]

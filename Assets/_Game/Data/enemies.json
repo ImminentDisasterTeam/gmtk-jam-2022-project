@@ -47,9 +47,37 @@
       "name": "queenSpider",
       "displayName": "Spider Queen",
       "image": "queenSpider",
-      "health": 15,
+      "health": 20,
       "actionLoop": [
         "queenSpiderCharge"
+      ]
+    },
+
+    {
+      "name": "whiteSkeleton",
+      "displayName": "Skeleton",
+      "image": "whiteSkeleton",
+      "health": 15,
+      "actionLoop": [
+        "whiteSkeletonAttack"
+      ]
+    },
+    {
+      "name": "greySkeleton",
+      "displayName": "Skeleton",
+      "image": "greySkeleton",
+      "health": 15,
+      "actionLoop": [
+        "greySkeletonAttack"
+      ]
+    },
+    {
+      "name": "blackSkeleton",
+      "displayName": "Skeleton",
+      "image": "blackSkeleton",
+      "health": 15,
+      "actionLoop": [
+        "blackSkeletonAttack"
       ]
     }
 
