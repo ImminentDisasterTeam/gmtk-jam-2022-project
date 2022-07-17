@@ -6,6 +6,7 @@ namespace _Game.Scripts.Data {
         public int handSize;
         public int deckSize;
         public int inventorySize;
+        public int dicesPerLevel;
         public string[] shopInventory;
         public float sellMultiplier;
         public float goldRetainMultiplier;

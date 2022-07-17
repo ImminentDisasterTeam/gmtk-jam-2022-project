@@ -2,6 +2,7 @@
   "handSize": 3,
   "deckSize": 8,
   "inventorySize": 8,
+  "dicesPerLevel": 3,
   "shopInventory": [
     "sword1",
     "sword2",
