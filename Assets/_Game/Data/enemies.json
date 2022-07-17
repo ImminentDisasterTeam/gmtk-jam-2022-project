@@ -36,7 +36,7 @@
       "name": "redEvilSpider",
       "displayName": "Red Spider",
       "image": "redSpider",
-      "health": 20,
+      "health": 21,
       "actionLoop": [
         "redEvilSpiderChargeAttack",
         "redEvilSpiderCharge"
@@ -47,7 +47,7 @@
       "name": "queenSpider",
       "displayName": "Spider Queen",
       "image": "queenSpider",
-      "health": 30,
+      "health": 35,
       "actionLoop": [
         "queenSpiderCharge"
       ]
@@ -57,7 +57,7 @@
       "name": "whiteSkeleton",
       "displayName": "Skeleton",
       "image": "whiteSkeleton",
-      "health": 16,
+      "health": 14,
       "actionLoop": [
         "whiteSkeletonAttack"
       ]
@@ -76,7 +76,7 @@
       "name": "blackSkeleton",
       "displayName": "Skeleton",
       "image": "blackSkeleton",
-      "health": 13,
+      "health": 16,
       "actionLoop": [
         "blackSkeletonAttack",
         "wait"
@@ -86,7 +86,7 @@
       "name": "royalSkeleton",
       "displayName": "Royal Skeleton",
       "image": "royalSkeleton",
-      "health": 40,
+      "health": 50,
       "actionLoop": [
         "royalSkeletonAttack",
         "wait",
@@ -109,7 +109,7 @@
       "name": "middleLavamental",
       "displayName": "Middle Lavamental",
       "image": "middleLavamental",
-      "health": 20,
+      "health": 25,
       "actionLoop": [
         "middleLavamentalAttack",
         "middleLavamentalAttack2",
@@ -142,7 +142,7 @@
       "name": "Golem",
       "displayName": "Golem",
       "image": "Golem",
-      "health": 250,
+      "health": 300,
       "actionLoop": [
         "GolemAttack1",
         "GolemDef1",
