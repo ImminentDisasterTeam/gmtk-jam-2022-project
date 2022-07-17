@@ -25,7 +25,6 @@ namespace _Game.Scripts.UI {
             _startButton.onClick.AddListener(OnButtonClick);
             ToggleUI(true);
             Player.LoadPlayer(new Rng(42));
-            SoundHolder.Instance.PlayMusic("dungeon");
         }
 
         private void OnButtonClick() {
@@ -44,12 +43,14 @@ namespace _Game.Scripts.UI {
 
         public void StartDungeon(DungeonData dungeonData, Rng rng, Action<bool> onDone, bool disableThisUI = true) {
             Player.Instance.InDungeon = true;
+            SoundHolder.Instance.PlayMusic("dungeon");
 
             var dungeon = new Dungeon(dungeonData);
             new DungeonRunner(dungeon, rng, _roomUI.StartRoom, finishedByDeath => {
                 Debug.LogWarning("FINISHED DUNGEON." + (finishedByDeath ? " DIED." : ""));
 
                 Player.Instance.InDungeon = false;
+                SoundHolder.Instance.PlayMusic("main");
                 if (finishedByDeath) {
                     Player.Instance.Reset(rng, true);
                 }
