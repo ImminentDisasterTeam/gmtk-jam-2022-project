@@ -1,6 +1,19 @@
 {
   "rooms": [
     {
+      "name": "juniorLavamental_battle",
+      "type": "Battle",
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "juniorLavamental"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "one_random_skeleton_battle",
       "type": "Battle",
       "text": "",
@@ -400,7 +413,6 @@
     },
     {
       "name": "empty",
-      "image": "empty",
       "type": "Empty"
     },
     {

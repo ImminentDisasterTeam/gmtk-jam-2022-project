@@ -102,7 +102,7 @@
       "image": "juniorLavamental",
       "health": 5,
       "actionLoop": [
-        ""
+        "juniorLavamentalCharge"
       ]
     },
     {
