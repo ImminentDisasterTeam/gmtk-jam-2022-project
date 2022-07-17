@@ -44,6 +44,7 @@ namespace _Game.Scripts.UI {
             _battleUI.SetActive(true);
             EnableContinue(false);
 
+            _actionSelectionPanel.Load();
             _actionSelectionPanel.Show();
             _continuePanel.Show();
 
@@ -119,7 +120,8 @@ namespace _Game.Scripts.UI {
             _environmentInteractionPanel.OnContinueStatusChanged.ClearSubscribers();
             _continuePanel.OnContinue.ClearSubscribers();
             _playerActionPanel.OnContentsChanged.ClearSubscribers();
-            
+            _actionSelectionPanel.OnSelected.ClearSubscribers();
+
             _battleUI.SetActive(false);
 
             var hideProcess = new ParallelProcess();
