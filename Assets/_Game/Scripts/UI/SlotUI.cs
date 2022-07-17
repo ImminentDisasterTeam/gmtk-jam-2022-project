@@ -44,6 +44,10 @@ namespace _Game.Scripts.UI {
             Item,
             Dice
         }
+
+        public virtual bool CanTakeFrom(SlotUI other) {
+            return true;
+        }
     }
 
     public static class SlotUIStateHelper {

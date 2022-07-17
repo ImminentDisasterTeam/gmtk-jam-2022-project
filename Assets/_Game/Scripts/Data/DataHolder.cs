@@ -23,36 +23,44 @@ namespace _Game.Scripts.Data {
             Instance = this;
         }
 
+        private DiceData[] _dicesCache;
         public DiceData[] GetDices() {
-            return JsonUtility.FromJson<Dices>(_dices.text).dices;
+            return _dicesCache ??= JsonUtility.FromJson<Dices>(_dices.text).dices;
         }
 
+        private DungeonData[] _dungeonsCache;
         public DungeonData[] GetDungeons() {
-            return JsonUtility.FromJson<Dungeons>(_dungeons.text).dungeons;
+            return _dungeonsCache ??= JsonUtility.FromJson<Dungeons>(_dungeons.text).dungeons;
         }
 
+        private EnemyData[] _enemiesCache;
         public EnemyData[] GetEnemies() {
-            return JsonUtility.FromJson<Enemies>(_enemies.text).enemies;
+            return _enemiesCache ??= JsonUtility.FromJson<Enemies>(_enemies.text).enemies;
         }
 
+        private EnemyActionData[] _enemyActionsCache;
         public EnemyActionData[] GetEnemyActions() {
-            return JsonUtility.FromJson<EnemyActions>(_enemyActions.text).actions;
+            return _enemyActionsCache ??= JsonUtility.FromJson<EnemyActions>(_enemyActions.text).actions;
         }
 
+        private ItemData[] _itemsCache;
         public ItemData[] GetItems() {
-            return JsonUtility.FromJson<Items>(_items.text).items;
+            return _itemsCache ??= JsonUtility.FromJson<Items>(_items.text).items;
         }
 
+        private PlayerData[] _playersCache;
         public PlayerData[] GetPlayers() {
-            return JsonUtility.FromJson<Players>(_players.text).players;
+            return _playersCache ??= JsonUtility.FromJson<Players>(_players.text).players;
         }
 
+        private RoomData[] _roomsCache;
         public RoomData[] GetRooms() {
-            return JsonUtility.FromJson<Rooms>(_rooms.text).rooms;
+            return _roomsCache ??= JsonUtility.FromJson<Rooms>(_rooms.text).rooms;
         }
 
+        private SettingsData? _settingsDataCache;
         public SettingsData GetSettings() {
-            return JsonUtility.FromJson<SettingsData>(_settings.text);
+            return _settingsDataCache ??= JsonUtility.FromJson<SettingsData>(_settings.text);
         }
 
         [Serializable]

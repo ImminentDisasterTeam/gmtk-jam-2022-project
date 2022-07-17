@@ -6,7 +6,6 @@ using GeneralUtils;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using Event = UnityEngine.Event;
 
 namespace _Game.Scripts.UI {
     public class DiceActionPanelUI : UIElement {
@@ -31,7 +30,7 @@ namespace _Game.Scripts.UI {
 
         public void Load(EActionType actionType, StatsData stats) {
             var shouldShowStats = actionType != EActionType.Wait;
-            var diceCount = shouldShowStats ? stats.dices : 0;
+            var diceCount = shouldShowStats ? stats.DiceCount : 0;
 
             _actionIcon.sprite = SpriteHolder.Instance.GetSprite(actionType);
 
@@ -39,6 +38,7 @@ namespace _Game.Scripts.UI {
             _stats = stats;
             _statsText.text = stats.ToString();
             _statsText.gameObject.SetActive(shouldShowStats);
+
             for (var i = 0; i < diceCount; i++) {
                 var diceSlot = Instantiate(_diceSlotPrefab, _diceSlotsParent);
                 diceSlot.State = SlotUI.EState.CanPut;
@@ -57,10 +57,7 @@ namespace _Game.Scripts.UI {
 
         public override void Hide(Action onDone = null) {
             base.Hide(() => {
-                foreach (var slot in GetDiceSlots()) {
-                    slot.OnContentsChanged.Unsubscribe(OnDiceSlotChanged);
-                    Destroy(slot.gameObject);
-                }
+                ClearSlots();
                 onDone?.Invoke();
             });
         }
@@ -68,6 +65,13 @@ namespace _Game.Scripts.UI {
         public int Roll(Rng rng) {
             _rolled = true;
             return _stats.initial + Convert.ToInt32(Math.Floor(_stats.dicesMod * GetDiceSlots().Select(s => s.Roll(rng)).Sum()));
+        }
+
+        private void ClearSlots() {
+            foreach (var slot in GetDiceSlots()) {
+                slot.OnContentsChanged.Unsubscribe(OnDiceSlotChanged);
+                DestroyImmediate(slot.gameObject);
+            }
         }
 
         private DiceSlotUI[] GetDiceSlots() {

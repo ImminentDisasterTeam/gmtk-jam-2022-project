@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using _Game.Scripts.Data;
+using _Game.Scripts.UI;
 using GeneralUtils;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -22,6 +23,9 @@ namespace _Game.Scripts.GamePlay {
         public IEnumerable<Dice> Dices => _data.dices.Select(diceName => string.IsNullOrEmpty(diceName)
             ? null
             : new Dice(DataHolder.Instance.GetDices().First(dice => dice.name == diceName)));
+        public IEnumerable<Item> Items => _data.inventory.Select(itemName => string.IsNullOrEmpty(itemName)
+            ? null
+            : new Item(DataHolder.Instance.GetItems().First(item => item.name == itemName)));
 
         public int Health { get; private set; }
         public int MaxHealth => _data.maxHealth;
@@ -29,7 +33,25 @@ namespace _Game.Scripts.GamePlay {
             get => _data.money;
             set {
                 _data.money = value;
+                StatsPanelUI.Instance.SetMoney(value);
                 WriteToSave();
+            }
+        }
+
+        private bool _inDungeon;
+        public bool InDungeon {
+            get => _inDungeon;
+            set {
+                var wasInDungeon = _inDungeon;
+                _inDungeon = value;
+
+                if (!wasInDungeon && value) {
+                    StatsPanelUI.Instance.SetEnabled(false);
+                } else if (wasInDungeon && !value) {
+                    StatsPanelUI.Instance.SetEnabled(true);
+                    ResetHealthToMax();
+                    WriteToSave();
+                }
             }
         }
 
@@ -40,18 +62,24 @@ namespace _Game.Scripts.GamePlay {
 
         private void Initialize(Rng rng) {
             _data = LoadFromSave() ?? CreateNewData(rng);
-            ResetHealthToMax();
-            WriteToSave();
+            PostLoad();
         }
 
         public void Reset(Rng rng) {
             _data = CreateNewData(rng);
+            PostLoad();
+        }
+
+        private void PostLoad() {
             ResetHealthToMax();
             WriteToSave();
+            StatsPanelUI.Instance.Load(MaxHealth, Money, _data.attackSlot, _data.defenceSlot, _data.interactSlot);
+            InventoryPanelUI.Instance.Load(Items);
         }
 
         public bool ChangeHealth(int deltaHealth) {
             Health = Math.Min(Math.Max(0, Health + deltaHealth), MaxHealth);
+            StatsPanelUI.Instance.SetHealth(Health);
             return Health == 0;
         }
 
@@ -60,8 +88,29 @@ namespace _Game.Scripts.GamePlay {
             WriteToSave();
         }
 
+        public void ChangeItem([CanBeNull] string itemName, int index) {
+            _data.inventory[index] = itemName;
+            WriteToSave();
+        }
+
+        public void ChangeAttackSlot([CanBeNull] string itemName) {
+            _data.attackSlot = itemName;
+            WriteToSave();
+        }
+
+        public void ChangeDefenceSlot([CanBeNull] string itemName) {
+            _data.attackSlot = itemName;
+            WriteToSave();
+        }
+
+        public void ChangeInteractionSlot([CanBeNull] string itemName) {
+            _data.attackSlot = itemName;
+            WriteToSave();
+        }
+
         public void ResetHealthToMax() {
             Health = MaxHealth;
+            StatsPanelUI.Instance.SetHealth(Health);
         }
 
         private static PlayerSaveData CreateNewData(Rng rng) {
@@ -83,12 +132,17 @@ namespace _Game.Scripts.GamePlay {
             };
 
             Array.Resize(ref data.dices, settings.deckSize);
+            Array.Resize(ref data.inventory, settings.inventorySize);
 
             return data;
         }
 
         private void WriteToSave() {
-            File.WriteAllText(FilePath, JsonUtility.ToJson(_data));
+            if (InDungeon) {
+                return;
+            }
+
+            File.WriteAllText(FilePath, JsonUtility.ToJson(_data, true));
         }
 
         private static StatsData ItemOrDefault(string item, StatsData @default) {

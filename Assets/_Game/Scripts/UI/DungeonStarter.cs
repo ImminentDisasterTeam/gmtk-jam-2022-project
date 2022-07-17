@@ -20,9 +20,10 @@ namespace _Game.Scripts.UI {
         [SerializeField] private RoomUI _roomUI;
         [SerializeField] private DungeonDiceUI _dungeonDiceUI;
 
-        private void Awake() {
+        private void Start() {
             _startButton.onClick.AddListener(OnButtonClick);
             ToggleUI(true);
+            Player.LoadPlayer(new Rng(42));
         }
 
         private void OnButtonClick() {
@@ -35,12 +36,18 @@ namespace _Game.Scripts.UI {
                 return;
             }
 
-            var rng = new Rng(randomSeed);
-            Player.LoadPlayer(rng);
+            Player.Instance.InDungeon = true;
 
+            var rng = new Rng(randomSeed);
             var dungeon = new Dungeon(dungeons[dungeonNumber]);
             new DungeonRunner(dungeon, rng, _roomUI.StartRoom, finishedByDeath => {
                 Debug.LogWarning("FINISHED DUNGEON." + (finishedByDeath ? " DIED." : ""));
+
+                Player.Instance.InDungeon = false;
+                if (finishedByDeath) {
+                    Player.Instance.Reset(rng);
+                }
+
                 _dungeonDiceUI.Hide();
                 ToggleUI(true);
             });

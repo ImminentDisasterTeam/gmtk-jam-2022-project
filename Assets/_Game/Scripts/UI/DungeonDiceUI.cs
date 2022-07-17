@@ -78,7 +78,7 @@ namespace _Game.Scripts.UI {
             base.Hide(() => {
                 foreach (var slot in GetDiceSlots()) {
                     slot.OnContentsChanged.Unsubscribe(OnDiceSlotChanged);
-                    Destroy(slot.gameObject);
+                    DestroyImmediate(slot.gameObject);
                 }
             });
         }

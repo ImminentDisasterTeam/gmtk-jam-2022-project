@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using _Game.Scripts.Data;
+using _Game.Scripts.GamePlay;
 using GeneralUtils;
 using GeneralUtils.Processes;
 using TMPro;
@@ -9,6 +11,7 @@ using UnityEngine;
 namespace _Game.Scripts.UI {
     public class EnvironmentInteractionPanelUI : UIElement {
         [SerializeField] private DiceActionPanelUI _diceActionPanel;
+        [SerializeField] private ItemPanelUI _dropPanel;
         [SerializeField] private TextMeshProUGUI _text;
         private RoomData _data;
 
@@ -46,17 +49,22 @@ namespace _Game.Scripts.UI {
 
         public (int deltaHealth, int deltaMoney) Roll(Rng rng) {
             var result = _diceActionPanel.Roll(rng);
-            
+
+            var (deltaHealth, healthDescription) = GetHealthRollResult(_data, result);
+            var (deltaMoney, items, chestDescription) = GetChestRollResult(_data, result, rng);
             _text.text = _data.Type switch {
-                ERoomType.ItemChest => GetChestRollDescription(_data, result),
-                ERoomType.GoldChest => GetChestRollDescription(_data, result),
-                ERoomType.Health => GetHealthRollDescription(_data, result),
+                ERoomType.ItemChest => chestDescription,
+                ERoomType.GoldChest => chestDescription,
+                ERoomType.Health => healthDescription,
                 _ => throw new ArgumentOutOfRangeException()
             };
 
-            var items = GetItems(_data, result, rng);
-            // TODO show optional selectionPanel
-            return (GetHealthChange(_data, result), GetGold(_data, result));
+            if (items.Length > 0) {
+                _dropPanel.Load(items.Select(i => new Item(DataHolder.Instance.GetItems().First(d => d.name == i))));
+                _dropPanel.Show();
+            }
+
+            return (deltaHealth, deltaMoney);
         }
 
         private static string GetChestDescription(RoomData data) {
@@ -92,24 +100,30 @@ namespace _Game.Scripts.UI {
             }
         }
 
-        private static string GetChestRollDescription(RoomData data, int result) {
+        private static (int gold, string[] items, string desription) GetChestRollResult(RoomData data, int result, Rng rng) {
             if (result < data.ChestCheck) {
-                return "You got nothing.";
+                return (0, Array.Empty<string>(), "You got nothing.");
             }
 
             if (result < data.hiddenCheck) {
-                return $"You got {LootType()}!";
+                return (data.gold, GetItems(data.contentPool), $"You got {LootType()}!");
             }
 
-            return $"You got more {LootType()} than you expected!";
+            var items = GetItems(data.contentPool).Concat(GetItems(data.hiddenContentPool)).ToArray();
+            return (data.gold + data.hiddenGold, items, $"You got more {LootType()} than you expected!");
 
             string LootType() => data.Type == ERoomType.GoldChest ? "gold" : "items";
+            string[] GetItems(PoolItemData[] pool) => (pool ?? Array.Empty<PoolItemData>()).Select(item => rng.NextChoice(item.subPool).type).ToArray();
         }
 
-        private static string GetHealthRollDescription(RoomData data, int result) {
+        private static (int health, string description) GetHealthRollResult(RoomData data, int result) {
+            if ((data.healthChange?.Length ?? 0) == 0) {
+                return (0, "");
+            }
+
             for (var i = 0; i < data.healthChange.Length; i++) {
                 if (Check(result, i, data.check)) {
-                    return $"Received {Health(data.healthChange[i])}!";
+                    return (data.healthChange[i], $"Received {Health(data.healthChange[i])}!");
                 }
             }
 
@@ -140,21 +154,6 @@ namespace _Game.Scripts.UI {
             }
         }
 
-        private static int GetHealthChange(RoomData data, int result) {
-            // var healthChange = _data.Type != ERoomType.Health
-            //     ? 0
-            //     :
-            return 0; // TODO
-        }
-
-        private static int GetGold(RoomData data, int result) {
-            return 0; // TODO
-        }
-
-        private static List<ItemData> GetItems(RoomData data, int result, Rng rng) {
-            return new List<ItemData>(); // TODO
-        }
-
         public override void Show(Action onDone = null) {
             var showProcess = new ParallelProcess();
             showProcess.Add(new AsyncProcess(base.Show));
@@ -169,6 +168,9 @@ namespace _Game.Scripts.UI {
             var hideProcess = new ParallelProcess();
             if (_data.Type != ERoomType.Empty) {
                 hideProcess.Add(new AsyncProcess(_diceActionPanel.Hide));
+            }
+            if (_dropPanel.gameObject.activeSelf) {
+                hideProcess.Add(new AsyncProcess(_dropPanel.Hide));
             }
             hideProcess.Add(new AsyncProcess(base.Hide));
             hideProcess.Run(onDone);

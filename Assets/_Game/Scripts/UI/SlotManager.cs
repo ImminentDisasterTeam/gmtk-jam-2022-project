@@ -24,6 +24,7 @@ namespace _Game.Scripts.UI {
         }
 
         public void OnClick([CanBeNull] SlotUI slot) {
+            // TODO: do not even select a slot from which you can't take
             if (slot == null) {
                 Debug.LogWarning("no slot clicked");
                 if (_selectedSlot != null) {
@@ -44,7 +45,7 @@ namespace _Game.Scripts.UI {
             }
 
             if (_selectedSlot.Type != slot.Type
-                || !(_selectedSlot.State.CanTake() && slot.State.CanPut())) {
+                || !(_selectedSlot.State.CanTake() && slot.State.CanPut() && slot.CanTakeFrom(_selectedSlot) && _selectedSlot.CanTakeFrom(slot))) {
                 _selectedSlot.ToggleSelection(false);
                 _selectedSlot = null;
                 return;
