@@ -15,6 +15,7 @@ namespace _Game.Scripts.UI {
         [SerializeField] private EnemyUI _enemyUI;
         [SerializeField] private GameObject _battleUI;
         [SerializeField] private Image _background;
+        [SerializeField] private Image _object;
 
         // private RoomData _data;
         private Rng _rng;
@@ -25,6 +26,13 @@ namespace _Game.Scripts.UI {
             _rng = rng;
             _onRoomFinished = onRoomFinished;
             _background.sprite = background;
+
+            var hasObject = !string.IsNullOrEmpty(data.image);
+            _object.gameObject.SetActive(hasObject);
+            if (hasObject) {
+                _object.sprite = SpriteHolder.Instance.GetSprite(data.image);
+                _object.SetNativeSize();
+            }
 
             Show(() => {
                 switch (data.Type) {
