@@ -7,6 +7,7 @@ namespace _Game.Scripts.Data {
         public string name;
         public SubActionData[] subActions;
         public ConditionData condition;
+        public bool HasCondition => !string.IsNullOrEmpty(condition.elseAction);
     }
 
     [Serializable]

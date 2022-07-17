@@ -24,11 +24,11 @@ namespace _Game.Scripts.UI {
         }
 
         public void OnPointerEnter(PointerEventData eventData) {
-            Log("Enter");
+            Log("Enter"); // TODO tooltip
         }
 
         public void OnPointerExit(PointerEventData eventData) {
-            Log("Exit");
+            Log("Exit"); // TODO tooltip
         }
 
         private void Log(string message) => Debug.Log($"{name}: {message}");

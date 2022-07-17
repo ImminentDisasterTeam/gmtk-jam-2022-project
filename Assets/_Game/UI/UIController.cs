@@ -12,10 +12,5 @@ namespace _Game.UI
                 throw new ApplicationException("ONLY ONE UICONTROLLER ALLOWED");
             Instance = this;
         }
-
-        public void SelectDice(bool select, int diceValue = 0)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

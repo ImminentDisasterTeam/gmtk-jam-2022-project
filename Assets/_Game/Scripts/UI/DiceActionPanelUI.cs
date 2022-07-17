@@ -29,6 +29,8 @@ namespace _Game.Scripts.UI {
         }
 
         public void Load(EActionType actionType, StatsData stats) {
+            ClearSlots();
+
             var shouldShowStats = actionType != EActionType.Wait;
             var diceCount = shouldShowStats ? stats.DiceCount : 0;
 
@@ -64,7 +66,7 @@ namespace _Game.Scripts.UI {
 
         public int Roll(Rng rng) {
             _rolled = true;
-            return _stats.initial + Convert.ToInt32(Math.Floor(_stats.dicesMod * GetDiceSlots().Select(s => s.Roll(rng)).Sum()));
+            return Math.Max(_stats.initial + Convert.ToInt32(Math.Floor(_stats.dicesMod * GetDiceSlots().Select(s => s.Roll(rng)).Sum())), 0);
         }
 
         private void ClearSlots() {

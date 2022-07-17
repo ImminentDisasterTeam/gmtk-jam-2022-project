@@ -113,7 +113,10 @@ namespace _Game.Scripts.UI {
             return (data.gold + data.hiddenGold, items, $"You got more {LootType()} than you expected!");
 
             string LootType() => data.Type == ERoomType.GoldChest ? "gold" : "items";
-            string[] GetItems(PoolItemData[] pool) => (pool ?? Array.Empty<PoolItemData>()).Select(item => rng.NextChoice(item.subPool).type).ToArray();
+            string[] GetItems(PoolItemData[] pool)
+                => (pool ?? Array.Empty<PoolItemData>())
+                    .Select(item => rng.NextWeightedChoice(item.WeightedItems))
+                    .ToArray();
         }
 
         private static (int health, string description) GetHealthRollResult(RoomData data, int result) {

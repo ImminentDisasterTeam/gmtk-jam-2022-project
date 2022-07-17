@@ -20,11 +20,7 @@ namespace _Game.Scripts.GamePlay {
 
             _currentRoom++;
 
-            var possibleRooms = _data.contentPool[_currentRoom].subPool;
-            var room = rng.NextWeightedChoice(possibleRooms
-                .Select(r => (r.type, (float) r.Weight))
-                .ToList());
-
+            var room = rng.NextWeightedChoice(_data.contentPool[_currentRoom].WeightedItems);
             var roomData = DataHolder.Instance.GetRooms().First(r => r.name == room);
             return new Room(roomData);
         }
