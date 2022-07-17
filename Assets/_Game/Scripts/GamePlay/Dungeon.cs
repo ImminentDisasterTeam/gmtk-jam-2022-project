@@ -1,12 +1,15 @@
 ﻿using System.Linq;
 using _Game.Scripts.Data;
+using _Game.Scripts.UI;
 using GeneralUtils;
 using JetBrains.Annotations;
+using UnityEngine;
 
 namespace _Game.Scripts.GamePlay {
     public class Dungeon {
         private readonly DungeonData _data;
         private int _currentRoom = -1;
+        public Sprite[] SpriteSheet => SpriteHolder.Instance.GetSheet(_data.spriteSheet);
 
         public Dungeon(DungeonData data) {
             _data = data;

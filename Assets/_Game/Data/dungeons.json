@@ -245,6 +245,7 @@
       ]
     },
     {
+      "spriteSheet": "cave",
       "levels": [
         3
       ],

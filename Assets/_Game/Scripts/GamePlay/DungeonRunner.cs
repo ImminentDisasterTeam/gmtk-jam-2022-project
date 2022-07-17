@@ -1,17 +1,18 @@
 ﻿using System;
 using _Game.Scripts.Data;
 using GeneralUtils;
+using UnityEngine;
 
 namespace _Game.Scripts.GamePlay {
     public class DungeonRunner {
         private readonly Dungeon _dungeon;
         private readonly Rng _rng;
-        private readonly Action<RoomData, Rng, Action<bool>> _roomStarter;
+        private readonly Action<RoomData, Rng, Sprite, Action<bool>> _roomStarter;
         private readonly Action<bool> _onDungeonFinished;
 
         private Room _room;
 
-        public DungeonRunner(Dungeon dungeon, Rng rng, Action<RoomData, Rng, Action<bool>> roomStarter, Action<bool> onDungeonFinished) {
+        public DungeonRunner(Dungeon dungeon, Rng rng, Action<RoomData, Rng, Sprite, Action<bool>> roomStarter, Action<bool> onDungeonFinished) {
             _dungeon = dungeon;
             _rng = rng;
             _roomStarter = roomStarter;
@@ -27,7 +28,8 @@ namespace _Game.Scripts.GamePlay {
                 return;
             }
 
-            _roomStarter(room.Data, _rng, OnRoomFinished);
+            var background = _rng.NextChoice(_dungeon.SpriteSheet);
+            _roomStarter(room.Data, _rng, background, OnRoomFinished);
         }
 
         private void OnRoomFinished(bool finishedByDeath) {
