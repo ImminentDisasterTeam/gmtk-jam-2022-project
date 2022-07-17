@@ -243,6 +243,85 @@
           ]
         }
       ]
+    },
+    {
+      "levels": [
+        3
+      ],
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "one_white_skeleton_battle",
+              "weight": 4
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "one_grey_skeleton_battle",
+              "weight": 9
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "simpleTrap2",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "one_white_skeleton_battle",
+              "weight": 9
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "one_grey_skeleton_battle",
+              "weight": 18
+            },
+            {
+              "type": "heal_health",
+              "weight": 1
+            },
+            {
+              "type": "empty",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "random1_chest",
+              "weight": 18
+            },
+            {
+              "type": "simpleTrap2",
+              "weight": 1
+            },
+            {
+              "type": "risky_health",
+              "weight": 1
+            }
+          ]
+        },
+        {
+          "subPool": [
+            {
+              "type": "one_black_skeleton_battle",
+              "weight": 1
+            }
+          ]
+        }
+      ]
     }
   ]
 }

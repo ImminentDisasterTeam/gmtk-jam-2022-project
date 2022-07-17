@@ -1,6 +1,45 @@
 {
   "rooms": [
     {
+      "name": "one_white_skeleton_battle",
+      "type": "Battle",
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "whiteSkeleton"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "one_grey_skeleton_battle",
+      "type": "Battle",
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "greySkeleton"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "one_black_skeleton_battle",
+      "type": "Battle",
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "blackSkeleton"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "one_black_spider_battle",
       "type": "Battle",
       "contentPool": [
@@ -195,6 +234,19 @@
       ],
       "healthChange": [
         -15,
+        0
+      ],
+      "mandatory": true
+    },
+    {
+      "name": "simpleTrap2",
+      "image": "simpleTrap",
+      "type": "Health",
+      "check": [
+        10
+      ],
+      "healthChange": [
+        -30,
         0
       ],
       "mandatory": true
