@@ -17,6 +17,7 @@ namespace _Game.Scripts {
 
             _mainGameMenu.Load(rng);
             _mainGameMenu.Show();
+            SoundHolder.Instance.PlayMusic("main");
         }
     }
 }

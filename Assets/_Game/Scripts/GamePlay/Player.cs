@@ -129,12 +129,12 @@ namespace _Game.Scripts.GamePlay {
         }
 
         public void ChangeDefenceSlot([CanBeNull] string itemName) {
-            _data.attackSlot = itemName;
+            _data.defenceSlot = itemName;
             WriteToSave();
         }
 
         public void ChangeInteractionSlot([CanBeNull] string itemName) {
-            _data.attackSlot = itemName;
+            _data.defenceSlot = itemName;
             WriteToSave();
         }
 
