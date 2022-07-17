@@ -201,7 +201,11 @@ namespace _Game.Scripts.GamePlay {
                 return;
             }
 
+#if UNITY_WEBGL && !UNITY_EDITOR
+            PlayerPrefs.SetString(FilePath, JsonUtility.ToJson(_data, true));
+#else
             File.WriteAllText(FilePath, JsonUtility.ToJson(_data, true));
+#endif
         }
 
         private static StatsData ItemOrDefault(string item, StatsData @default) {
@@ -214,11 +218,20 @@ namespace _Game.Scripts.GamePlay {
         }
 
         private PlayerSaveData? LoadFromSave() {
+            
+#if UNITY_WEBGL && !UNITY_EDITOR
+            if (!PlayerPrefs.HasKey(FilePath)) {
+                return null;
+            }
+
+            return JsonUtility.FromJson<PlayerSaveData>(PlayerPrefs.GetString(FilePath));
+#else
             if (!File.Exists(FilePath)) {
                 return null;
             }
 
             return JsonUtility.FromJson<PlayerSaveData>(File.ReadAllText(FilePath));
+#endif
         }
     }
 }
