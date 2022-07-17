@@ -61,6 +61,13 @@ namespace _Game.Scripts.UI {
             _info.SetActive(true);
         }
 
+        public override void Hide(Action onDone = null) {
+            base.Hide(() => {
+                ClearItems();
+                onDone?.Invoke();
+            });
+        }
+
         private void ClearItems() {
             foreach (Transform slot in _choiceParent) {
                DestroyImmediate(slot.gameObject);
