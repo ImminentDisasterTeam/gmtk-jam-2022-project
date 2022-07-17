@@ -149,10 +149,10 @@
       "maxLevel": 5
     },
     {
-      "name": "d3_unversal",
+      "name": "d3_universal",
       "displayName": "Dice for All Needs",
       "desc": "Can be used in any situation. With 33% for success.",
-      "image": "d3_unversal",
+      "image": "d3_universal",
       "faces": [
         12, 0, -12
       ],
