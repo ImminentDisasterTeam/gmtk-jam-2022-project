@@ -449,7 +449,7 @@
         {
           "subPool": [
             {
-              "type": "simpleTrap1",
+              "type": "middleLavamental_battle",
               "weight": 1
             },
             {
@@ -465,7 +465,7 @@
         {
           "subPool": [
             {
-              "type": "one_grey_skeleton_battle",
+              "type": "middleLavamental_battle",
               "weight": 9
             }
           ]
@@ -473,7 +473,7 @@
         {
           "subPool": [
             {
-              "type": "one_grey_skeleton_battle",
+              "type": "seniorLavamental_battle",
               "weight": 18
             },
             {
@@ -493,7 +493,7 @@
               "weight": 18
             },
             {
-              "type": "simpleTrap2",
+              "type": "seniorLavamental_battle",
               "weight": 1
             },
             {
@@ -505,7 +505,15 @@
         {
           "subPool": [
             {
-              "type": "royal_skeleton_battle",
+              "type": "seniorLavamental_battle",
+              "weight": 1
+            },
+            {
+              "type": "middleLavamental_battle",
+              "weight": 1
+            },
+            {
+              "type": "juniorLavamental_battle",
               "weight": 1
             }
           ]

@@ -1,6 +1,45 @@
 {
   "rooms": [
     {
+      "name": "golem_battle",
+      "type": "Battle",
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "Golem"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "seniorLavamental_battle",
+      "type": "Battle",
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "seniorLavamental"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "middleLavamental_battle",
+      "type": "Battle",
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "middleLavamental"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "juniorLavamental_battle",
       "type": "Battle",
       "contentPool": [

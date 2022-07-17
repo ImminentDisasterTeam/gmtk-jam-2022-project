@@ -4,7 +4,7 @@
       "name": "blackSpider",
       "displayName": "Black Spider",
       "image": "blackSpider",
-      "health": 6,
+      "health": 8,
       "actionLoop": [
         "blackSpiderAttack",
         "blackSpiderDef"
@@ -15,7 +15,7 @@
       "name": "greenSpider",
       "displayName": "Green Spider",
       "image": "greenSpider",
-      "health": 6,
+      "health": 10,
       "actionLoop": [
         "greenSpiderAttack",
         "greenSpiderHeal"
@@ -26,7 +26,7 @@
       "name": "redSpider",
       "displayName": "Red Spider",
       "image": "redSpider",
-      "health": 8,
+      "health": 14,
       "actionLoop": [
         "redSpiderAttack",
         "redSpiderCharge"
@@ -36,7 +36,7 @@
       "name": "redEvilSpider",
       "displayName": "Red Spider",
       "image": "redSpider",
-      "health": 12,
+      "health": 20,
       "actionLoop": [
         "redEvilSpiderChargeAttack",
         "redEvilSpiderCharge"

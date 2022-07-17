@@ -153,7 +153,7 @@
       ],
       "condition": {
         "chargeHigher": 0,
-        "chargeLower": 15,
+        "chargeLower": 12,
         "healthHigher": 0,
         "healthLower": 0,
         "elseAction": "redSpiderChargeAttack"
@@ -172,7 +172,7 @@
         }
       ],
       "condition": {
-        "chargeHigher": 15,
+        "chargeHigher": 12,
         "chargeLower": 0,
         "healthHigher": 0,
         "healthLower": 0,
@@ -207,7 +207,7 @@
       ],
       "condition": {
         "chargeHigher": 0,
-        "chargeLower": 7,
+        "chargeLower": 6,
         "healthHigher": 0,
         "healthLower": 0,
         "elseAction": "redEvilSpiderChargeAttack"
@@ -226,7 +226,7 @@
         }
       ],
       "condition": {
-        "chargeHigher": 7,
+        "chargeHigher": 6,
         "chargeLower": 0,
         "healthHigher": 0,
         "healthLower": 0,
@@ -241,7 +241,7 @@
         {
           "type": "Attack",
           "stats": {
-            "initial": 25,
+            "initial": 40,
             "dices": 0,
             "dicesMod": 0
           }
