@@ -6,6 +6,7 @@
         Heal,
         UseItem,  // HEAL, BUT FOR PLAYER -> no serialization
         Wait,
-        Interact   // FOR INTERACTING WITH ENVIRONMENT -> no serialization
+        Interact,   // FOR INTERACTING WITH ENVIRONMENT -> no serialization
+        ChickenOut   // FOR RUNNING AWAY
     }
 }

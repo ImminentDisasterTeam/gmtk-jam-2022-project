@@ -35,6 +35,7 @@ namespace _Game.Scripts.UI {
                 EActionType.UseItem => "useItem",
                 EActionType.Wait => "wait",
                 EActionType.Interact => "interact",
+                EActionType.ChickenOut => "escape",
                 _ => throw new ArgumentOutOfRangeException(nameof(actionType), actionType, null)
             };
 

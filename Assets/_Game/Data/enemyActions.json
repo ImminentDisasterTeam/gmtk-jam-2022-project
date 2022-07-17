@@ -284,7 +284,7 @@
         {
           "type": "Attack",
           "stats": {
-            "initial": 4,
+            "initial": 5,
             "dices": 1,
             "dicesMod": 0.5
           }
@@ -295,10 +295,23 @@
 
 
     {
-      "name": "greySkeleton",
+      "name": "greySkeletonAttack",
       "subActions": [
         {
           "type": "Attack",
+          "stats": {
+            "initial": 0,
+            "dices": 1,
+            "dicesMod": 2
+          }
+        }
+      ]
+    },
+    {
+      "name": "greySkeletonDef",
+      "subActions": [
+        {
+          "type": "Defend",
           "stats": {
             "initial": 4,
             "dices": 1,
@@ -313,6 +326,14 @@
     {
       "name": "blackSkeletonAttack",
       "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 4,
+            "dices": 1,
+            "dicesMod": 0.5
+          }
+        },
         {
           "type": "Attack",
           "stats": {

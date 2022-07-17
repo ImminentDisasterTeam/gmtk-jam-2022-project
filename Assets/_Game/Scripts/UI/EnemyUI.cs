@@ -37,6 +37,7 @@ namespace _Game.Scripts.UI {
                 OnPanelChanged(actionPanel);
             }
 
+            LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform) _actionPanelsParent);
             LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform) transform);
         }
 

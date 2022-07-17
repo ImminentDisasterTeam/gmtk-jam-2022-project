@@ -57,7 +57,7 @@
       "name": "whiteSkeleton",
       "displayName": "Skeleton",
       "image": "whiteSkeleton",
-      "health": 15,
+      "health": 16,
       "actionLoop": [
         "whiteSkeletonAttack"
       ]
@@ -66,16 +66,17 @@
       "name": "greySkeleton",
       "displayName": "Skeleton",
       "image": "greySkeleton",
-      "health": 15,
+      "health": 12,
       "actionLoop": [
-        "greySkeletonAttack"
+        "greySkeletonAttack",
+        "greySkeletonDef"
       ]
     },
     {
       "name": "blackSkeleton",
       "displayName": "Skeleton",
       "image": "blackSkeleton",
-      "health": 15,
+      "health": 13,
       "actionLoop": [
         "blackSkeletonAttack"
       ]
