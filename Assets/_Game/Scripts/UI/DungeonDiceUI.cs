@@ -17,6 +17,12 @@ namespace _Game.Scripts.UI {
         private readonly List<Dice> _discardList = new List<Dice>();
         private Rng _rng;
 
+        public static DungeonDiceUI Instance { get; private set; }
+
+        public DungeonDiceUI() {
+            Instance = this;
+        }
+
         public void Load(IEnumerable<Dice> dices, int diceSlots, Rng rng) {
             _rng = rng;
 
@@ -28,6 +34,7 @@ namespace _Game.Scripts.UI {
             for (var i = 0; i < diceSlots; i++) {
                 var diceSlot = Instantiate(_diceSlotPrefab, _diceSlotsParent);
                 diceSlot.OnContentsChanged.Subscribe(OnDiceSlotChanged);
+                // diceSlot.State = SlotUI.EState.CanTake;
             }
 
             Draw();
@@ -36,13 +43,18 @@ namespace _Game.Scripts.UI {
         private void OnDiceSlotChanged(DiceSlotUI slot, Dice oldValue, Dice value) {
             if (oldValue != null && value == null) {
                 slot.State = SlotUI.EState.Locked;
-                _discardList.Add(oldValue);
-                UpdateLabels();
+                // _discardList.Add(oldValue);
+                // UpdateLabels();
             }
 
             if (GetDiceSlots().All(s => s.Dice == null)) {
                 Draw();
             }
+        }
+
+        public void AddToDiscard(IEnumerable<Dice> dices) {
+            _discardList.AddRange(dices);
+            UpdateLabels();
         }
 
         private void Draw() {
@@ -52,12 +64,19 @@ namespace _Game.Scripts.UI {
                     MoveDiscardToDeck();
                 }
 
-                var dice = _rng.NextChoice(_deckList);
-                _deckList.Remove(dice);
-
                 diceSlot.OnContentsChanged.Unsubscribe(OnDiceSlotChanged);
-                diceSlot.State = SlotUI.EState.Unlocked;
-                diceSlot.Dice = dice;
+
+                if (_deckList.Count != 0) {
+                    var dice = _rng.NextChoice(_deckList);
+                    _deckList.Remove(dice);
+                    
+                    diceSlot.State = SlotUI.EState.CanTake;
+                    diceSlot.Dice = dice;
+                } else {
+                    diceSlot.State = SlotUI.EState.Locked;
+                    diceSlot.Dice = null;
+                }
+
                 diceSlot.OnContentsChanged.Subscribe(OnDiceSlotChanged);
             }
 

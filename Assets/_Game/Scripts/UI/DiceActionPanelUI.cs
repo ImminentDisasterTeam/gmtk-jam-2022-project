@@ -66,6 +66,7 @@ namespace _Game.Scripts.UI {
 
         public int Roll(Rng rng) {
             _rolled = true;
+            DungeonDiceUI.Instance.AddToDiscard(GetDiceSlots().Select(s => s.Dice));
             return Math.Max(_stats.initial + Convert.ToInt32(Math.Floor(_stats.dicesMod * GetDiceSlots().Select(s => s.Roll(rng)).Sum())), 0);
         }
 

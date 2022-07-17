@@ -39,8 +39,11 @@ namespace _Game.Scripts.UI {
             _currentFrameSlot = slot;
 
             if (_selectedSlot == null) {
-                _selectedSlot = slot;
-                _selectedSlot.ToggleSelection(true);
+                if (slot.State.CanTake()) {
+                    _selectedSlot = slot;
+                    _selectedSlot.ToggleSelection(true);
+                }
+
                 return;
             }
 

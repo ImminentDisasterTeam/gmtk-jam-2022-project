@@ -158,6 +158,9 @@ TextureImporter:
   - first:
       213: 5473873561477175044
     second: shield1
+  - first:
+      213: 5926628049566721756
+    second: frame
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1334,6 +1337,27 @@ TextureImporter:
       bones: []
       spriteID: 407df39900b17fb40800000000000000
       internalID: 5473873561477175044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frame
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 208
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd66a4a7fcc9f3250800000000000000
+      internalID: 5926628049566721756
       vertices: []
       indices: 
       edges: []
