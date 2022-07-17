@@ -12,6 +12,7 @@ namespace _Game.Scripts.UI {
         [SerializeField] private InnUI _innUI;
         [SerializeField] private ShopUI _shopUI;
         [SerializeField] private DungeonStarter _dungeonStarter;
+        [SerializeField] private AnimatedWindow _deathWindow;
 
         private Rng _rng;
 
@@ -53,15 +54,22 @@ namespace _Game.Scripts.UI {
                 .ToArray();
 
             if (suitableDungeons.Length == 0) {
-                // TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO TODO GAME END?
+                return;
             }
 
             var dungeon = _rng.NextChoice(suitableDungeons);
 
             Hide(() => {
                 _dungeonStarter.StartDungeon(dungeon, _rng, finishedByDeath => {
-                    // TODO show some death screen
-                    Show();
+                    if (finishedByDeath) {
+                        _deathWindow.Load(() => {
+                            _deathWindow.Hide();
+                            Show();
+                        });
+                        _deathWindow.Show();
+                    } else {
+                        Show();
+                    }
                 });
             });
         }
