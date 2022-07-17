@@ -180,6 +180,60 @@
       }
     },
 
+    {
+      "name": "redEvilSpiderAttack",
+      "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 1,
+            "dices": 0,
+            "dicesMod": 0
+          }
+        }
+      ]
+    },
+    {
+      "name": "redEvilSpiderCharge",
+      "subActions": [
+        {
+          "type": "Charge",
+          "stats": {
+            "initial": 1,
+            "dices": 1,
+            "dicesMod": 1
+          }
+        }
+      ],
+      "condition": {
+        "chargeHigher": 0,
+        "chargeLower": 15,
+        "healthHigher": 0,
+        "healthLower": 0,
+        "elseAction": "redEvilSpiderChargeAttack"
+      }
+    },
+    {
+      "name": "redEvilSpiderChargeAttack",
+      "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 10,
+            "dices": 1,
+            "dicesMod": 1
+          }
+        }
+      ],
+      "condition": {
+        "chargeHigher": 15,
+        "chargeLower": 0,
+        "healthHigher": 0,
+        "healthLower": 0,
+        "elseAction": "redEvilSpiderAttack"
+      }
+    },
+
 
     {
       "name": "queenSpiderChargedAttack",

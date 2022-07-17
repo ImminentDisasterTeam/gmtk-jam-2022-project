@@ -119,7 +119,7 @@
       ]
     },
     {
-      "name": "shield1_amulet1_chest",
+      "name": "random1_chest",
       "image": "gold_chest",
       "type": "ItemChest",
       "check": [
@@ -130,6 +130,12 @@
           "subPool": [
             {
               "type": "shield1"
+            },
+            {
+              "type": "sword1"
+            },
+            {
+              "type": "amulet1"
             }
           ]
         }
@@ -138,6 +144,12 @@
       "hiddenContentPool": [
         {
           "subPool": [
+            {
+              "type": "shield1"
+            },
+            {
+              "type": "sword1"
+            },
             {
               "type": "amulet1"
             }
@@ -163,7 +175,7 @@
     },
     {
       "name": "heal_health",
-      "image": "simpleTrapInFontain",
+      "image": "Fontain",
       "type": "Health",
       "check": [
         8
