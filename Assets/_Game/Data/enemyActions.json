@@ -381,6 +381,35 @@
           }
         }
       ]
+    },
+
+
+
+    {
+      "name": "juniorLavamental",
+      "subActions": [
+        {
+          "type": "Attack",
+          "stats": {
+            "initial": 0,
+            "dices": 1,
+            "dicesMod": 2
+          }
+        }
+      ]
+    },
+    {
+      "name": "greySkeletonDef",
+      "subActions": [
+        {
+          "type": "Defend",
+          "stats": {
+            "initial": 4,
+            "dices": 1,
+            "dicesMod": 0.5
+          }
+        }
+      ]
     }
 
   ]

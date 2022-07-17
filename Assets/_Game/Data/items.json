@@ -44,7 +44,7 @@
       "name": "shield1",
       "displayName": "Broken Door",
       "desc": "Can't be closed.",
-      "type": "Armor",
+      "type": "Defence",
       "image": "shield1",
       "stats": {
         "initial": 1,
@@ -57,7 +57,7 @@
       "name": "shield3",
       "displayName": "Wooden Shield",
       "desc": "Effective against fire (according to the manufacturer).",
-      "type": "Armor",
+      "type": "Defence",
       "image": "shield3",
       "stats": {
         "initial": 3,
@@ -70,7 +70,7 @@
       "name": "shield2",
       "displayName": "Aegis",
       "desc": "If only hiding behind a shield would be enough...",
-      "type": "Armor",
+      "type": "Defence",
       "image": "shield2",
       "stats": {
         "initial": 10,

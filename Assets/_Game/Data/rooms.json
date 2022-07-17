@@ -114,6 +114,20 @@
         }
       ]
     },
+    
+    {
+      "name": "one_red_evil_spider_battle",
+      "type": "Battle",
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "redEvilSpider"
+            }
+          ]
+        }
+      ]
+    },
     {
       "name": "spider_queen_battle",
       "type": "Battle",
@@ -232,6 +246,84 @@
         }
       ]
     },
+    {
+      "name": "random2_chest",
+      "image": "gold_chest",
+      "type": "ItemChest",
+      "check": [
+        15
+      ],
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "shield2"
+            },
+            {
+              "type": "sword2"
+            },
+            {
+              "type": "amulet2"
+            }
+          ]
+        }
+      ],
+      "hiddenCheck": 30,
+      "hiddenContentPool": [
+        {
+          "subPool": [
+            {
+              "type": "shield2"
+            },
+            {
+              "type": "sword2"
+            },
+            {
+              "type": "amulet2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "random3_chest",
+      "image": "gold_chest",
+      "type": "ItemChest",
+      "check": [
+        25
+      ],
+      "contentPool": [
+        {
+          "subPool": [
+            {
+              "type": "shield3"
+            },
+            {
+              "type": "sword3"
+            },
+            {
+              "type": "amulet3"
+            }
+          ]
+        }
+      ],
+      "hiddenCheck": 40,
+      "hiddenContentPool": [
+        {
+          "subPool": [
+            {
+              "type": "shield3"
+            },
+            {
+              "type": "sword3"
+            },
+            {
+              "type": "amulet3"
+            }
+          ]
+        }
+      ]
+    },
     
     {
       "name": "risky_health",
@@ -245,6 +337,21 @@
         -15,
         0,
         30
+      ],
+      "mandatory": false
+    },
+    {
+      "name": "risky_health2",
+      "image": "simpleTrapInFontain",
+      "type": "Health",
+      "check": [
+        6,
+        10
+      ],
+      "healthChange": [
+        -30,
+        0,
+        60
       ],
       "mandatory": false
     },
