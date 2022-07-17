@@ -80,6 +80,15 @@
       "actionLoop": [
         "blackSkeletonAttack"
       ]
+    },
+    {
+      "name": "blackSkeleton",
+      "displayName": "Skeleton",
+      "image": "blackSkeleton",
+      "health": 13,
+      "actionLoop": [
+        "blackSkeletonAttack"
+      ]
     }
 
     

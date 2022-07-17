@@ -85,7 +85,7 @@
       "name": "amulet1",
       "displayName": "Nice Stone",
       "desc": "Found on the beach.",
-      "type": "Amulet",
+      "type": "Interaction",
       "image": "amulet1",
       "stats": {
         "initial": 3,
@@ -98,7 +98,7 @@
       "name": "amulet2",
       "displayName": "Amulet of Forgottten God",
       "desc": "Show your loyalty.",
-      "type": "Amulet",
+      "type": "Interaction",
       "image": "amulet2",
       "stats": {
         "initial": 6,
@@ -110,8 +110,8 @@
     {
       "name": "amulet3",
       "displayName": "Blessed Necklace",
-      "desc": "Seems to.",
-      "type": "It looks extremely uncomfortable.",
+      "desc": "It looks extremely uncomfortable.",
+      "type": "Interaction",
       "image": "amulet3",
       "stats": {
         "initial": 0,
@@ -120,5 +120,6 @@
       },
       "cost": 10000
     }
+
   ]
 }

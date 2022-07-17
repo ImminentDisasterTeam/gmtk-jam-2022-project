@@ -295,7 +295,7 @@
 
 
     {
-      "name": "greySkeleton",
+      "name": "greySkeletonAttack",
       "subActions": [
         {
           "type": "Attack",
