@@ -17,6 +17,7 @@ namespace _Game.Scripts.UI {
         public void SwapWith(SlotUI other) {
             HideTooltip();
             PerformSwapWith(other);
+            SoundHolder.Instance.PlaySound("item");
         }
         protected abstract void PerformSwapWith(SlotUI other);
 
