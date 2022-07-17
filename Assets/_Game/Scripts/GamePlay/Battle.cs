@@ -125,9 +125,11 @@ namespace _Game.Scripts.GamePlay {
             switch (playerType) {
                 case EActionType.Attack:
                     playerAttack = playerResult;
+                    SoundHolder.Instance.PlaySound("atk");
                     break;
                 case EActionType.Defend:
                     playerDefense = playerResult;
+                    SoundHolder.Instance.PlaySound("def");
                     break;
                 case EActionType.UseItem:
                     Player.Instance.ChangeHealth(playerResult);
@@ -140,6 +142,7 @@ namespace _Game.Scripts.GamePlay {
                         FinishTurn(true, false);
                         return;
                     }
+                    SoundHolder.Instance.PlaySound("escape");
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
