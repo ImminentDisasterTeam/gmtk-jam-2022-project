@@ -42,7 +42,7 @@ namespace _Game.Scripts.UI {
 
         private void StartBattleRoom(RoomData data, Rng rng) {
             _battleUI.SetActive(true);
-            EnableContinue(false);
+            // EnableContinue(false);
 
             _actionSelectionPanel.Load();
             _actionSelectionPanel.Show();

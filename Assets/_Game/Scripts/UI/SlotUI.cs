@@ -51,7 +51,7 @@ namespace _Game.Scripts.UI {
             _tooltipProcess?.TryAbort();
             LoadTooltip(_tooltip);
             var proc = new SerialProcess();
-            proc.Add(new AsyncProcess(onDone => DOVirtual.DelayedCall(0.2f, () => onDone())));
+            proc.Add(new AsyncProcess(onDone => DOVirtual.DelayedCall(0.4f, () => onDone())));
             proc.Add(new AsyncProcess(_tooltip.Show));
             _tooltipProcess = proc;
             _tooltipProcess.Run();

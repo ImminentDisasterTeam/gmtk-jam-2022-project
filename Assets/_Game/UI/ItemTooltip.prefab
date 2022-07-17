@@ -433,6 +433,7 @@ GameObject:
   - component: {fileID: 2030654343954308607}
   - component: {fileID: 6070975842292715201}
   - component: {fileID: 4895006137110919182}
+  - component: {fileID: 5363821037202400437}
   m_Layer: 5
   m_Name: ItemTooltip
   m_TagString: Untagged
@@ -539,6 +540,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_TargetDisplay: 0
+--- !u!225 &5363821037202400437
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030654343954308605}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &2030654344036886651
 GameObject:
   m_ObjectHideFlags: 0
