@@ -73,7 +73,7 @@
       "name": "d4_sadness",
       "displayName": "Sadness",
       "desc": "Sadness everywhere.",
-      "image": "d4_curse",
+      "image": "d4_sadness",
       "faces": [
         0, 0, 0, 0
       ],
@@ -179,7 +179,7 @@
       "name": "d20_risky",
       "displayName": "True Gambler's True Dice",
       "desc": "100% 250 on enemy attack (just kidding).",
-      "image": "d20_risky",
+      "image": "d20",
       "faces": [
         1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 250
       ],
@@ -195,7 +195,7 @@
       "faces": [
         9, 12, 15, 15, 18, 21
       ],
-      "minLevel": 6,
+      "minLevel": 5,
       "maxLevel": 7
     },
 
@@ -207,7 +207,7 @@
       "faces": [
         20
       ],
-      "minLevel": 6,
+      "minLevel": 5,
       "maxLevel": 7
     },
 

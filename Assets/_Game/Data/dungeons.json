@@ -250,6 +250,10 @@
             {
               "type": "easy_money",
               "weight": 1
+            },
+            {
+              "type": "minijackpot",
+              "weight": 1
             }
           ]
         },
@@ -293,6 +297,10 @@
             },
             {
               "type": "easy_money",
+              "weight": 1
+            },
+            {
+              "type": "minijackpot",
               "weight": 1
             }
           ]
@@ -342,6 +350,10 @@
             {
               "type": "easy_money",
               "weight": 1
+            },
+            {
+              "type": "minijackpot",
+              "weight": 1
             }
           ]
         },
@@ -384,7 +396,7 @@
         {
           "subPool": [
             {
-              "type": "simpleTrap1",
+              "type": "jackpot",
               "weight": 1
             },
             {
@@ -474,6 +486,14 @@
             },
             {
               "type": "risky_health2",
+              "weight": 1
+            },
+            {
+              "type": "jackpot",
+              "weight": 1
+            },
+            {
+              "type": "minijackpot",
               "weight": 1
             }
           ]

@@ -79,7 +79,6 @@
       "health": 13,
       "actionLoop": [
         "blackSkeletonAttack",
-        "wait",
         "wait"
       ]
     },
@@ -92,6 +91,7 @@
         "royalSkeletonAttack",
         "wait",
         "wait",
+        "royalSkeletonAttack",
         "wait"
       ]
     },
@@ -124,7 +124,7 @@
       "name": "seniorLavamental",
       "displayName": "Senior Lavamental",
       "image": "seniorLavamental",
-      "health": 100,
+      "health": 65,
       "actionLoop": [
         "seniorLavamentalDef",
         "seniorLavamentalDef",
@@ -142,7 +142,7 @@
       "name": "Golem",
       "displayName": "Golem",
       "image": "Golem",
-      "health": 500,
+      "health": 250,
       "actionLoop": [
         "GolemAttack1",
         "GolemDef1",
