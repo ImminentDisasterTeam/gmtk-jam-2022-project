@@ -76,7 +76,7 @@
       "name": "blackSkeleton",
       "displayName": "Skeleton",
       "image": "blackSkeleton",
-      "health": 16,
+      "health": 25,
       "actionLoop": [
         "blackSkeletonAttack",
         "wait"
