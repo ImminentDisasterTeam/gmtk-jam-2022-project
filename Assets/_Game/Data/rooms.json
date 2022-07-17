@@ -331,7 +331,7 @@
     
     {
       "name": "risky_health",
-      "image": "simpleTrapInFontain",
+      "image": "FontainTrap",
       "type": "Health",
       "check": [
         6,
@@ -346,7 +346,7 @@
     },
     {
       "name": "risky_health2",
-      "image": "simpleTrapInFontain",
+      "image": "FontainTrap",
       "type": "Health",
       "check": [
         6,
